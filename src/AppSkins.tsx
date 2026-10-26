@@ -59,8 +59,8 @@ function Avatar({
 }) {
   return (
     <span className={`skin-avatar ${round ? "round" : ""}`}>
-      {safeMedia(src)?.startsWith("data:image/") ? (
-        <img src={safeMedia(src)} alt="" />
+      {(src.startsWith("/assets/wechat/") || safeMedia(src)?.startsWith("data:image/")) ? (
+        <img src={src.startsWith("/assets/wechat/") ? src : safeMedia(src)} alt="" />
       ) : (
         name.slice(0, 1)
       )}
@@ -90,8 +90,10 @@ function MessageList({
   onRead,
   whatsapp = false,
   chatWallpaper,
+  boyfriendChat = false,
 }: {
   items: Item[];
+  boyfriendChat?: boolean;
   chatWallpaper?: string;
   creator: boolean;
   onItem: (i: Item) => void;
@@ -107,7 +109,7 @@ function MessageList({
           className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
         >
           {!whatsapp && !i.outgoing && (
-            <Avatar name={i.sender} src={i.avatar} />
+            <Avatar name={i.sender} src={boyfriendChat ? "/assets/wechat/boyfriend-chat-avatar.jpeg" : i.avatar} />
           )}
           <button
             className="skin-bubble"
@@ -128,7 +130,7 @@ function MessageList({
               {whatsapp && i.outgoing && <CheckCheck size={11} />}
             </small>
           </button>
-          {!whatsapp && i.outgoing && <Avatar name={i.sender} src={i.avatar} />}
+          {!whatsapp && i.outgoing && <Avatar name={i.sender} src={boyfriendChat ? "/assets/wechat/my-chat-avatar.jpeg" : i.avatar} />}
         </div>
       ))}
     </div>
@@ -286,6 +288,7 @@ export function WeChatSkin(p: SkinProps) {
           <MessageList
             items={p.items.filter((i) => i.title === p.thread)}
             chatWallpaper={p.thread === "Aaa最帅的mua～" ? "/assets/wechat/chat-boyfriend-bg.jpeg" : "/assets/wechat/chat-others-bg.jpeg"}
+            boyfriendChat={p.thread === "Aaa最帅的mua～"}
             creator={p.creator}
             onItem={p.onItem}
             onRead={p.onRead}
