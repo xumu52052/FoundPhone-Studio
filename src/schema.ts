@@ -196,6 +196,10 @@ export function validateWork(input: unknown): Work {
   return workSchema.parse(input);
 }
 export function safeMedia(value: string) {
+  // Allow bundled, same-origin assets from the public/assets directory.
+  // Exclude traversal, query strings, fragments, SVG, and external URLs.
+  const localAsset = /^\/assets\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.(?:png|jpe?g|webp|gif|mp3|wav|ogg|webm|mp4)$/i;
+  if (localAsset.test(value)) return value;
   return /^data:(image\/(png|jpeg|webp|gif)|audio\/(mpeg|mp3|wav|ogg|webm|mp4)|video\/(mp4|webm));base64,[a-zA-Z0-9+/=\s]+$/.test(
     value,
   )
