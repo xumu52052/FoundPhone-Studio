@@ -91,9 +91,11 @@ function MessageList({
   whatsapp = false,
   chatWallpaper,
   boyfriendChat = false,
+  participantAvatar,
 }: {
   items: Item[];
   boyfriendChat?: boolean;
+  participantAvatar?: string;
   chatWallpaper?: string;
   creator: boolean;
   onItem: (i: Item) => void;
@@ -109,7 +111,7 @@ function MessageList({
           className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
         >
           {!whatsapp && !i.outgoing && (
-            <Avatar name={i.sender} src={boyfriendChat ? "/assets/wechat/boyfriend-chat-avatar.jpeg" : i.avatar} />
+            <Avatar name={i.sender} src={participantAvatar || i.avatar} />
           )}
           <button
             className="skin-bubble"
@@ -130,7 +132,7 @@ function MessageList({
               {whatsapp && i.outgoing && <CheckCheck size={11} />}
             </small>
           </button>
-          {!whatsapp && i.outgoing && <Avatar name={i.sender} src={boyfriendChat ? "/assets/wechat/my-chat-avatar.jpeg" : i.avatar} />}
+          {!whatsapp && i.outgoing && <Avatar name={i.sender} src="/assets/wechat/my-chat-avatar.jpeg" />}
         </div>
       ))}
     </div>
@@ -172,14 +174,21 @@ export function WeChatSkin(p: SkinProps) {
   const orderedChats = [
     "Aaa最帅的mua～",
     "🪵助理",
-    "李姐",
     "好闺闺",
     "妈咪～",
     "🪵mama",
   ];
+  // User-supplied original images; keep chat list and message avatars consistent.
+  const chatAvatars: Record<string, string> = {
+    "Aaa最帅的mua～": "/assets/wechat/aaa-dog.jpeg",
+    "好闺闺": "/assets/wechat/avatar-bestie.jpeg",
+    "🪵mama": "/assets/wechat/avatar-his-mom.jpeg",
+    "妈咪～": "/assets/wechat/avatar-my-mom.jpeg",
+    "🪵助理": "/assets/wechat/avatar-assistant.jpeg",
+  };
   const conversations = orderedChats;
   const contacts = [
-    ...new Set(p.items.map((i) => i.sender).filter((s) => s !== "我")),
+    ...new Set(p.items.map((i) => i.sender).filter((s) => s !== "我" && s !== "李姐")),
   ];
   const posts = p.items.filter(
     (i) => i.folder === "朋友圈" || i.kind === "post",
@@ -289,6 +298,7 @@ export function WeChatSkin(p: SkinProps) {
             items={p.items.filter((i) => i.title === p.thread)}
             chatWallpaper={p.thread === "Aaa最帅的mua～" ? "/assets/wechat/chat-boyfriend-bg.jpeg" : "/assets/wechat/chat-others-bg.jpeg"}
             boyfriendChat={p.thread === "Aaa最帅的mua～"}
+            participantAvatar={chatAvatars[p.thread]}
             creator={p.creator}
             onItem={p.onItem}
             onRead={p.onRead}
@@ -360,11 +370,7 @@ export function WeChatSkin(p: SkinProps) {
                       }}
                     >
                       <span className="wx-chat-avatar">
-                        {t === "Aaa最帅的mua～" ? (
-                          <img className="wx-custom-avatar" src="/assets/wechat/aaa-dog.jpeg" alt="" />
-                        ) : (
-                          <Avatar name={t} src={last?.avatar ?? ""} />
-                        )}
+                        <Avatar name={t} src={chatAvatars[t] || last?.avatar || ""} />
                         {!readThreads.includes(t) &&
                           list.some((i) => !i.read) && (
                             <b className="wx-unread">
@@ -398,7 +404,7 @@ export function WeChatSkin(p: SkinProps) {
               {"时代峰峻".includes(query) && <><div className="wx-section-label">我的企业</div><button className="wx-contact" type="button"><img className="wx-custom-avatar" src="/assets/wechat/company.jpeg" alt="时代峰峻" />时代峰峻</button></>}
               {"Aaa最帅的mua～".includes(query) && <><div className="wx-section-label">A</div><button className="wx-contact" type="button"><img className="wx-custom-avatar" src="/assets/wechat/aaa-dog.jpeg" alt="Aaa最帅的mua～头像" />Aaa最帅的mua～</button></>}
               {contacts.filter((c) => c.includes(query) && c !== "Aaa最帅的mua～").map((c) => (
-                <button key={c} className="wx-contact" onClick={() => { const item=p.items.find(i=>i.sender===c); if(item){p.onThread(item.title);p.onRead(item.title)} }}><Avatar name={c} src={p.items.find(i=>i.sender===c)?.avatar}/>{c}</button>
+                <button key={c} className="wx-contact" onClick={() => { const item=p.items.find(i=>i.sender===c); if(item){p.onThread(item.title);p.onRead(item.title)} }}><Avatar name={c} src={chatAvatars[c] || p.items.find(i=>i.sender===c)?.avatar}/>{c}</button>
               ))}
             </div>
           ) : tab === "发现" ? (
