@@ -4927,3 +4927,19 @@ label {
 /* Author-supplied WeChat profile and contact images. */
 .wx-custom-avatar { width:36px; height:36px; border-radius:5px; object-fit:cover; flex-shrink:0; }
 .wx-profile-custom-avatar { width:55px; height:55px; }
+
+/* WeChat contacts: align every icon and name on the same left grid. */
+.ios18 .wechat-ui .wx-address-book .wx-contact {
+  display: flex; flex-direction: row; align-items: center; justify-content: flex-start;
+  box-sizing: border-box; width: 100%; min-height: 55px;
+  padding: 10px 14px; gap: 12px; text-align: left;
+}
+.ios18 .wechat-ui .wx-address-book .wx-contact-symbol,
+.ios18 .wechat-ui .wx-address-book .wx-contact > .wx-custom-avatar,
+.ios18 .wechat-ui .wx-address-book .wx-contact > .wx-avatar {
+  width: 36px; height: 36px; min-width: 36px; flex: 0 0 36px;
+  margin: 0; object-fit: cover;
+}
+.ios18 .wechat-ui .wx-address-book .wx-contact-symbol {
+  display: inline-flex; align-items: center; justify-content: center;
+}
