@@ -52,12 +52,49 @@ export function ensureAppStore(work: Work): Work {
         ],
       };
 }
+// Keep only apps registered in this project; unavailable screenshot apps
+// are omitted and remaining icons shift left/up without substitutes.
+const requestedHomePages = [
+  ["calendar", "mail", "clock", "maps", "weather", "notes", "reminders", "wallet", "music", "health", "appstore", "settings", "contacts", "calculator", "safari", "files"],
+  ["wechat", "douyin", "qq", "weibo", "redbook", "bilibili", "alipay", "taobao", "delivery", "kakao", "instagram", "youtube", "forum"],
+];
+const requestedDock = ["messages", "phone", "photos", "camera"];
+const homeLayoutRevision = 4;
+function applyRequestedHome(layout: DeviceLayout) {
+  const known = new Set(layout.apps.map((a) => a.id));
+  const utilityIds: string[] = [];
+  const planned = requestedHomePages.flat().filter((id) => id.startsWith("folder:") || known.has(id));
+  for (const app of layout.apps) {
+    app.dock = requestedDock.includes(app.id);
+    if (app.dock || planned.includes(app.id) || utilityIds.includes(app.id)) {
+      app.installed = true;
+      app.visible = true;
+      app.folder = utilityIds.includes(app.id) ? "实用工具" : "";
+    }
+  }
+  const extra = layout.apps
+    .filter((a) => a.installed && a.visible && !a.dock && !a.folder && !planned.includes(a.id))
+    .map((a) => a.id);
+  layout.order = [...planned, ...extra];
+  layout.positions = {};
+  requestedHomePages.forEach((page, pageIndex) => {
+    // Pack registered apps tightly in the requested order, without substitutes.
+    page.filter((id) => id.startsWith("folder:") || known.has(id)).forEach((id, index) => {
+      layout.positions[id] = { page: pageIndex, x: index % 4, y: Math.floor(index / 4) };
+    });
+  });
+  extra.forEach((id, index) => {
+    layout.positions[id] = { page: 2 + Math.floor(index / 24), x: index % 4, y: Math.floor((index % 24) / 4) };
+  });
+  layout.previewLayoutRevision = homeLayoutRevision;
+  return layout;
+}
 export function defaultLayout(input: Work): DeviceLayout {
   const w = ensureAppStore(input);
-  return {
+  return applyRequestedHome({
     version: 1,
     workId: w.id,
-    previewLayoutRevision: w.id === "ui-test-phone-v2" ? 1 : 0,
+    previewLayoutRevision: 0,
     apps: structuredClone(w.apps)
       .sort((a, b) => (a.id === "appstore" ? -1 : b.id === "appstore" ? 1 : 0))
       .map((a) =>
@@ -69,7 +106,7 @@ export function defaultLayout(input: Work): DeviceLayout {
     order: [],
     cleared: [],
     positions: {},
-  };
+  });
 }
 export function validateLayout(raw: unknown, input: Work) {
   const w = ensureAppStore(input);
@@ -94,30 +131,7 @@ export function validateLayout(raw: unknown, input: Work) {
     store.visible = true;
     store.folder = "";
   }
-  if (w.id === "ui-test-phone-v2" && layout.previewLayoutRevision < 1) {
-    const visibleApps = ["wechat", "douyin"];
-    for (const app of layout.apps) {
-      if (
-        visibleApps.includes(app.id) ||
-        ["中国", "国内", "国际", "海外", "国内App", "国际App"].includes(
-          app.folder,
-        )
-      ) {
-        app.folder = "";
-        delete layout.positions[app.id];
-        if (visibleApps.includes(app.id)) {
-          app.installed = true;
-          app.visible = true;
-          app.dock = false;
-        }
-      }
-    }
-    layout.order = [
-      ...visibleApps,
-      ...layout.order.filter((id) => !visibleApps.includes(id)),
-    ];
-    layout.previewLayoutRevision = 1;
-  }
+  if (layout.previewLayoutRevision < homeLayoutRevision) applyRequestedHome(layout);
   const entries = homeEntries(layout),
     packed = packHome(entries, layout.positions);
   for (const entry of entries) {

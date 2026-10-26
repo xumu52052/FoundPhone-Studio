@@ -741,3 +741,17 @@
   background: #fafafa;
   color: #ffadb7;
 }
+
+/* WeChat: visually mark the first, pinned conversation without changing order. */
+.ios18 .wechat-ui .wx-chat-row.wx-pinned-chat { background: #f4f4f4; }
+.ios18 .wechat-ui .wx-chat-row .wx-chat-avatar > .wx-custom-avatar { width: 47px; height: 47px; object-fit: cover; border-radius: 5px; }
+
+/* Chat-only wallpapers: pinned boyfriend thread vs all other WeChat conversations. */
+.ios18 .wechat-ui .skin-messages.wx-custom-chat-wallpaper,
+.wechat-ui .skin-messages.wx-custom-chat-wallpaper {
+  background-color: #fff9fb;
+  background-image: var(--unused-wallpaper, none);
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: repeat-y;
+}

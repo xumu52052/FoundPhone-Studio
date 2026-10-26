@@ -4918,3 +4918,12 @@ label {
   background: #e34f58;
   transform: rotate(135deg);
 }
+
+/* Custom WeChat discovery and address book presentation */
+.wx-contact-symbol { width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:5px;color:white;font-size:12px;margin-right:12px;flex-shrink:0; }
+.wx-discovery-separated { border-top: 12px solid #ededed; }
+.wx-address-book .wx-search { margin: 8px 12px; }
+
+/* Author-supplied WeChat profile and contact images. */
+.wx-custom-avatar { width:36px; height:36px; border-radius:5px; object-fit:cover; flex-shrink:0; }
+.wx-profile-custom-avatar { width:55px; height:55px; }

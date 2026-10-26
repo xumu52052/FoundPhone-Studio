@@ -3,14 +3,15 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 2,
+  "revision": 11,
   "phone": {
     "owner": "机主",
     "date": "2026-10-25",
     "time": "09:41",
     "battery": 94,
     "network": "5G",
-    "wallpaper": "apple-wwdc26"
+    "wallpaper": "personal-photos",
+    "passcode": "1116"
   },
   "installedApps": [
     "appstore",
@@ -93,6 +94,30 @@
       "name": "测试联系人",
       "phone": "",
       "bio": "这是一条测试内容。"
+    },
+    {
+      "id": "boyfriend",
+      "name": "Aaa最帅的mua～"
+    },
+    {
+      "id": "assistant",
+      "name": "🪵助理"
+    },
+    {
+      "id": "lijie",
+      "name": "李姐"
+    },
+    {
+      "id": "bestie",
+      "name": "好闺闺"
+    },
+    {
+      "id": "mom",
+      "name": "妈咪～"
+    },
+    {
+      "id": "his_mom",
+      "name": "🪵mama"
     }
   ],
   "chats": [
@@ -107,22 +132,6 @@
       "messages": [
         {
           "id": "test-message-messages",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-wechat",
-      "app": "wechat",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-wechat",
           "body": "这是一条测试消息。",
           "senderId": "test-contact"
         }
@@ -244,6 +253,3010 @@
           "senderId": "owner"
         }
       ]
+    },
+    {
+      "id": "wechat-boyfriend",
+      "app": "wechat",
+      "title": "Aaa最帅的mua～",
+      "participants": [
+        "owner",
+        "boyfriend"
+      ],
+      "messages": [
+        {
+          "id": "bf-jul-001",
+          "senderId": "boyfriend",
+          "time": "2026-07-06 10:12",
+          "body": "宝宝 在忙吗"
+        },
+        {
+          "id": "bf-jul-002",
+          "senderId": "owner",
+          "time": "2026-07-06 10:14",
+          "body": "刚把电脑打开 怎么啦"
+        },
+        {
+          "id": "bf-jul-003",
+          "senderId": "boyfriend",
+          "time": "2026-07-06 10:16",
+          "body": "今天专场定妆了"
+        },
+        {
+          "id": "bf-jul-004",
+          "senderId": "boyfriend",
+          "time": "2026-07-06 10:18",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-01.jpg"
+        },
+        {
+          "id": "bf-jul-005",
+          "senderId": "boyfriend",
+          "time": "2026-07-06 10:20",
+          "body": "你先看 别笑我"
+        },
+        {
+          "id": "bf-jul-006",
+          "senderId": "owner",
+          "time": "2026-07-06 10:22",
+          "body": "啊啊啊好帅啊"
+        },
+        {
+          "id": "bf-jul-007",
+          "senderId": "boyfriend",
+          "time": "2026-07-06 10:24",
+          "body": "真的？"
+        },
+        {
+          "id": "bf-jul-008",
+          "senderId": "owner",
+          "time": "2026-07-06 10:26",
+          "body": "真的！！男朋友特别帅"
+        },
+        {
+          "id": "bf-jul-009",
+          "senderId": "boyfriend",
+          "time": "2026-07-06 10:28",
+          "body": "那我放心了哈哈"
+        },
+        {
+          "id": "bf-jul-010",
+          "senderId": "boyfriend",
+          "time": "2026-07-06 10:30",
+          "body": "晚上再给你打电话"
+        },
+        {
+          "id": "bf-jul-011",
+          "senderId": "boyfriend",
+          "time": "2026-07-09 08:24",
+          "body": "早"
+        },
+        {
+          "id": "bf-jul-012",
+          "senderId": "boyfriend",
+          "time": "2026-07-09 08:26",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-02.jpg"
+        },
+        {
+          "id": "bf-jul-013",
+          "senderId": "boyfriend",
+          "time": "2026-07-09 08:28",
+          "body": "上班前先给你报个到"
+        },
+        {
+          "id": "bf-jul-014",
+          "senderId": "owner",
+          "time": "2026-07-09 08:30",
+          "body": "你怎么比我起得还早"
+        },
+        {
+          "id": "bf-jul-015",
+          "senderId": "boyfriend",
+          "time": "2026-07-09 08:32",
+          "body": "今天妆发早"
+        },
+        {
+          "id": "bf-jul-016",
+          "senderId": "boyfriend",
+          "time": "2026-07-09 08:34",
+          "body": "你出门记得带伞"
+        },
+        {
+          "id": "bf-jul-017",
+          "senderId": "owner",
+          "time": "2026-07-09 08:36",
+          "body": "知道啦 你也吃早饭"
+        },
+        {
+          "id": "bf-jul-018",
+          "senderId": "boyfriend",
+          "time": "2026-07-09 08:38",
+          "body": "吃了两个包子"
+        },
+        {
+          "id": "bf-jul-019",
+          "senderId": "owner",
+          "time": "2026-07-09 08:40",
+          "body": "不错 表扬"
+        },
+        {
+          "id": "bf-jul-020",
+          "senderId": "boyfriend",
+          "time": "2026-07-15 19:11",
+          "body": "运动会结束了"
+        },
+        {
+          "id": "bf-jul-021",
+          "senderId": "boyfriend",
+          "time": "2026-07-15 19:13",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-03.jpg"
+        },
+        {
+          "id": "bf-jul-022",
+          "senderId": "owner",
+          "time": "2026-07-15 19:15",
+          "body": "哈哈哈哈你今天好有活力"
+        },
+        {
+          "id": "bf-jul-023",
+          "senderId": "boyfriend",
+          "time": "2026-07-15 19:17",
+          "body": "我现在腿有点酸"
+        },
+        {
+          "id": "bf-jul-024",
+          "senderId": "owner",
+          "time": "2026-07-15 19:19",
+          "body": "回去好好拉伸"
+        },
+        {
+          "id": "bf-jul-025",
+          "senderId": "boyfriend",
+          "time": "2026-07-15 19:21",
+          "body": "收到教练"
+        },
+        {
+          "id": "bf-jul-026",
+          "senderId": "boyfriend",
+          "time": "2026-07-15 19:23",
+          "body": "你晚饭吃什么"
+        },
+        {
+          "id": "bf-jul-027",
+          "senderId": "owner",
+          "time": "2026-07-15 19:25",
+          "body": "跟李姐吃的米线"
+        },
+        {
+          "id": "bf-jul-028",
+          "senderId": "boyfriend",
+          "time": "2026-07-15 19:27",
+          "body": "又是米线哈哈哈"
+        },
+        {
+          "id": "bf-jul-029",
+          "senderId": "boyfriend",
+          "time": "2026-07-20 16:06",
+          "body": "给你看张图"
+        },
+        {
+          "id": "bf-jul-030",
+          "senderId": "boyfriend",
+          "time": "2026-07-20 16:08",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-04.jpg"
+        },
+        {
+          "id": "bf-jul-031",
+          "senderId": "owner",
+          "time": "2026-07-20 16:10",
+          "body": "哇 巡演前就开始帅了"
+        },
+        {
+          "id": "bf-jul-032",
+          "senderId": "boyfriend",
+          "time": "2026-07-20 16:12",
+          "body": "什么叫开始"
+        },
+        {
+          "id": "bf-jul-033",
+          "senderId": "owner",
+          "time": "2026-07-20 16:14",
+          "body": "一直都帅 行了吧"
+        },
+        {
+          "id": "bf-jul-034",
+          "senderId": "boyfriend",
+          "time": "2026-07-20 16:16",
+          "body": "这还差不多"
+        },
+        {
+          "id": "bf-jul-035",
+          "senderId": "boyfriend",
+          "time": "2026-07-20 16:18",
+          "body": "你今天几点下班"
+        },
+        {
+          "id": "bf-jul-036",
+          "senderId": "owner",
+          "time": "2026-07-20 16:20",
+          "body": "六点左右"
+        },
+        {
+          "id": "bf-jul-037",
+          "senderId": "boyfriend",
+          "time": "2026-07-20 16:22",
+          "body": "好 晚上有空我给你打视频"
+        },
+        {
+          "id": "bf-jul-038",
+          "senderId": "boyfriend",
+          "time": "2026-07-24 13:20",
+          "body": "中午休息一会"
+        },
+        {
+          "id": "bf-jul-039",
+          "senderId": "boyfriend",
+          "time": "2026-07-24 13:22",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-05.jpg"
+        },
+        {
+          "id": "bf-jul-040",
+          "senderId": "owner",
+          "time": "2026-07-24 13:24",
+          "body": "你午饭吃了没"
+        },
+        {
+          "id": "bf-jul-041",
+          "senderId": "boyfriend",
+          "time": "2026-07-24 13:26",
+          "body": "吃了 今天盒饭不错"
+        },
+        {
+          "id": "bf-jul-042",
+          "senderId": "owner",
+          "time": "2026-07-24 13:28",
+          "body": "你昨天不是说想吃我做的面"
+        },
+        {
+          "id": "bf-jul-043",
+          "senderId": "boyfriend",
+          "time": "2026-07-24 13:30",
+          "body": "对啊"
+        },
+        {
+          "id": "bf-jul-044",
+          "senderId": "boyfriend",
+          "time": "2026-07-24 13:32",
+          "body": "等我回去还能点单吗"
+        },
+        {
+          "id": "bf-jul-045",
+          "senderId": "owner",
+          "time": "2026-07-24 13:34",
+          "body": "看你表现"
+        },
+        {
+          "id": "bf-jul-046",
+          "senderId": "boyfriend",
+          "time": "2026-07-24 13:36",
+          "body": "那我今天表现很好"
+        },
+        {
+          "id": "bf-jul-047",
+          "senderId": "boyfriend",
+          "time": "2026-07-28 17:42",
+          "body": "上车啦"
+        },
+        {
+          "id": "bf-jul-048",
+          "senderId": "boyfriend",
+          "time": "2026-07-28 17:44",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-06.jpg"
+        },
+        {
+          "id": "bf-jul-049",
+          "senderId": "boyfriend",
+          "time": "2026-07-28 17:46",
+          "body": "今天路上有点堵"
+        },
+        {
+          "id": "bf-jul-050",
+          "senderId": "owner",
+          "time": "2026-07-28 17:48",
+          "body": "那你靠着休息会"
+        },
+        {
+          "id": "bf-jul-051",
+          "senderId": "boyfriend",
+          "time": "2026-07-28 17:50",
+          "body": "你呢 下班了吗"
+        },
+        {
+          "id": "bf-jul-052",
+          "senderId": "owner",
+          "time": "2026-07-28 17:52",
+          "body": "还差一个表"
+        },
+        {
+          "id": "bf-jul-053",
+          "senderId": "boyfriend",
+          "time": "2026-07-28 17:54",
+          "body": "别急 慢慢弄"
+        },
+        {
+          "id": "bf-jul-054",
+          "senderId": "boyfriend",
+          "time": "2026-07-28 17:56",
+          "body": "回家跟我说一声"
+        },
+        {
+          "id": "bf-aug-001",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:23",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-aug-002",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:23",
+          "body": "我刚拍完一组"
+        },
+        {
+          "id": "bf-aug-003",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:24",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-07.jpg"
+        },
+        {
+          "id": "bf-aug-004",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:25",
+          "body": "给你看看现场"
+        },
+        {
+          "id": "bf-aug-005",
+          "senderId": "owner",
+          "time": "2026-08-02 11:28",
+          "body": "哇 今天这个造型好好看"
+        },
+        {
+          "id": "bf-aug-006",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:29",
+          "body": "我也觉得还不错哈哈"
+        },
+        {
+          "id": "bf-aug-007",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:29",
+          "body": "你在干嘛"
+        },
+        {
+          "id": "bf-aug-008",
+          "senderId": "owner",
+          "time": "2026-08-02 11:31",
+          "body": "偷偷吃零食"
+        },
+        {
+          "id": "bf-aug-009",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:31",
+          "body": "什么零食"
+        },
+        {
+          "id": "bf-aug-010",
+          "senderId": "owner",
+          "time": "2026-08-02 11:32",
+          "body": "你放冰箱里的那个巧克力"
+        },
+        {
+          "id": "bf-aug-011",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:32",
+          "body": "哈哈哈哈哈"
+        },
+        {
+          "id": "bf-aug-012",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:33",
+          "body": "本来就是买给你的"
+        },
+        {
+          "id": "bf-aug-013",
+          "senderId": "boyfriend",
+          "time": "2026-08-02 11:33",
+          "body": "少吃点 一会还得吃饭呢"
+        },
+        {
+          "id": "bf-aug-014",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:06",
+          "body": "宝宝你看"
+        },
+        {
+          "id": "bf-aug-015",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:06",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-08.jpg"
+        },
+        {
+          "id": "bf-aug-016",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:07",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-09.jpg"
+        },
+        {
+          "id": "bf-aug-017",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:07",
+          "body": "我在车上玩这个"
+        },
+        {
+          "id": "bf-aug-018",
+          "senderId": "owner",
+          "time": "2026-08-05 14:08",
+          "body": "哈哈哈哈你怎么还玩上这个了"
+        },
+        {
+          "id": "bf-aug-019",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:08",
+          "body": "路上太无聊了"
+        },
+        {
+          "id": "bf-aug-020",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:09",
+          "body": "你玩过没"
+        },
+        {
+          "id": "bf-aug-021",
+          "senderId": "owner",
+          "time": "2026-08-05 14:10",
+          "body": "玩过啊"
+        },
+        {
+          "id": "bf-aug-022",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:10",
+          "body": "那你教教我"
+        },
+        {
+          "id": "bf-aug-023",
+          "senderId": "owner",
+          "time": "2026-08-05 14:11",
+          "body": "你不是很聪明嘛穆老师"
+        },
+        {
+          "id": "bf-aug-024",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:11",
+          "body": "聪明人也需要女朋友的帮助"
+        },
+        {
+          "id": "bf-aug-025",
+          "senderId": "owner",
+          "time": "2026-08-05 14:12",
+          "body": "哈哈哈哈行吧"
+        },
+        {
+          "id": "bf-aug-026",
+          "senderId": "boyfriend",
+          "time": "2026-08-05 14:12",
+          "body": "我就知道你最好了"
+        },
+        {
+          "id": "bf-aug-027",
+          "senderId": "boyfriend",
+          "time": "2026-08-08 09:17",
+          "body": "早上好"
+        },
+        {
+          "id": "bf-aug-028",
+          "senderId": "boyfriend",
+          "time": "2026-08-08 09:17",
+          "body": "今日穿搭展示"
+        },
+        {
+          "id": "bf-aug-029",
+          "senderId": "boyfriend",
+          "time": "2026-08-08 09:18",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-10.jpg"
+        },
+        {
+          "id": "bf-aug-030",
+          "senderId": "boyfriend",
+          "time": "2026-08-08 09:18",
+          "body": "怎么样"
+        },
+        {
+          "id": "bf-aug-031",
+          "senderId": "owner",
+          "time": "2026-08-08 09:21",
+          "body": "帅帅帅"
+        },
+        {
+          "id": "bf-aug-032",
+          "senderId": "owner",
+          "time": "2026-08-08 09:21",
+          "body": "我们穆祉丞穿什么都好看"
+        },
+        {
+          "id": "bf-aug-033",
+          "senderId": "boyfriend",
+          "time": "2026-08-08 09:22",
+          "body": "嘿嘿"
+        },
+        {
+          "id": "bf-aug-034",
+          "senderId": "boyfriend",
+          "time": "2026-08-08 09:22",
+          "body": "那我今天心情很好"
+        },
+        {
+          "id": "bf-aug-035",
+          "senderId": "boyfriend",
+          "time": "2026-08-08 09:23",
+          "body": "你出门了吗"
+        },
+        {
+          "id": "bf-aug-036",
+          "senderId": "owner",
+          "time": "2026-08-08 09:24",
+          "body": "在地铁上"
+        },
+        {
+          "id": "bf-aug-037",
+          "senderId": "boyfriend",
+          "time": "2026-08-08 09:24",
+          "body": "到公司给我说一声"
+        },
+        {
+          "id": "bf-aug-038",
+          "senderId": "owner",
+          "time": "2026-08-08 09:25",
+          "body": "知道啦宝宝"
+        },
+        {
+          "id": "bf-aug-039",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:42",
+          "body": "宝宝宝宝"
+        },
+        {
+          "id": "bf-aug-040",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:42",
+          "body": "今天拍广告遇到一只猫"
+        },
+        {
+          "id": "bf-aug-041",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:43",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-11.jpg"
+        },
+        {
+          "id": "bf-aug-042",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:43",
+          "body": "它叫馒头哈哈哈"
+        },
+        {
+          "id": "bf-aug-043",
+          "senderId": "owner",
+          "time": "2026-08-12 15:46",
+          "body": "啊啊啊啊好可爱"
+        },
+        {
+          "id": "bf-aug-044",
+          "senderId": "owner",
+          "time": "2026-08-12 15:46",
+          "body": "好像面团啊！！"
+        },
+        {
+          "id": "bf-aug-045",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:47",
+          "body": "对吧！！！"
+        },
+        {
+          "id": "bf-aug-046",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:47",
+          "body": "我第一眼就想到了面团"
+        },
+        {
+          "id": "bf-aug-047",
+          "senderId": "owner",
+          "time": "2026-08-12 15:48",
+          "body": "你是不是想面团了"
+        },
+        {
+          "id": "bf-aug-048",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:48",
+          "body": "有点"
+        },
+        {
+          "id": "bf-aug-049",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:49",
+          "body": "也想你"
+        },
+        {
+          "id": "bf-aug-050",
+          "senderId": "owner",
+          "time": "2026-08-12 15:49",
+          "body": "哈哈哈哈顺便想我是吧"
+        },
+        {
+          "id": "bf-aug-051",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:50",
+          "body": "不是顺便"
+        },
+        {
+          "id": "bf-aug-052",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:50",
+          "body": "想你比较多"
+        },
+        {
+          "id": "bf-aug-053",
+          "senderId": "owner",
+          "time": "2026-08-12 15:51",
+          "body": "好吧勉强相信你"
+        },
+        {
+          "id": "bf-aug-054",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:51",
+          "body": "你晚上回去帮我看看面团"
+        },
+        {
+          "id": "bf-aug-055",
+          "senderId": "boyfriend",
+          "time": "2026-08-12 15:52",
+          "body": "给它拍个视频"
+        },
+        {
+          "id": "bf-aug-056",
+          "senderId": "owner",
+          "time": "2026-08-12 15:52",
+          "body": "好呀"
+        },
+        {
+          "id": "bf-aug-057",
+          "senderId": "boyfriend",
+          "time": "2026-08-16 20:14",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-aug-058",
+          "senderId": "boyfriend",
+          "time": "2026-08-16 20:14",
+          "body": "你今天有没有看到我的黑色短袖"
+        },
+        {
+          "id": "bf-aug-059",
+          "senderId": "owner",
+          "time": "2026-08-16 20:16",
+          "body": "哪件啊"
+        },
+        {
+          "id": "bf-aug-060",
+          "senderId": "boyfriend",
+          "time": "2026-08-16 20:16",
+          "body": "胸口有个小图案的"
+        },
+        {
+          "id": "bf-aug-061",
+          "senderId": "owner",
+          "time": "2026-08-16 20:17",
+          "body": "在衣柜第二层"
+        },
+        {
+          "id": "bf-aug-062",
+          "senderId": "owner",
+          "time": "2026-08-16 20:17",
+          "body": "我昨天给你叠好了"
+        },
+        {
+          "id": "bf-aug-063",
+          "senderId": "boyfriend",
+          "time": "2026-08-16 20:18",
+          "body": "找到了！"
+        },
+        {
+          "id": "bf-aug-064",
+          "senderId": "boyfriend",
+          "time": "2026-08-16 20:18",
+          "body": "谢谢宝宝"
+        },
+        {
+          "id": "bf-aug-065",
+          "senderId": "owner",
+          "time": "2026-08-16 20:19",
+          "body": "你怎么每次都找不到衣服"
+        },
+        {
+          "id": "bf-aug-066",
+          "senderId": "boyfriend",
+          "time": "2026-08-16 20:19",
+          "body": "因为你收拾得太整齐了哈哈哈"
+        },
+        {
+          "id": "bf-aug-067",
+          "senderId": "owner",
+          "time": "2026-08-16 20:20",
+          "body": "这也能怪我！"
+        },
+        {
+          "id": "bf-aug-068",
+          "senderId": "boyfriend",
+          "time": "2026-08-16 20:20",
+          "body": "不怪不怪"
+        },
+        {
+          "id": "bf-aug-069",
+          "senderId": "boyfriend",
+          "time": "2026-08-16 20:21",
+          "body": "宝宝最好了"
+        },
+        {
+          "id": "bf-aug-070",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:46",
+          "body": "宝宝睡了吗"
+        },
+        {
+          "id": "bf-aug-071",
+          "senderId": "owner",
+          "time": "2026-08-19 23:47",
+          "body": "还没有 怎么啦"
+        },
+        {
+          "id": "bf-aug-072",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:47",
+          "body": "帮我选个照片"
+        },
+        {
+          "id": "bf-aug-073",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:48",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-12.jpg"
+        },
+        {
+          "id": "bf-aug-074",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:48",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-13.jpg"
+        },
+        {
+          "id": "bf-aug-075",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:49",
+          "body": "哪张好看"
+        },
+        {
+          "id": "bf-aug-076",
+          "senderId": "owner",
+          "time": "2026-08-19 23:50",
+          "body": "哈哈哈哈第一张什么东西"
+        },
+        {
+          "id": "bf-aug-077",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:50",
+          "body": "很有艺术感好不好"
+        },
+        {
+          "id": "bf-aug-078",
+          "senderId": "owner",
+          "time": "2026-08-19 23:51",
+          "body": "第二张！！"
+        },
+        {
+          "id": "bf-aug-079",
+          "senderId": "owner",
+          "time": "2026-08-19 23:51",
+          "body": "戴眼镜好帅"
+        },
+        {
+          "id": "bf-aug-080",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:52",
+          "body": "哦～"
+        },
+        {
+          "id": "bf-aug-081",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:52",
+          "body": "原来喜欢戴眼镜的"
+        },
+        {
+          "id": "bf-aug-082",
+          "senderId": "owner",
+          "time": "2026-08-19 23:53",
+          "body": "我喜欢穆祉丞"
+        },
+        {
+          "id": "bf-aug-083",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:53",
+          "body": "这个回答我喜欢"
+        },
+        {
+          "id": "bf-aug-084",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:54",
+          "body": "好啦快睡觉"
+        },
+        {
+          "id": "bf-aug-085",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:54",
+          "body": "明天还上班呢"
+        },
+        {
+          "id": "bf-aug-086",
+          "senderId": "owner",
+          "time": "2026-08-19 23:55",
+          "body": "你也早点睡宝宝"
+        },
+        {
+          "id": "bf-aug-087",
+          "senderId": "boyfriend",
+          "time": "2026-08-19 23:55",
+          "body": "晚安 爱你"
+        },
+        {
+          "id": "bf-aug-088",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:06",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-aug-089",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:06",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-14.jpg"
+        },
+        {
+          "id": "bf-aug-090",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:07",
+          "body": "输了"
+        },
+        {
+          "id": "bf-aug-091",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:07",
+          "body": "好难过"
+        },
+        {
+          "id": "bf-aug-092",
+          "senderId": "owner",
+          "time": "2026-08-24 22:09",
+          "body": "哈哈哈哈哈哈"
+        },
+        {
+          "id": "bf-aug-093",
+          "senderId": "owner",
+          "time": "2026-08-24 22:09",
+          "body": "你不是说今天必赢吗"
+        },
+        {
+          "id": "bf-aug-094",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:10",
+          "body": "别提了"
+        },
+        {
+          "id": "bf-aug-095",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:10",
+          "body": "差一点就赢了"
+        },
+        {
+          "id": "bf-aug-096",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:11",
+          "body": "宝宝安慰一下"
+        },
+        {
+          "id": "bf-aug-097",
+          "senderId": "owner",
+          "time": "2026-08-24 22:12",
+          "body": "好啦好啦 我们小穆最厉害了"
+        },
+        {
+          "id": "bf-aug-098",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:12",
+          "body": "再哄一句"
+        },
+        {
+          "id": "bf-aug-099",
+          "senderId": "owner",
+          "time": "2026-08-24 22:13",
+          "body": "亲亲宝宝 下次肯定赢"
+        },
+        {
+          "id": "bf-aug-100",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:13",
+          "body": "嘿嘿"
+        },
+        {
+          "id": "bf-aug-101",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:14",
+          "body": "好了 复活了"
+        },
+        {
+          "id": "bf-aug-102",
+          "senderId": "boyfriend",
+          "time": "2026-08-24 22:14",
+          "body": "不打了 陪你聊天"
+        },
+        {
+          "id": "bf-aug-103",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:32",
+          "body": "下班没"
+        },
+        {
+          "id": "bf-aug-104",
+          "senderId": "owner",
+          "time": "2026-08-29 18:34",
+          "body": "下啦 在回家路上"
+        },
+        {
+          "id": "bf-aug-105",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:34",
+          "body": "晚上想吃什么"
+        },
+        {
+          "id": "bf-aug-106",
+          "senderId": "owner",
+          "time": "2026-08-29 18:35",
+          "body": "你要回来吗"
+        },
+        {
+          "id": "bf-aug-107",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:35",
+          "body": "嗯 今天能早点结束"
+        },
+        {
+          "id": "bf-aug-108",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:36",
+          "body": "我买点菜回去"
+        },
+        {
+          "id": "bf-aug-109",
+          "senderId": "owner",
+          "time": "2026-08-29 18:37",
+          "body": "想吃番茄炒蛋"
+        },
+        {
+          "id": "bf-aug-110",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:37",
+          "body": "收到"
+        },
+        {
+          "id": "bf-aug-111",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:38",
+          "body": "再给你买个小蛋糕"
+        },
+        {
+          "id": "bf-aug-112",
+          "senderId": "owner",
+          "time": "2026-08-29 18:38",
+          "body": "为什么呀"
+        },
+        {
+          "id": "bf-aug-113",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:39",
+          "body": "没有为什么"
+        },
+        {
+          "id": "bf-aug-114",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:39",
+          "body": "想给你买"
+        },
+        {
+          "id": "bf-aug-115",
+          "senderId": "owner",
+          "time": "2026-08-29 18:40",
+          "body": "好喜欢你呀"
+        },
+        {
+          "id": "bf-aug-116",
+          "senderId": "boyfriend",
+          "time": "2026-08-29 18:40",
+          "body": "我也是宝宝"
+        },
+        {
+          "id": "bf-001",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:26",
+          "body": "宝宝宝宝"
+        },
+        {
+          "id": "bf-002",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:26",
+          "body": "告诉你个好消息"
+        },
+        {
+          "id": "bf-003",
+          "senderId": "owner",
+          "time": "2026-09-01 11:27",
+          "body": "什么呀！！"
+        },
+        {
+          "id": "bf-004",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:27",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-15.jpg"
+        },
+        {
+          "id": "bf-005",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:28",
+          "body": "电影入围釜山电影节了"
+        },
+        {
+          "id": "bf-006",
+          "senderId": "owner",
+          "time": "2026-09-01 11:29",
+          "body": "啊啊啊啊啊啊"
+        },
+        {
+          "id": "bf-007",
+          "senderId": "owner",
+          "time": "2026-09-01 11:29",
+          "body": "宝宝！！！！"
+        },
+        {
+          "id": "bf-008",
+          "senderId": "owner",
+          "time": "2026-09-01 11:30",
+          "body": "恭喜你呀我的大明星😭"
+        },
+        {
+          "id": "bf-009",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:30",
+          "body": "哈哈哈哈谢谢宝宝"
+        },
+        {
+          "id": "bf-010",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:31",
+          "body": "我刚知道的时候也特别开心"
+        },
+        {
+          "id": "bf-011",
+          "senderId": "owner",
+          "time": "2026-09-01 11:32",
+          "body": "我真的好为你骄傲"
+        },
+        {
+          "id": "bf-012",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:33",
+          "body": "等见面给我个拥抱呗"
+        },
+        {
+          "id": "bf-013",
+          "senderId": "owner",
+          "time": "2026-09-01 11:33",
+          "body": "给你一百个！！"
+        },
+        {
+          "id": "bf-014",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:34",
+          "body": "那我先记账了哈哈哈"
+        },
+        {
+          "id": "bf-015",
+          "senderId": "boyfriend",
+          "time": "2026-09-01 11:35",
+          "body": "晚上有空给你打电话"
+        },
+        {
+          "id": "bf-016",
+          "senderId": "owner",
+          "time": "2026-09-01 11:35",
+          "body": "好！爱你宝宝"
+        },
+        {
+          "id": "bf-017",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:12",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-018",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:12",
+          "body": "给你看个东西"
+        },
+        {
+          "id": "bf-019",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:13",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-16.jpg"
+        },
+        {
+          "id": "bf-020",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:13",
+          "body": "看看我有没有什么不一样"
+        },
+        {
+          "id": "bf-021",
+          "senderId": "owner",
+          "time": "2026-09-05 16:16",
+          "body": "等等"
+        },
+        {
+          "id": "bf-022",
+          "senderId": "owner",
+          "time": "2026-09-05 16:16",
+          "body": "你是不是剪头发了"
+        },
+        {
+          "id": "bf-023",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:17",
+          "body": "不是哈哈哈"
+        },
+        {
+          "id": "bf-024",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:17",
+          "body": "再仔细看看"
+        },
+        {
+          "id": "bf-025",
+          "senderId": "owner",
+          "time": "2026-09-05 16:18",
+          "body": "啊啊啊啊啊"
+        },
+        {
+          "id": "bf-026",
+          "senderId": "owner",
+          "time": "2026-09-05 16:18",
+          "body": "穆祉丞！！！"
+        },
+        {
+          "id": "bf-027",
+          "senderId": "owner",
+          "time": "2026-09-05 16:19",
+          "body": "你打耳洞了？？？"
+        },
+        {
+          "id": "bf-028",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:19",
+          "body": "被发现了嘿嘿"
+        },
+        {
+          "id": "bf-029",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:20",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-17.jpg"
+        },
+        {
+          "id": "bf-030",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:20",
+          "body": "再给你看清楚一点"
+        },
+        {
+          "id": "bf-031",
+          "senderId": "owner",
+          "time": "2026-09-05 16:21",
+          "body": "啊啊啊好帅"
+        },
+        {
+          "id": "bf-032",
+          "senderId": "owner",
+          "time": "2026-09-05 16:21",
+          "body": "但是疼不疼呀宝宝"
+        },
+        {
+          "id": "bf-033",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:22",
+          "body": "还好 就一下"
+        },
+        {
+          "id": "bf-034",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:22",
+          "body": "你喜欢吗"
+        },
+        {
+          "id": "bf-035",
+          "senderId": "owner",
+          "time": "2026-09-05 16:23",
+          "body": "喜欢！！"
+        },
+        {
+          "id": "bf-036",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:23",
+          "body": "那就行"
+        },
+        {
+          "id": "bf-037",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:24",
+          "body": "本来还想等见面给你个惊喜"
+        },
+        {
+          "id": "bf-038",
+          "senderId": "owner",
+          "time": "2026-09-05 16:24",
+          "body": "那你怎么忍不住发照片了哈哈哈"
+        },
+        {
+          "id": "bf-039",
+          "senderId": "boyfriend",
+          "time": "2026-09-05 16:25",
+          "body": "想让你早点看到嘛"
+        },
+        {
+          "id": "bf-040",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:36",
+          "body": "宝宝今天拍摄的地方好漂亮"
+        },
+        {
+          "id": "bf-041",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:37",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-18.jpg"
+        },
+        {
+          "id": "bf-042",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:37",
+          "body": "你看"
+        },
+        {
+          "id": "bf-043",
+          "senderId": "owner",
+          "time": "2026-09-10 14:40",
+          "body": "哇 好漂亮的草坪"
+        },
+        {
+          "id": "bf-044",
+          "senderId": "owner",
+          "time": "2026-09-10 14:40",
+          "body": "感觉好适合野餐"
+        },
+        {
+          "id": "bf-045",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:41",
+          "body": "我也是这么想的"
+        },
+        {
+          "id": "bf-046",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:41",
+          "body": "以后有机会带你来"
+        },
+        {
+          "id": "bf-047",
+          "senderId": "owner",
+          "time": "2026-09-10 14:42",
+          "body": "好呀好呀"
+        },
+        {
+          "id": "bf-048",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:42",
+          "body": "带点吃的"
+        },
+        {
+          "id": "bf-049",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:43",
+          "body": "再带个小毯子"
+        },
+        {
+          "id": "bf-050",
+          "senderId": "owner",
+          "time": "2026-09-10 14:43",
+          "body": "你怎么都安排好了哈哈哈"
+        },
+        {
+          "id": "bf-051",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:44",
+          "body": "因为刚才在这坐着就想到你了"
+        },
+        {
+          "id": "bf-052",
+          "senderId": "owner",
+          "time": "2026-09-10 14:45",
+          "body": "那我也想你啦"
+        },
+        {
+          "id": "bf-053",
+          "senderId": "boyfriend",
+          "time": "2026-09-10 14:45",
+          "body": "等我回去带你出去玩"
+        },
+        {
+          "id": "bf-054",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:23",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-055",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:23",
+          "body": "我头发是不是长太快了"
+        },
+        {
+          "id": "bf-056",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:24",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-19.jpg"
+        },
+        {
+          "id": "bf-057",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:24",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-20.jpg"
+        },
+        {
+          "id": "bf-058",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:25",
+          "body": "你看这刘海"
+        },
+        {
+          "id": "bf-059",
+          "senderId": "owner",
+          "time": "2026-09-15 18:27",
+          "body": "哈哈哈哈哈哈"
+        },
+        {
+          "id": "bf-060",
+          "senderId": "owner",
+          "time": "2026-09-15 18:27",
+          "body": "好像真的长了好多"
+        },
+        {
+          "id": "bf-061",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:28",
+          "body": "都快挡眼睛了"
+        },
+        {
+          "id": "bf-062",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:28",
+          "body": "想剪了"
+        },
+        {
+          "id": "bf-063",
+          "senderId": "owner",
+          "time": "2026-09-15 18:29",
+          "body": "不要不要"
+        },
+        {
+          "id": "bf-064",
+          "senderId": "owner",
+          "time": "2026-09-15 18:29",
+          "body": "我喜欢你现在这个发型"
+        },
+        {
+          "id": "bf-065",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:30",
+          "body": "真的啊"
+        },
+        {
+          "id": "bf-066",
+          "senderId": "owner",
+          "time": "2026-09-15 18:30",
+          "body": "真的 特别乖"
+        },
+        {
+          "id": "bf-067",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:31",
+          "body": "那先不剪"
+        },
+        {
+          "id": "bf-068",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:31",
+          "body": "听女朋友的"
+        },
+        {
+          "id": "bf-069",
+          "senderId": "owner",
+          "time": "2026-09-15 18:32",
+          "body": "嘿嘿好乖"
+        },
+        {
+          "id": "bf-070",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:32",
+          "body": "那有没有奖励"
+        },
+        {
+          "id": "bf-071",
+          "senderId": "owner",
+          "time": "2026-09-15 18:33",
+          "body": "奖励一个亲亲"
+        },
+        {
+          "id": "bf-072",
+          "senderId": "boyfriend",
+          "time": "2026-09-15 18:33",
+          "body": "成交"
+        },
+        {
+          "id": "bf-073",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:08",
+          "body": "宝宝快看"
+        },
+        {
+          "id": "bf-074",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:08",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-21.jpg"
+        },
+        {
+          "id": "bf-075",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:09",
+          "body": "我做的"
+        },
+        {
+          "id": "bf-076",
+          "senderId": "owner",
+          "time": "2026-09-20 19:11",
+          "body": "哇！！！"
+        },
+        {
+          "id": "bf-077",
+          "senderId": "owner",
+          "time": "2026-09-20 19:11",
+          "body": "穆大厨上线了"
+        },
+        {
+          "id": "bf-078",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:12",
+          "body": "看着还可以吧"
+        },
+        {
+          "id": "bf-079",
+          "senderId": "owner",
+          "time": "2026-09-20 19:12",
+          "body": "看着就很好吃"
+        },
+        {
+          "id": "bf-080",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:13",
+          "body": "我尝了"
+        },
+        {
+          "id": "bf-081",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:13",
+          "body": "还真挺好吃的哈哈"
+        },
+        {
+          "id": "bf-082",
+          "senderId": "owner",
+          "time": "2026-09-20 19:14",
+          "body": "什么时候做给我吃"
+        },
+        {
+          "id": "bf-083",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:14",
+          "body": "等我回去"
+        },
+        {
+          "id": "bf-084",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:15",
+          "body": "给你做一大份"
+        },
+        {
+          "id": "bf-085",
+          "senderId": "owner",
+          "time": "2026-09-20 19:15",
+          "body": "好期待呀"
+        },
+        {
+          "id": "bf-086",
+          "senderId": "boyfriend",
+          "time": "2026-09-20 19:16",
+          "body": "那你得负责夸我"
+        },
+        {
+          "id": "bf-087",
+          "senderId": "owner",
+          "time": "2026-09-20 19:16",
+          "body": "保证完成任务"
+        },
+        {
+          "id": "bf-088",
+          "senderId": "boyfriend",
+          "time": "2026-09-25 21:16",
+          "body": "宝宝我收拾行李呢"
+        },
+        {
+          "id": "bf-089",
+          "senderId": "owner",
+          "time": "2026-09-25 21:18",
+          "body": "收拾完了吗"
+        },
+        {
+          "id": "bf-090",
+          "senderId": "boyfriend",
+          "time": "2026-09-25 21:18",
+          "body": "差不多了"
+        },
+        {
+          "id": "bf-091",
+          "senderId": "boyfriend",
+          "time": "2026-09-25 21:19",
+          "body": "总感觉少带了点什么"
+        },
+        {
+          "id": "bf-092",
+          "senderId": "owner",
+          "time": "2026-09-25 21:20",
+          "body": "护照充电器转换插头"
+        },
+        {
+          "id": "bf-093",
+          "senderId": "owner",
+          "time": "2026-09-25 21:20",
+          "body": "都检查了吗"
+        },
+        {
+          "id": "bf-094",
+          "senderId": "boyfriend",
+          "time": "2026-09-25 21:21",
+          "body": "检查了"
+        },
+        {
+          "id": "bf-095",
+          "senderId": "boyfriend",
+          "time": "2026-09-25 21:21",
+          "body": "少带了你"
+        },
+        {
+          "id": "bf-096",
+          "senderId": "owner",
+          "time": "2026-09-25 21:22",
+          "body": "哈哈哈哈穆祉丞！"
+        },
+        {
+          "id": "bf-097",
+          "senderId": "boyfriend",
+          "time": "2026-09-25 21:22",
+          "body": "说真的嘛"
+        },
+        {
+          "id": "bf-098",
+          "senderId": "boyfriend",
+          "time": "2026-09-25 21:23",
+          "body": "等下次有空我们一起出去玩"
+        },
+        {
+          "id": "bf-099",
+          "senderId": "owner",
+          "time": "2026-09-25 21:24",
+          "body": "好呀 我等你"
+        },
+        {
+          "id": "bf-100",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:42",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-101",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:42",
+          "body": "给你看看今天"
+        },
+        {
+          "id": "bf-102",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:43",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-22.jpg"
+        },
+        {
+          "id": "bf-103",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:43",
+          "body": "巴黎这边天气还不错"
+        },
+        {
+          "id": "bf-104",
+          "senderId": "owner",
+          "time": "2026-09-28 16:46",
+          "body": "啊啊啊啊好帅"
+        },
+        {
+          "id": "bf-105",
+          "senderId": "owner",
+          "time": "2026-09-28 16:46",
+          "body": "我的巴黎小王子"
+        },
+        {
+          "id": "bf-106",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:47",
+          "body": "哈哈哈哈"
+        },
+        {
+          "id": "bf-107",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:47",
+          "body": "这个称呼不错"
+        },
+        {
+          "id": "bf-108",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:48",
+          "body": "你吃饭了吗"
+        },
+        {
+          "id": "bf-109",
+          "senderId": "owner",
+          "time": "2026-09-28 16:49",
+          "body": "吃啦 你呢"
+        },
+        {
+          "id": "bf-110",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:49",
+          "body": "我刚吃完早餐"
+        },
+        {
+          "id": "bf-111",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:50",
+          "body": "今天还有活动"
+        },
+        {
+          "id": "bf-112",
+          "senderId": "owner",
+          "time": "2026-09-28 16:50",
+          "body": "加油宝宝！"
+        },
+        {
+          "id": "bf-113",
+          "senderId": "boyfriend",
+          "time": "2026-09-28 16:51",
+          "body": "收到女朋友的加油了"
+        },
+        {
+          "id": "bf-114",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:18",
+          "body": "宝宝在干嘛"
+        },
+        {
+          "id": "bf-115",
+          "senderId": "owner",
+          "time": "2026-09-29 20:20",
+          "body": "在家看电视"
+        },
+        {
+          "id": "bf-116",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:20",
+          "body": "看什么呢"
+        },
+        {
+          "id": "bf-117",
+          "senderId": "owner",
+          "time": "2026-09-29 20:21",
+          "body": "随便找了个综艺"
+        },
+        {
+          "id": "bf-118",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:21",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-23.jpg"
+        },
+        {
+          "id": "bf-119",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:22",
+          "body": "我现在在车上"
+        },
+        {
+          "id": "bf-120",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:22",
+          "body": "刚结束一个行程"
+        },
+        {
+          "id": "bf-121",
+          "senderId": "owner",
+          "time": "2026-09-29 20:23",
+          "body": "今天累不累呀"
+        },
+        {
+          "id": "bf-122",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:24",
+          "body": "还好"
+        },
+        {
+          "id": "bf-123",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:24",
+          "body": "就是有点困"
+        },
+        {
+          "id": "bf-124",
+          "senderId": "owner",
+          "time": "2026-09-29 20:25",
+          "body": "那你靠着睡一会"
+        },
+        {
+          "id": "bf-125",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:25",
+          "body": "嗯"
+        },
+        {
+          "id": "bf-126",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:26",
+          "body": "宝宝我有点想回家了"
+        },
+        {
+          "id": "bf-127",
+          "senderId": "owner",
+          "time": "2026-09-29 20:27",
+          "body": "想面团了是不是"
+        },
+        {
+          "id": "bf-128",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:27",
+          "body": "想面团"
+        },
+        {
+          "id": "bf-129",
+          "senderId": "boyfriend",
+          "time": "2026-09-29 20:28",
+          "body": "更想你"
+        },
+        {
+          "id": "bf-130",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:36",
+          "body": "宝宝今天去了卢浮宫"
+        },
+        {
+          "id": "bf-131",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:37",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-24.jpg"
+        },
+        {
+          "id": "bf-132",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:37",
+          "body": "里面真的好大"
+        },
+        {
+          "id": "bf-133",
+          "senderId": "owner",
+          "time": "2026-09-30 18:39",
+          "body": "哇啊啊啊"
+        },
+        {
+          "id": "bf-134",
+          "senderId": "owner",
+          "time": "2026-09-30 18:39",
+          "body": "好想去！！"
+        },
+        {
+          "id": "bf-135",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:40",
+          "body": "以后我们一起来"
+        },
+        {
+          "id": "bf-136",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:40",
+          "body": "慢慢逛"
+        },
+        {
+          "id": "bf-137",
+          "senderId": "owner",
+          "time": "2026-09-30 18:41",
+          "body": "好！说好了"
+        },
+        {
+          "id": "bf-138",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:41",
+          "body": "说好了"
+        },
+        {
+          "id": "bf-139",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:42",
+          "body": "到时候你负责做攻略"
+        },
+        {
+          "id": "bf-140",
+          "senderId": "owner",
+          "time": "2026-09-30 18:42",
+          "body": "那你负责什么"
+        },
+        {
+          "id": "bf-141",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:43",
+          "body": "负责陪你"
+        },
+        {
+          "id": "bf-142",
+          "senderId": "boyfriend",
+          "time": "2026-09-30 18:43",
+          "body": "还有拍照"
+        },
+        {
+          "id": "bf-143",
+          "senderId": "owner",
+          "time": "2026-09-30 18:44",
+          "body": "哈哈哈哈可以"
+        },
+        {
+          "id": "bf-144",
+          "senderId": "owner",
+          "time": "2026-10-01 22:13",
+          "body": "宝宝宝宝！！"
+        },
+        {
+          "id": "bf-145",
+          "senderId": "owner",
+          "time": "2026-10-01 22:13",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-25.jpg"
+        },
+        {
+          "id": "bf-146",
+          "senderId": "owner",
+          "time": "2026-10-01 22:14",
+          "body": "我看到你走秀的图啦"
+        },
+        {
+          "id": "bf-147",
+          "senderId": "owner",
+          "time": "2026-10-01 22:14",
+          "body": "啊啊啊啊好帅啊啊啊"
+        },
+        {
+          "id": "bf-148",
+          "senderId": "owner",
+          "time": "2026-10-01 22:15",
+          "body": "怎么会这么帅"
+        },
+        {
+          "id": "bf-149",
+          "senderId": "boyfriend",
+          "time": "2026-10-01 22:17",
+          "body": "哈哈哈哈宝宝"
+        },
+        {
+          "id": "bf-150",
+          "senderId": "boyfriend",
+          "time": "2026-10-01 22:17",
+          "body": "你这夸得我都不好意思了"
+        },
+        {
+          "id": "bf-151",
+          "senderId": "owner",
+          "time": "2026-10-01 22:18",
+          "body": "真的特别特别帅"
+        },
+        {
+          "id": "bf-152",
+          "senderId": "owner",
+          "time": "2026-10-01 22:18",
+          "body": "好骄傲呀"
+        },
+        {
+          "id": "bf-153",
+          "senderId": "boyfriend",
+          "time": "2026-10-01 22:19",
+          "body": "谢谢宝宝"
+        },
+        {
+          "id": "bf-154",
+          "senderId": "boyfriend",
+          "time": "2026-10-01 22:19",
+          "body": "你喜欢就好"
+        },
+        {
+          "id": "bf-155",
+          "senderId": "boyfriend",
+          "time": "2026-10-01 22:20",
+          "body": "等我回去给你看别的照片"
+        },
+        {
+          "id": "bf-156",
+          "senderId": "owner",
+          "time": "2026-10-01 22:20",
+          "body": "好！等你回来"
+        },
+        {
+          "id": "bf-157",
+          "senderId": "boyfriend",
+          "time": "2026-10-01 22:21",
+          "body": "快啦"
+        },
+        {
+          "id": "bf-158",
+          "senderId": "boyfriend",
+          "time": "2026-10-01 22:21",
+          "body": "很快就见面了"
+        },
+        {
+          "id": "bf-159",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:12",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-160",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:12",
+          "body": "落地啦"
+        },
+        {
+          "id": "bf-161",
+          "senderId": "owner",
+          "time": "2026-10-02 18:14",
+          "body": "终于回来啦！！"
+        },
+        {
+          "id": "bf-162",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:14",
+          "body": "嗯嗯"
+        },
+        {
+          "id": "bf-163",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:15",
+          "body": "现在去拿行李"
+        },
+        {
+          "id": "bf-164",
+          "senderId": "owner",
+          "time": "2026-10-02 18:15",
+          "body": "累不累宝宝"
+        },
+        {
+          "id": "bf-165",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:16",
+          "body": "有点"
+        },
+        {
+          "id": "bf-166",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:16",
+          "body": "想赶紧回去躺着"
+        },
+        {
+          "id": "bf-167",
+          "senderId": "owner",
+          "time": "2026-10-02 18:17",
+          "body": "那你早点回来"
+        },
+        {
+          "id": "bf-168",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:17",
+          "body": "好"
+        },
+        {
+          "id": "bf-169",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:18",
+          "body": "想抱你"
+        },
+        {
+          "id": "bf-170",
+          "senderId": "owner",
+          "time": "2026-10-02 18:18",
+          "body": "我也是🥺"
+        },
+        {
+          "id": "bf-171",
+          "senderId": "boyfriend",
+          "time": "2026-10-02 18:19",
+          "body": "等我回家"
+        },
+        {
+          "id": "bf-172",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:26",
+          "body": "宝宝在忙吗"
+        },
+        {
+          "id": "bf-173",
+          "senderId": "owner",
+          "time": "2026-10-06 13:28",
+          "body": "刚吃完午饭"
+        },
+        {
+          "id": "bf-174",
+          "senderId": "owner",
+          "time": "2026-10-06 13:28",
+          "body": "怎么啦"
+        },
+        {
+          "id": "bf-175",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:29",
+          "body": "给你看看前两天拍的"
+        },
+        {
+          "id": "bf-176",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:29",
+          "body": "",
+          "kind": "image",
+          "media": "/assets/story-photos/chat-photo-26.jpg"
+        },
+        {
+          "id": "bf-177",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:30",
+          "body": "这个衣服是不是很可爱"
+        },
+        {
+          "id": "bf-178",
+          "senderId": "owner",
+          "time": "2026-10-06 13:32",
+          "body": "啊啊啊啊"
+        },
+        {
+          "id": "bf-179",
+          "senderId": "owner",
+          "time": "2026-10-06 13:32",
+          "body": "小熊宝宝！！"
+        },
+        {
+          "id": "bf-180",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:33",
+          "body": "哈哈哈哈"
+        },
+        {
+          "id": "bf-181",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:33",
+          "body": "我就知道你会这么说"
+        },
+        {
+          "id": "bf-182",
+          "senderId": "owner",
+          "time": "2026-10-06 13:34",
+          "body": "好想捏捏你的脸"
+        },
+        {
+          "id": "bf-183",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:34",
+          "body": "晚上回来给你捏"
+        },
+        {
+          "id": "bf-184",
+          "senderId": "owner",
+          "time": "2026-10-06 13:35",
+          "body": "说话算话"
+        },
+        {
+          "id": "bf-185",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:35",
+          "body": "算话"
+        },
+        {
+          "id": "bf-186",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:36",
+          "body": "对了冰箱里还有牛奶吗"
+        },
+        {
+          "id": "bf-187",
+          "senderId": "owner",
+          "time": "2026-10-06 13:37",
+          "body": "好像没了"
+        },
+        {
+          "id": "bf-188",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:37",
+          "body": "行 我回去买"
+        },
+        {
+          "id": "bf-189",
+          "senderId": "boyfriend",
+          "time": "2026-10-06 13:38",
+          "body": "还想吃什么 发我"
+        },
+        {
+          "id": "bf-190",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:48",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-191",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:48",
+          "body": "你今天几点回来"
+        },
+        {
+          "id": "bf-192",
+          "senderId": "owner",
+          "time": "2026-10-10 17:50",
+          "body": "六点多吧"
+        },
+        {
+          "id": "bf-193",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:50",
+          "body": "我今天比你早到家"
+        },
+        {
+          "id": "bf-194",
+          "senderId": "owner",
+          "time": "2026-10-10 17:51",
+          "body": "哇这么难得"
+        },
+        {
+          "id": "bf-195",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:51",
+          "body": "对啊哈哈哈"
+        },
+        {
+          "id": "bf-196",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:52",
+          "body": "晚上我做饭"
+        },
+        {
+          "id": "bf-197",
+          "senderId": "owner",
+          "time": "2026-10-10 17:52",
+          "body": "真的吗穆大厨"
+        },
+        {
+          "id": "bf-198",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:53",
+          "body": "当然"
+        },
+        {
+          "id": "bf-199",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:53",
+          "body": "你回来直接吃"
+        },
+        {
+          "id": "bf-200",
+          "senderId": "owner",
+          "time": "2026-10-10 17:54",
+          "body": "好幸福呀"
+        },
+        {
+          "id": "bf-201",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:54",
+          "body": "那你路上慢点"
+        },
+        {
+          "id": "bf-202",
+          "senderId": "boyfriend",
+          "time": "2026-10-10 17:55",
+          "body": "我在家等你"
+        },
+        {
+          "id": "bf-203",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 21:18",
+          "body": "宝宝我跟他们打两把CS"
+        },
+        {
+          "id": "bf-204",
+          "senderId": "owner",
+          "time": "2026-10-15 21:19",
+          "body": "好呀"
+        },
+        {
+          "id": "bf-205",
+          "senderId": "owner",
+          "time": "2026-10-15 21:19",
+          "body": "我去洗澡啦"
+        },
+        {
+          "id": "bf-206",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 21:20",
+          "body": "好"
+        },
+        {
+          "id": "bf-207",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 21:20",
+          "body": "洗完叫我"
+        },
+        {
+          "id": "bf-208",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 22:03",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-209",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 22:03",
+          "body": "你洗完了吗"
+        },
+        {
+          "id": "bf-210",
+          "senderId": "owner",
+          "time": "2026-10-15 22:05",
+          "body": "刚吹完头发"
+        },
+        {
+          "id": "bf-211",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 22:05",
+          "body": "我也打完了"
+        },
+        {
+          "id": "bf-212",
+          "senderId": "owner",
+          "time": "2026-10-15 22:06",
+          "body": "赢了吗"
+        },
+        {
+          "id": "bf-213",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 22:06",
+          "body": "赢了嘿嘿"
+        },
+        {
+          "id": "bf-214",
+          "senderId": "owner",
+          "time": "2026-10-15 22:07",
+          "body": "厉害厉害"
+        },
+        {
+          "id": "bf-215",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 22:07",
+          "body": "我去找你"
+        },
+        {
+          "id": "bf-216",
+          "senderId": "owner",
+          "time": "2026-10-15 22:08",
+          "body": "我就在客厅啊哈哈哈"
+        },
+        {
+          "id": "bf-217",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 22:08",
+          "body": "知道"
+        },
+        {
+          "id": "bf-218",
+          "senderId": "boyfriend",
+          "time": "2026-10-15 22:09",
+          "body": "马上到"
+        },
+        {
+          "id": "bf-219",
+          "senderId": "boyfriend",
+          "time": "2026-10-20 15:16",
+          "body": "宝宝在干嘛"
+        },
+        {
+          "id": "bf-220",
+          "senderId": "owner",
+          "time": "2026-10-20 15:18",
+          "body": "在公司改表格"
+        },
+        {
+          "id": "bf-221",
+          "senderId": "owner",
+          "time": "2026-10-20 15:18",
+          "body": "改得头都大了"
+        },
+        {
+          "id": "bf-222",
+          "senderId": "boyfriend",
+          "time": "2026-10-20 15:19",
+          "body": "辛苦了宝宝"
+        },
+        {
+          "id": "bf-223",
+          "senderId": "boyfriend",
+          "time": "2026-10-20 15:19",
+          "body": "今天忙完带你去吃好吃的"
+        },
+        {
+          "id": "bf-224",
+          "senderId": "owner",
+          "time": "2026-10-20 15:20",
+          "body": "你不是也有工作吗"
+        },
+        {
+          "id": "bf-225",
+          "senderId": "boyfriend",
+          "time": "2026-10-20 15:20",
+          "body": "晚上应该能结束"
+        },
+        {
+          "id": "bf-226",
+          "senderId": "boyfriend",
+          "time": "2026-10-20 15:21",
+          "body": "要是太晚就改天"
+        },
+        {
+          "id": "bf-227",
+          "senderId": "owner",
+          "time": "2026-10-20 15:21",
+          "body": "好呀 不着急"
+        },
+        {
+          "id": "bf-228",
+          "senderId": "boyfriend",
+          "time": "2026-10-20 15:22",
+          "body": "嗯"
+        },
+        {
+          "id": "bf-229",
+          "senderId": "boyfriend",
+          "time": "2026-10-20 15:22",
+          "body": "你先忙"
+        },
+        {
+          "id": "bf-230",
+          "senderId": "boyfriend",
+          "time": "2026-10-20 15:23",
+          "body": "晚上见宝宝"
+        },
+        {
+          "id": "bf-231",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:24",
+          "body": "宝宝"
+        },
+        {
+          "id": "bf-232",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:24",
+          "body": "起床没"
+        },
+        {
+          "id": "bf-233",
+          "senderId": "owner",
+          "time": "2026-10-25 10:26",
+          "body": "起啦"
+        },
+        {
+          "id": "bf-234",
+          "senderId": "owner",
+          "time": "2026-10-25 10:26",
+          "body": "你怎么这么早"
+        },
+        {
+          "id": "bf-235",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:27",
+          "body": "今天有拍摄"
+        },
+        {
+          "id": "bf-236",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:27",
+          "body": "我走的时候你还在睡"
+        },
+        {
+          "id": "bf-237",
+          "senderId": "owner",
+          "time": "2026-10-25 10:28",
+          "body": "你怎么不叫我"
+        },
+        {
+          "id": "bf-238",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:28",
+          "body": "看你睡得挺香"
+        },
+        {
+          "id": "bf-239",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:29",
+          "body": "就没舍得叫"
+        },
+        {
+          "id": "bf-240",
+          "senderId": "owner",
+          "time": "2026-10-25 10:30",
+          "body": "呜呜好想你"
+        },
+        {
+          "id": "bf-241",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:30",
+          "body": "我也是"
+        },
+        {
+          "id": "bf-242",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:31",
+          "body": "晚上回来抱抱"
+        },
+        {
+          "id": "bf-243",
+          "senderId": "owner",
+          "time": "2026-10-25 10:31",
+          "body": "好！！"
+        },
+        {
+          "id": "bf-244",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:32",
+          "body": "厨房给你留了早餐"
+        },
+        {
+          "id": "bf-245",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:32",
+          "body": "记得吃"
+        },
+        {
+          "id": "bf-246",
+          "senderId": "owner",
+          "time": "2026-10-25 10:33",
+          "body": "知道啦 爱你宝宝"
+        },
+        {
+          "id": "bf-247",
+          "senderId": "boyfriend",
+          "time": "2026-10-25 10:33",
+          "body": "爱你"
+        }
+      ]
+    },
+    {
+      "id": "wechat-assistant",
+      "app": "wechat",
+      "title": "🪵助理",
+      "participants": [
+        "owner",
+        "assistant"
+      ],
+      "messages": [
+        {
+          "id": "wechat-assistant-001",
+          "body": "嫂子早！",
+          "senderId": "assistant",
+          "time": "08:42"
+        },
+        {
+          "id": "wechat-assistant-002",
+          "body": "早呀 怎么啦",
+          "senderId": "owner",
+          "time": "08:43"
+        },
+        {
+          "id": "wechat-assistant-003",
+          "body": "没事没事哈哈哈",
+          "senderId": "assistant",
+          "time": "08:43"
+        },
+        {
+          "id": "wechat-assistant-004",
+          "body": "就是丞丞今天拍摄安排有点满",
+          "senderId": "assistant",
+          "time": "08:44"
+        },
+        {
+          "id": "wechat-assistant-005",
+          "body": "下午还有个采访",
+          "senderId": "assistant",
+          "time": "08:44"
+        },
+        {
+          "id": "wechat-assistant-006",
+          "body": "好哦 辛苦你们啦",
+          "senderId": "owner",
+          "time": "08:46"
+        },
+        {
+          "id": "wechat-assistant-007",
+          "body": "不辛苦不辛苦",
+          "senderId": "assistant",
+          "time": "08:46"
+        },
+        {
+          "id": "wechat-assistant-008",
+          "body": "他刚才还问我今天能不能早点结束呢哈哈",
+          "senderId": "assistant",
+          "time": "08:47"
+        },
+        {
+          "id": "wechat-assistant-009",
+          "body": "哈哈哈哈他又想干嘛",
+          "senderId": "owner",
+          "time": "08:48"
+        },
+        {
+          "id": "wechat-assistant-010",
+          "body": "这我哪敢说啊嫂子😂",
+          "senderId": "assistant",
+          "time": "08:48"
+        },
+        {
+          "id": "wechat-assistant-011",
+          "body": "嫂子，丞丞今天估计得晚点收工了",
+          "senderId": "assistant",
+          "time": "10:42"
+        },
+        {
+          "id": "wechat-assistant-012",
+          "body": "临时加了一组拍摄",
+          "senderId": "assistant",
+          "time": "10:42"
+        }
+      ]
+    },
+    {
+      "id": "wechat-lijie",
+      "app": "wechat",
+      "title": "李姐",
+      "participants": [
+        "owner",
+        "lijie"
+      ],
+      "messages": [
+        {
+          "id": "wechat-lijie-001",
+          "body": "小徐，早上好呀",
+          "senderId": "lijie",
+          "time": "09:12"
+        },
+        {
+          "id": "wechat-lijie-002",
+          "body": "早上好李姐！",
+          "senderId": "owner",
+          "time": "09:13"
+        },
+        {
+          "id": "wechat-lijie-003",
+          "body": "昨天那个数据你整理完了吗",
+          "senderId": "lijie",
+          "time": "09:13"
+        },
+        {
+          "id": "wechat-lijie-004",
+          "body": "整理好了！我一会发您",
+          "senderId": "owner",
+          "time": "09:14"
+        },
+        {
+          "id": "wechat-lijie-005",
+          "body": "好嘞 不着急",
+          "senderId": "lijie",
+          "time": "09:15"
+        },
+        {
+          "id": "wechat-lijie-006",
+          "body": "对了中午要不要一起吃饭",
+          "senderId": "lijie",
+          "time": "09:18"
+        },
+        {
+          "id": "wechat-lijie-007",
+          "body": "好呀 今天吃什么",
+          "senderId": "owner",
+          "time": "09:19"
+        },
+        {
+          "id": "wechat-lijie-008",
+          "body": "楼下那家米线？",
+          "senderId": "lijie",
+          "time": "09:20"
+        },
+        {
+          "id": "wechat-lijie-009",
+          "body": "可以可以！",
+          "senderId": "owner",
+          "time": "09:21"
+        },
+        {
+          "id": "wechat-lijie-010",
+          "body": "小徐，那个表我给你发过去了哈",
+          "senderId": "lijie",
+          "time": "09:36"
+        }
+      ]
+    },
+    {
+      "id": "wechat-bestie",
+      "app": "wechat",
+      "title": "好闺闺",
+      "participants": [
+        "owner",
+        "bestie"
+      ],
+      "messages": [
+        {
+          "id": "wechat-bestie-001",
+          "body": "宝宝！！！！",
+          "senderId": "bestie",
+          "time": "19:32"
+        },
+        {
+          "id": "wechat-bestie-002",
+          "body": "你猜我刷到谁了",
+          "senderId": "bestie",
+          "time": "19:32"
+        },
+        {
+          "id": "wechat-bestie-003",
+          "body": "谁啊哈哈哈哈",
+          "senderId": "owner",
+          "time": "19:33"
+        },
+        {
+          "id": "wechat-bestie-004",
+          "body": "你男朋友啊啊啊啊",
+          "senderId": "bestie",
+          "time": "19:33"
+        },
+        {
+          "id": "wechat-bestie-005",
+          "body": "今天那个路透帅死我了",
+          "senderId": "bestie",
+          "time": "19:34"
+        },
+        {
+          "id": "wechat-bestie-006",
+          "body": "哈哈哈哈哈哈",
+          "senderId": "owner",
+          "time": "19:34"
+        },
+        {
+          "id": "wechat-bestie-007",
+          "body": "你怎么一点反应都没有",
+          "senderId": "bestie",
+          "time": "19:35"
+        },
+        {
+          "id": "wechat-bestie-008",
+          "body": "我天天看他啊",
+          "senderId": "owner",
+          "time": "19:35"
+        },
+        {
+          "id": "wechat-bestie-009",
+          "body": "……",
+          "senderId": "bestie",
+          "time": "19:35"
+        },
+        {
+          "id": "wechat-bestie-010",
+          "body": "行 你赢了",
+          "senderId": "bestie",
+          "time": "19:36"
+        },
+        {
+          "id": "wechat-bestie-011",
+          "body": "哈哈哈哈爱你宝宝",
+          "senderId": "owner",
+          "time": "19:37"
+        },
+        {
+          "id": "wechat-bestie-012",
+          "body": "少来",
+          "senderId": "bestie",
+          "time": "19:37"
+        },
+        {
+          "id": "wechat-bestie-013",
+          "body": "对了你俩最近见面了吗",
+          "senderId": "bestie",
+          "time": "19:40"
+        },
+        {
+          "id": "wechat-bestie-014",
+          "body": "前两天见啦",
+          "senderId": "owner",
+          "time": "19:41"
+        },
+        {
+          "id": "wechat-bestie-015",
+          "body": "我就知道！！！",
+          "senderId": "bestie",
+          "time": "19:41"
+        },
+        {
+          "id": "wechat-bestie-016",
+          "body": "不是我说 你俩也太黏糊了吧哈哈哈哈",
+          "senderId": "bestie",
+          "time": "19:42"
+        }
+      ]
+    },
+    {
+      "id": "wechat-mom",
+      "app": "wechat",
+      "title": "妈咪～",
+      "participants": [
+        "owner",
+        "mom"
+      ],
+      "messages": [
+        {
+          "id": "wechat-mom-001",
+          "body": "闺女 下班了没",
+          "senderId": "mom",
+          "time": "18:05"
+        },
+        {
+          "id": "wechat-mom-002",
+          "body": "下啦妈妈",
+          "senderId": "owner",
+          "time": "18:08"
+        },
+        {
+          "id": "wechat-mom-003",
+          "body": "晚上吃什么呀",
+          "senderId": "mom",
+          "time": "18:09"
+        },
+        {
+          "id": "wechat-mom-004",
+          "body": "准备点个外卖嘿嘿",
+          "senderId": "owner",
+          "time": "18:10"
+        },
+        {
+          "id": "wechat-mom-005",
+          "body": "又吃外卖",
+          "senderId": "mom",
+          "time": "18:10"
+        },
+        {
+          "id": "wechat-mom-006",
+          "body": "有时间自己做点饭",
+          "senderId": "mom",
+          "time": "18:11"
+        },
+        {
+          "id": "wechat-mom-007",
+          "body": "知道啦妈妈～",
+          "senderId": "owner",
+          "time": "18:11"
+        },
+        {
+          "id": "wechat-mom-008",
+          "body": "小穆最近忙不忙呀",
+          "senderId": "mom",
+          "time": "18:14"
+        },
+        {
+          "id": "wechat-mom-009",
+          "body": "挺忙的 最近一直拍东西",
+          "senderId": "owner",
+          "time": "18:15"
+        },
+        {
+          "id": "wechat-mom-010",
+          "body": "年轻人忙事业也正常",
+          "senderId": "mom",
+          "time": "18:16"
+        },
+        {
+          "id": "wechat-mom-011",
+          "body": "你们俩都照顾好自己",
+          "senderId": "mom",
+          "time": "18:16"
+        },
+        {
+          "id": "wechat-mom-012",
+          "body": "嗯嗯 爱你妈妈😘",
+          "senderId": "owner",
+          "time": "18:17"
+        },
+        {
+          "id": "wechat-mom-013",
+          "body": "早上记得吃点东西再去上班",
+          "senderId": "mom",
+          "time": "08:02"
+        }
+      ]
+    },
+    {
+      "id": "wechat-his_mom",
+      "app": "wechat",
+      "title": "🪵mama",
+      "participants": [
+        "owner",
+        "his_mom"
+      ],
+      "messages": [
+        {
+          "id": "wechat-his_mom-001",
+          "body": "宝贝 最近工作忙不忙呀",
+          "senderId": "his_mom",
+          "time": "16:20"
+        },
+        {
+          "id": "wechat-his_mom-002",
+          "body": "阿姨！最近还好～",
+          "senderId": "owner",
+          "time": "16:24"
+        },
+        {
+          "id": "wechat-his_mom-003",
+          "body": "那就好呀",
+          "senderId": "his_mom",
+          "time": "16:25"
+        },
+        {
+          "id": "wechat-his_mom-004",
+          "body": "最近天气凉了 记得多穿点",
+          "senderId": "his_mom",
+          "time": "16:25"
+        },
+        {
+          "id": "wechat-his_mom-005",
+          "body": "好哒 阿姨也要注意身体！",
+          "senderId": "owner",
+          "time": "16:26"
+        },
+        {
+          "id": "wechat-his_mom-006",
+          "body": "乖乖😘",
+          "senderId": "his_mom",
+          "time": "16:27"
+        },
+        {
+          "id": "wechat-his_mom-007",
+          "body": "丞丞前两天还跟我说想吃家里的饭了",
+          "senderId": "his_mom",
+          "time": "16:29"
+        },
+        {
+          "id": "wechat-his_mom-008",
+          "body": "哈哈哈哈他是不是又馋啦",
+          "senderId": "owner",
+          "time": "16:30"
+        },
+        {
+          "id": "wechat-his_mom-009",
+          "body": "可不是嘛",
+          "senderId": "his_mom",
+          "time": "16:31"
+        },
+        {
+          "id": "wechat-his_mom-010",
+          "body": "你有空跟他一起回来玩呀",
+          "senderId": "his_mom",
+          "time": "16:32"
+        },
+        {
+          "id": "wechat-his_mom-011",
+          "body": "好呀阿姨！等他不忙了我们一起去",
+          "senderId": "owner",
+          "time": "16:33"
+        },
+        {
+          "id": "wechat-his_mom-012",
+          "body": "好好好",
+          "senderId": "his_mom",
+          "time": "16:34"
+        },
+        {
+          "id": "wechat-his_mom-013",
+          "body": "下次来阿姨给你做好吃的😘",
+          "senderId": "his_mom",
+          "time": "16:35"
+        }
+      ]
     }
   ],
   "content": {
@@ -269,12 +3282,164 @@
     ],
     "photos": [
       {
-        "id": "test-item-photos",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
+        "id": "photo-user-01",
+        "title": "和小猫的午后",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-01.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-02",
+        "title": "搞怪自拍",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-02.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-03",
+        "title": "阳光下的自拍",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-03.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-04",
+        "title": "可爱表情",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-04.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-05",
+        "title": "电影海报",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-05.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-06",
+        "title": "黑色运动服自拍",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-06.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-07",
+        "title": "镜头靠近一点",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-07.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-08",
+        "title": "树下",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-08.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-09",
+        "title": "白T自拍",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-09.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-10",
+        "title": "低头自拍",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-10.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-11",
+        "title": "今天的晚饭",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-11.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-12",
+        "title": "街头漫步",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-12.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-13",
+        "title": "车窗边",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-13.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-14",
+        "title": "逛博物馆",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-14.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-15",
+        "title": "活动现场",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-15.jpg",
+        "folder": "日常碎片"
+      },
+      {
+        "id": "photo-user-16",
+        "title": "吃零食",
+        "body": "私人相册",
+        "sender": "🧡💖",
+        "time": "2026-10-26 12:00",
+        "kind": "image",
+        "media": "/assets/story-photos/photo-16.jpg",
+        "folder": "日常碎片"
       }
     ],
     "camera": [
@@ -690,6 +3855,4363 @@
         "id": "test-appstore",
         "title": "测试内容",
         "body": "这是一条测试内容。"
+      }
+    ],
+    "wechat": [
+      {
+        "id": "bf-jul-001",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝 在忙吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-06 10:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-002",
+        "title": "Aaa最帅的mua～",
+        "body": "刚把电脑打开 怎么啦",
+        "sender": "我",
+        "time": "2026-07-06 10:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-003",
+        "title": "Aaa最帅的mua～",
+        "body": "今天专场定妆了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-06 10:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-004",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-06 10:18",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-01.jpg"
+      },
+      {
+        "id": "bf-jul-005",
+        "title": "Aaa最帅的mua～",
+        "body": "你先看 别笑我",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-06 10:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-006",
+        "title": "Aaa最帅的mua～",
+        "body": "啊啊啊好帅啊",
+        "sender": "我",
+        "time": "2026-07-06 10:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-007",
+        "title": "Aaa最帅的mua～",
+        "body": "真的？",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-06 10:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-008",
+        "title": "Aaa最帅的mua～",
+        "body": "真的！！男朋友特别帅",
+        "sender": "我",
+        "time": "2026-07-06 10:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-009",
+        "title": "Aaa最帅的mua～",
+        "body": "那我放心了哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-06 10:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-010",
+        "title": "Aaa最帅的mua～",
+        "body": "晚上再给你打电话",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-06 10:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-011",
+        "title": "Aaa最帅的mua～",
+        "body": "早",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-09 08:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-012",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-09 08:26",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-02.jpg"
+      },
+      {
+        "id": "bf-jul-013",
+        "title": "Aaa最帅的mua～",
+        "body": "上班前先给你报个到",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-09 08:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-014",
+        "title": "Aaa最帅的mua～",
+        "body": "你怎么比我起得还早",
+        "sender": "我",
+        "time": "2026-07-09 08:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-015",
+        "title": "Aaa最帅的mua～",
+        "body": "今天妆发早",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-09 08:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-016",
+        "title": "Aaa最帅的mua～",
+        "body": "你出门记得带伞",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-09 08:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-017",
+        "title": "Aaa最帅的mua～",
+        "body": "知道啦 你也吃早饭",
+        "sender": "我",
+        "time": "2026-07-09 08:36",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-018",
+        "title": "Aaa最帅的mua～",
+        "body": "吃了两个包子",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-09 08:38",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-019",
+        "title": "Aaa最帅的mua～",
+        "body": "不错 表扬",
+        "sender": "我",
+        "time": "2026-07-09 08:40",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-020",
+        "title": "Aaa最帅的mua～",
+        "body": "运动会结束了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-15 19:11",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-021",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-15 19:13",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-03.jpg"
+      },
+      {
+        "id": "bf-jul-022",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈你今天好有活力",
+        "sender": "我",
+        "time": "2026-07-15 19:15",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-023",
+        "title": "Aaa最帅的mua～",
+        "body": "我现在腿有点酸",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-15 19:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-024",
+        "title": "Aaa最帅的mua～",
+        "body": "回去好好拉伸",
+        "sender": "我",
+        "time": "2026-07-15 19:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-025",
+        "title": "Aaa最帅的mua～",
+        "body": "收到教练",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-15 19:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-026",
+        "title": "Aaa最帅的mua～",
+        "body": "你晚饭吃什么",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-15 19:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-027",
+        "title": "Aaa最帅的mua～",
+        "body": "跟李姐吃的米线",
+        "sender": "我",
+        "time": "2026-07-15 19:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-028",
+        "title": "Aaa最帅的mua～",
+        "body": "又是米线哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-15 19:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-029",
+        "title": "Aaa最帅的mua～",
+        "body": "给你看张图",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-20 16:06",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-030",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-20 16:08",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-04.jpg"
+      },
+      {
+        "id": "bf-jul-031",
+        "title": "Aaa最帅的mua～",
+        "body": "哇 巡演前就开始帅了",
+        "sender": "我",
+        "time": "2026-07-20 16:10",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-032",
+        "title": "Aaa最帅的mua～",
+        "body": "什么叫开始",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-20 16:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-033",
+        "title": "Aaa最帅的mua～",
+        "body": "一直都帅 行了吧",
+        "sender": "我",
+        "time": "2026-07-20 16:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-034",
+        "title": "Aaa最帅的mua～",
+        "body": "这还差不多",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-20 16:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-035",
+        "title": "Aaa最帅的mua～",
+        "body": "你今天几点下班",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-20 16:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-036",
+        "title": "Aaa最帅的mua～",
+        "body": "六点左右",
+        "sender": "我",
+        "time": "2026-07-20 16:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-037",
+        "title": "Aaa最帅的mua～",
+        "body": "好 晚上有空我给你打视频",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-20 16:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-038",
+        "title": "Aaa最帅的mua～",
+        "body": "中午休息一会",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-24 13:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-039",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-24 13:22",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-05.jpg"
+      },
+      {
+        "id": "bf-jul-040",
+        "title": "Aaa最帅的mua～",
+        "body": "你午饭吃了没",
+        "sender": "我",
+        "time": "2026-07-24 13:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-041",
+        "title": "Aaa最帅的mua～",
+        "body": "吃了 今天盒饭不错",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-24 13:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-042",
+        "title": "Aaa最帅的mua～",
+        "body": "你昨天不是说想吃我做的面",
+        "sender": "我",
+        "time": "2026-07-24 13:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-043",
+        "title": "Aaa最帅的mua～",
+        "body": "对啊",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-24 13:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-044",
+        "title": "Aaa最帅的mua～",
+        "body": "等我回去还能点单吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-24 13:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-045",
+        "title": "Aaa最帅的mua～",
+        "body": "看你表现",
+        "sender": "我",
+        "time": "2026-07-24 13:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-046",
+        "title": "Aaa最帅的mua～",
+        "body": "那我今天表现很好",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-24 13:36",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-047",
+        "title": "Aaa最帅的mua～",
+        "body": "上车啦",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-28 17:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-048",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-28 17:44",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-06.jpg"
+      },
+      {
+        "id": "bf-jul-049",
+        "title": "Aaa最帅的mua～",
+        "body": "今天路上有点堵",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-28 17:46",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-050",
+        "title": "Aaa最帅的mua～",
+        "body": "那你靠着休息会",
+        "sender": "我",
+        "time": "2026-07-28 17:48",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-051",
+        "title": "Aaa最帅的mua～",
+        "body": "你呢 下班了吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-28 17:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-052",
+        "title": "Aaa最帅的mua～",
+        "body": "还差一个表",
+        "sender": "我",
+        "time": "2026-07-28 17:52",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-053",
+        "title": "Aaa最帅的mua～",
+        "body": "别急 慢慢弄",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-28 17:54",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-jul-054",
+        "title": "Aaa最帅的mua～",
+        "body": "回家跟我说一声",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-07-28 17:56",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-001",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-002",
+        "title": "Aaa最帅的mua～",
+        "body": "我刚拍完一组",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-003",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:24",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-07.jpg"
+      },
+      {
+        "id": "bf-aug-004",
+        "title": "Aaa最帅的mua～",
+        "body": "给你看看现场",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-005",
+        "title": "Aaa最帅的mua～",
+        "body": "哇 今天这个造型好好看",
+        "sender": "我",
+        "time": "2026-08-02 11:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-006",
+        "title": "Aaa最帅的mua～",
+        "body": "我也觉得还不错哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-007",
+        "title": "Aaa最帅的mua～",
+        "body": "你在干嘛",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-008",
+        "title": "Aaa最帅的mua～",
+        "body": "偷偷吃零食",
+        "sender": "我",
+        "time": "2026-08-02 11:31",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-009",
+        "title": "Aaa最帅的mua～",
+        "body": "什么零食",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:31",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-010",
+        "title": "Aaa最帅的mua～",
+        "body": "你放冰箱里的那个巧克力",
+        "sender": "我",
+        "time": "2026-08-02 11:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-011",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-012",
+        "title": "Aaa最帅的mua～",
+        "body": "本来就是买给你的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-013",
+        "title": "Aaa最帅的mua～",
+        "body": "少吃点 一会还得吃饭呢",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-02 11:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-014",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝你看",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:06",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-015",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:06",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-08.jpg"
+      },
+      {
+        "id": "bf-aug-016",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:07",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-09.jpg"
+      },
+      {
+        "id": "bf-aug-017",
+        "title": "Aaa最帅的mua～",
+        "body": "我在车上玩这个",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:07",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-018",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈你怎么还玩上这个了",
+        "sender": "我",
+        "time": "2026-08-05 14:08",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-019",
+        "title": "Aaa最帅的mua～",
+        "body": "路上太无聊了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:08",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-020",
+        "title": "Aaa最帅的mua～",
+        "body": "你玩过没",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:09",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-021",
+        "title": "Aaa最帅的mua～",
+        "body": "玩过啊",
+        "sender": "我",
+        "time": "2026-08-05 14:10",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-022",
+        "title": "Aaa最帅的mua～",
+        "body": "那你教教我",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:10",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-023",
+        "title": "Aaa最帅的mua～",
+        "body": "你不是很聪明嘛穆老师",
+        "sender": "我",
+        "time": "2026-08-05 14:11",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-024",
+        "title": "Aaa最帅的mua～",
+        "body": "聪明人也需要女朋友的帮助",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:11",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-025",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈行吧",
+        "sender": "我",
+        "time": "2026-08-05 14:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-026",
+        "title": "Aaa最帅的mua～",
+        "body": "我就知道你最好了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-05 14:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-027",
+        "title": "Aaa最帅的mua～",
+        "body": "早上好",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-08 09:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-028",
+        "title": "Aaa最帅的mua～",
+        "body": "今日穿搭展示",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-08 09:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-029",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-08 09:18",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-10.jpg"
+      },
+      {
+        "id": "bf-aug-030",
+        "title": "Aaa最帅的mua～",
+        "body": "怎么样",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-08 09:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-031",
+        "title": "Aaa最帅的mua～",
+        "body": "帅帅帅",
+        "sender": "我",
+        "time": "2026-08-08 09:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-032",
+        "title": "Aaa最帅的mua～",
+        "body": "我们穆祉丞穿什么都好看",
+        "sender": "我",
+        "time": "2026-08-08 09:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-033",
+        "title": "Aaa最帅的mua～",
+        "body": "嘿嘿",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-08 09:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-034",
+        "title": "Aaa最帅的mua～",
+        "body": "那我今天心情很好",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-08 09:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-035",
+        "title": "Aaa最帅的mua～",
+        "body": "你出门了吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-08 09:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-036",
+        "title": "Aaa最帅的mua～",
+        "body": "在地铁上",
+        "sender": "我",
+        "time": "2026-08-08 09:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-037",
+        "title": "Aaa最帅的mua～",
+        "body": "到公司给我说一声",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-08 09:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-038",
+        "title": "Aaa最帅的mua～",
+        "body": "知道啦宝宝",
+        "sender": "我",
+        "time": "2026-08-08 09:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-039",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-040",
+        "title": "Aaa最帅的mua～",
+        "body": "今天拍广告遇到一只猫",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-041",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:43",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-11.jpg"
+      },
+      {
+        "id": "bf-aug-042",
+        "title": "Aaa最帅的mua～",
+        "body": "它叫馒头哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:43",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-043",
+        "title": "Aaa最帅的mua～",
+        "body": "啊啊啊啊好可爱",
+        "sender": "我",
+        "time": "2026-08-12 15:46",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-044",
+        "title": "Aaa最帅的mua～",
+        "body": "好像面团啊！！",
+        "sender": "我",
+        "time": "2026-08-12 15:46",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-045",
+        "title": "Aaa最帅的mua～",
+        "body": "对吧！！！",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:47",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-046",
+        "title": "Aaa最帅的mua～",
+        "body": "我第一眼就想到了面团",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:47",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-047",
+        "title": "Aaa最帅的mua～",
+        "body": "你是不是想面团了",
+        "sender": "我",
+        "time": "2026-08-12 15:48",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-048",
+        "title": "Aaa最帅的mua～",
+        "body": "有点",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:48",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-049",
+        "title": "Aaa最帅的mua～",
+        "body": "也想你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:49",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-050",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈顺便想我是吧",
+        "sender": "我",
+        "time": "2026-08-12 15:49",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-051",
+        "title": "Aaa最帅的mua～",
+        "body": "不是顺便",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-052",
+        "title": "Aaa最帅的mua～",
+        "body": "想你比较多",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-053",
+        "title": "Aaa最帅的mua～",
+        "body": "好吧勉强相信你",
+        "sender": "我",
+        "time": "2026-08-12 15:51",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-054",
+        "title": "Aaa最帅的mua～",
+        "body": "你晚上回去帮我看看面团",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:51",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-055",
+        "title": "Aaa最帅的mua～",
+        "body": "给它拍个视频",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-12 15:52",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-056",
+        "title": "Aaa最帅的mua～",
+        "body": "好呀",
+        "sender": "我",
+        "time": "2026-08-12 15:52",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-057",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-16 20:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-058",
+        "title": "Aaa最帅的mua～",
+        "body": "你今天有没有看到我的黑色短袖",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-16 20:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-059",
+        "title": "Aaa最帅的mua～",
+        "body": "哪件啊",
+        "sender": "我",
+        "time": "2026-08-16 20:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-060",
+        "title": "Aaa最帅的mua～",
+        "body": "胸口有个小图案的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-16 20:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-061",
+        "title": "Aaa最帅的mua～",
+        "body": "在衣柜第二层",
+        "sender": "我",
+        "time": "2026-08-16 20:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-062",
+        "title": "Aaa最帅的mua～",
+        "body": "我昨天给你叠好了",
+        "sender": "我",
+        "time": "2026-08-16 20:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-063",
+        "title": "Aaa最帅的mua～",
+        "body": "找到了！",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-16 20:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-064",
+        "title": "Aaa最帅的mua～",
+        "body": "谢谢宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-16 20:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-065",
+        "title": "Aaa最帅的mua～",
+        "body": "你怎么每次都找不到衣服",
+        "sender": "我",
+        "time": "2026-08-16 20:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-066",
+        "title": "Aaa最帅的mua～",
+        "body": "因为你收拾得太整齐了哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-16 20:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-067",
+        "title": "Aaa最帅的mua～",
+        "body": "这也能怪我！",
+        "sender": "我",
+        "time": "2026-08-16 20:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-068",
+        "title": "Aaa最帅的mua～",
+        "body": "不怪不怪",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-16 20:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-069",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝最好了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-16 20:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-070",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝睡了吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:46",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-071",
+        "title": "Aaa最帅的mua～",
+        "body": "还没有 怎么啦",
+        "sender": "我",
+        "time": "2026-08-19 23:47",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-072",
+        "title": "Aaa最帅的mua～",
+        "body": "帮我选个照片",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:47",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-073",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:48",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-12.jpg"
+      },
+      {
+        "id": "bf-aug-074",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:48",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-13.jpg"
+      },
+      {
+        "id": "bf-aug-075",
+        "title": "Aaa最帅的mua～",
+        "body": "哪张好看",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:49",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-076",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈第一张什么东西",
+        "sender": "我",
+        "time": "2026-08-19 23:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-077",
+        "title": "Aaa最帅的mua～",
+        "body": "很有艺术感好不好",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-078",
+        "title": "Aaa最帅的mua～",
+        "body": "第二张！！",
+        "sender": "我",
+        "time": "2026-08-19 23:51",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-079",
+        "title": "Aaa最帅的mua～",
+        "body": "戴眼镜好帅",
+        "sender": "我",
+        "time": "2026-08-19 23:51",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-080",
+        "title": "Aaa最帅的mua～",
+        "body": "哦～",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:52",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-081",
+        "title": "Aaa最帅的mua～",
+        "body": "原来喜欢戴眼镜的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:52",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-082",
+        "title": "Aaa最帅的mua～",
+        "body": "我喜欢穆祉丞",
+        "sender": "我",
+        "time": "2026-08-19 23:53",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-083",
+        "title": "Aaa最帅的mua～",
+        "body": "这个回答我喜欢",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:53",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-084",
+        "title": "Aaa最帅的mua～",
+        "body": "好啦快睡觉",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:54",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-085",
+        "title": "Aaa最帅的mua～",
+        "body": "明天还上班呢",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:54",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-086",
+        "title": "Aaa最帅的mua～",
+        "body": "你也早点睡宝宝",
+        "sender": "我",
+        "time": "2026-08-19 23:55",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-087",
+        "title": "Aaa最帅的mua～",
+        "body": "晚安 爱你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-19 23:55",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-088",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:06",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-089",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:06",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-14.jpg"
+      },
+      {
+        "id": "bf-aug-090",
+        "title": "Aaa最帅的mua～",
+        "body": "输了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:07",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-091",
+        "title": "Aaa最帅的mua～",
+        "body": "好难过",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:07",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-092",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈哈哈",
+        "sender": "我",
+        "time": "2026-08-24 22:09",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-093",
+        "title": "Aaa最帅的mua～",
+        "body": "你不是说今天必赢吗",
+        "sender": "我",
+        "time": "2026-08-24 22:09",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-094",
+        "title": "Aaa最帅的mua～",
+        "body": "别提了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:10",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-095",
+        "title": "Aaa最帅的mua～",
+        "body": "差一点就赢了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:10",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-096",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝安慰一下",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:11",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-097",
+        "title": "Aaa最帅的mua～",
+        "body": "好啦好啦 我们小穆最厉害了",
+        "sender": "我",
+        "time": "2026-08-24 22:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-098",
+        "title": "Aaa最帅的mua～",
+        "body": "再哄一句",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-099",
+        "title": "Aaa最帅的mua～",
+        "body": "亲亲宝宝 下次肯定赢",
+        "sender": "我",
+        "time": "2026-08-24 22:13",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-100",
+        "title": "Aaa最帅的mua～",
+        "body": "嘿嘿",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:13",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-101",
+        "title": "Aaa最帅的mua～",
+        "body": "好了 复活了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-102",
+        "title": "Aaa最帅的mua～",
+        "body": "不打了 陪你聊天",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-24 22:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-103",
+        "title": "Aaa最帅的mua～",
+        "body": "下班没",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-104",
+        "title": "Aaa最帅的mua～",
+        "body": "下啦 在回家路上",
+        "sender": "我",
+        "time": "2026-08-29 18:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-105",
+        "title": "Aaa最帅的mua～",
+        "body": "晚上想吃什么",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-106",
+        "title": "Aaa最帅的mua～",
+        "body": "你要回来吗",
+        "sender": "我",
+        "time": "2026-08-29 18:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-107",
+        "title": "Aaa最帅的mua～",
+        "body": "嗯 今天能早点结束",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-108",
+        "title": "Aaa最帅的mua～",
+        "body": "我买点菜回去",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:36",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-109",
+        "title": "Aaa最帅的mua～",
+        "body": "想吃番茄炒蛋",
+        "sender": "我",
+        "time": "2026-08-29 18:37",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-110",
+        "title": "Aaa最帅的mua～",
+        "body": "收到",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:37",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-111",
+        "title": "Aaa最帅的mua～",
+        "body": "再给你买个小蛋糕",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:38",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-112",
+        "title": "Aaa最帅的mua～",
+        "body": "为什么呀",
+        "sender": "我",
+        "time": "2026-08-29 18:38",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-113",
+        "title": "Aaa最帅的mua～",
+        "body": "没有为什么",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:39",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-114",
+        "title": "Aaa最帅的mua～",
+        "body": "想给你买",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:39",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-115",
+        "title": "Aaa最帅的mua～",
+        "body": "好喜欢你呀",
+        "sender": "我",
+        "time": "2026-08-29 18:40",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-aug-116",
+        "title": "Aaa最帅的mua～",
+        "body": "我也是宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-08-29 18:40",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-001",
+        "title": "🪵助理",
+        "body": "嫂子早！",
+        "sender": "🪵助理",
+        "time": "08:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-002",
+        "title": "🪵助理",
+        "body": "早呀 怎么啦",
+        "sender": "我",
+        "time": "08:43",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-003",
+        "title": "🪵助理",
+        "body": "没事没事哈哈哈",
+        "sender": "🪵助理",
+        "time": "08:43",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-004",
+        "title": "🪵助理",
+        "body": "就是丞丞今天拍摄安排有点满",
+        "sender": "🪵助理",
+        "time": "08:44",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-005",
+        "title": "🪵助理",
+        "body": "下午还有个采访",
+        "sender": "🪵助理",
+        "time": "08:44",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-006",
+        "title": "🪵助理",
+        "body": "好哦 辛苦你们啦",
+        "sender": "我",
+        "time": "08:46",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-007",
+        "title": "🪵助理",
+        "body": "不辛苦不辛苦",
+        "sender": "🪵助理",
+        "time": "08:46",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-008",
+        "title": "🪵助理",
+        "body": "他刚才还问我今天能不能早点结束呢哈哈",
+        "sender": "🪵助理",
+        "time": "08:47",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-009",
+        "title": "🪵助理",
+        "body": "哈哈哈哈他又想干嘛",
+        "sender": "我",
+        "time": "08:48",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-010",
+        "title": "🪵助理",
+        "body": "这我哪敢说啊嫂子😂",
+        "sender": "🪵助理",
+        "time": "08:48",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-011",
+        "title": "🪵助理",
+        "body": "嫂子，丞丞今天估计得晚点收工了",
+        "sender": "🪵助理",
+        "time": "10:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-assistant-012",
+        "title": "🪵助理",
+        "body": "临时加了一组拍摄",
+        "sender": "🪵助理",
+        "time": "10:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-001",
+        "title": "李姐",
+        "body": "小徐，早上好呀",
+        "sender": "李姐",
+        "time": "09:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-002",
+        "title": "李姐",
+        "body": "早上好李姐！",
+        "sender": "我",
+        "time": "09:13",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-003",
+        "title": "李姐",
+        "body": "昨天那个数据你整理完了吗",
+        "sender": "李姐",
+        "time": "09:13",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-004",
+        "title": "李姐",
+        "body": "整理好了！我一会发您",
+        "sender": "我",
+        "time": "09:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-005",
+        "title": "李姐",
+        "body": "好嘞 不着急",
+        "sender": "李姐",
+        "time": "09:15",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-006",
+        "title": "李姐",
+        "body": "对了中午要不要一起吃饭",
+        "sender": "李姐",
+        "time": "09:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-007",
+        "title": "李姐",
+        "body": "好呀 今天吃什么",
+        "sender": "我",
+        "time": "09:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-008",
+        "title": "李姐",
+        "body": "楼下那家米线？",
+        "sender": "李姐",
+        "time": "09:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-009",
+        "title": "李姐",
+        "body": "可以可以！",
+        "sender": "我",
+        "time": "09:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-lijie-010",
+        "title": "李姐",
+        "body": "小徐，那个表我给你发过去了哈",
+        "sender": "李姐",
+        "time": "09:36",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-001",
+        "title": "好闺闺",
+        "body": "宝宝！！！！",
+        "sender": "好闺闺",
+        "time": "19:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-002",
+        "title": "好闺闺",
+        "body": "你猜我刷到谁了",
+        "sender": "好闺闺",
+        "time": "19:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-003",
+        "title": "好闺闺",
+        "body": "谁啊哈哈哈哈",
+        "sender": "我",
+        "time": "19:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-004",
+        "title": "好闺闺",
+        "body": "你男朋友啊啊啊啊",
+        "sender": "好闺闺",
+        "time": "19:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-005",
+        "title": "好闺闺",
+        "body": "今天那个路透帅死我了",
+        "sender": "好闺闺",
+        "time": "19:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-006",
+        "title": "好闺闺",
+        "body": "哈哈哈哈哈哈",
+        "sender": "我",
+        "time": "19:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-007",
+        "title": "好闺闺",
+        "body": "你怎么一点反应都没有",
+        "sender": "好闺闺",
+        "time": "19:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-008",
+        "title": "好闺闺",
+        "body": "我天天看他啊",
+        "sender": "我",
+        "time": "19:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-009",
+        "title": "好闺闺",
+        "body": "……",
+        "sender": "好闺闺",
+        "time": "19:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-010",
+        "title": "好闺闺",
+        "body": "行 你赢了",
+        "sender": "好闺闺",
+        "time": "19:36",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-011",
+        "title": "好闺闺",
+        "body": "哈哈哈哈爱你宝宝",
+        "sender": "我",
+        "time": "19:37",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-012",
+        "title": "好闺闺",
+        "body": "少来",
+        "sender": "好闺闺",
+        "time": "19:37",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-013",
+        "title": "好闺闺",
+        "body": "对了你俩最近见面了吗",
+        "sender": "好闺闺",
+        "time": "19:40",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-014",
+        "title": "好闺闺",
+        "body": "前两天见啦",
+        "sender": "我",
+        "time": "19:41",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-015",
+        "title": "好闺闺",
+        "body": "我就知道！！！",
+        "sender": "好闺闺",
+        "time": "19:41",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-bestie-016",
+        "title": "好闺闺",
+        "body": "不是我说 你俩也太黏糊了吧哈哈哈哈",
+        "sender": "好闺闺",
+        "time": "19:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-001",
+        "title": "妈咪～",
+        "body": "闺女 下班了没",
+        "sender": "妈咪～",
+        "time": "18:05",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-002",
+        "title": "妈咪～",
+        "body": "下啦妈妈",
+        "sender": "我",
+        "time": "18:08",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-003",
+        "title": "妈咪～",
+        "body": "晚上吃什么呀",
+        "sender": "妈咪～",
+        "time": "18:09",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-004",
+        "title": "妈咪～",
+        "body": "准备点个外卖嘿嘿",
+        "sender": "我",
+        "time": "18:10",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-005",
+        "title": "妈咪～",
+        "body": "又吃外卖",
+        "sender": "妈咪～",
+        "time": "18:10",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-006",
+        "title": "妈咪～",
+        "body": "有时间自己做点饭",
+        "sender": "妈咪～",
+        "time": "18:11",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-007",
+        "title": "妈咪～",
+        "body": "知道啦妈妈～",
+        "sender": "我",
+        "time": "18:11",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-008",
+        "title": "妈咪～",
+        "body": "小穆最近忙不忙呀",
+        "sender": "妈咪～",
+        "time": "18:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-009",
+        "title": "妈咪～",
+        "body": "挺忙的 最近一直拍东西",
+        "sender": "我",
+        "time": "18:15",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-010",
+        "title": "妈咪～",
+        "body": "年轻人忙事业也正常",
+        "sender": "妈咪～",
+        "time": "18:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-011",
+        "title": "妈咪～",
+        "body": "你们俩都照顾好自己",
+        "sender": "妈咪～",
+        "time": "18:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-012",
+        "title": "妈咪～",
+        "body": "嗯嗯 爱你妈妈😘",
+        "sender": "我",
+        "time": "18:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-mom-013",
+        "title": "妈咪～",
+        "body": "早上记得吃点东西再去上班",
+        "sender": "妈咪～",
+        "time": "08:02",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-001",
+        "title": "🪵mama",
+        "body": "宝贝 最近工作忙不忙呀",
+        "sender": "🪵mama",
+        "time": "16:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-002",
+        "title": "🪵mama",
+        "body": "阿姨！最近还好～",
+        "sender": "我",
+        "time": "16:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-003",
+        "title": "🪵mama",
+        "body": "那就好呀",
+        "sender": "🪵mama",
+        "time": "16:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-004",
+        "title": "🪵mama",
+        "body": "最近天气凉了 记得多穿点",
+        "sender": "🪵mama",
+        "time": "16:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-005",
+        "title": "🪵mama",
+        "body": "好哒 阿姨也要注意身体！",
+        "sender": "我",
+        "time": "16:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-006",
+        "title": "🪵mama",
+        "body": "乖乖😘",
+        "sender": "🪵mama",
+        "time": "16:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-007",
+        "title": "🪵mama",
+        "body": "丞丞前两天还跟我说想吃家里的饭了",
+        "sender": "🪵mama",
+        "time": "16:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-008",
+        "title": "🪵mama",
+        "body": "哈哈哈哈他是不是又馋啦",
+        "sender": "我",
+        "time": "16:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-009",
+        "title": "🪵mama",
+        "body": "可不是嘛",
+        "sender": "🪵mama",
+        "time": "16:31",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-010",
+        "title": "🪵mama",
+        "body": "你有空跟他一起回来玩呀",
+        "sender": "🪵mama",
+        "time": "16:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-011",
+        "title": "🪵mama",
+        "body": "好呀阿姨！等他不忙了我们一起去",
+        "sender": "我",
+        "time": "16:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-012",
+        "title": "🪵mama",
+        "body": "好好好",
+        "sender": "🪵mama",
+        "time": "16:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "item-wechat-his_mom-013",
+        "title": "🪵mama",
+        "body": "下次来阿姨给你做好吃的😘",
+        "sender": "🪵mama",
+        "time": "16:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-001",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-002",
+        "title": "Aaa最帅的mua～",
+        "body": "告诉你个好消息",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-003",
+        "title": "Aaa最帅的mua～",
+        "body": "什么呀！！",
+        "sender": "🧡💖",
+        "time": "2026-09-01 11:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-004",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:27",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-15.jpg"
+      },
+      {
+        "id": "bf-005",
+        "title": "Aaa最帅的mua～",
+        "body": "电影入围釜山电影节了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-006",
+        "title": "Aaa最帅的mua～",
+        "body": "啊啊啊啊啊啊",
+        "sender": "🧡💖",
+        "time": "2026-09-01 11:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-007",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝！！！！",
+        "sender": "🧡💖",
+        "time": "2026-09-01 11:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-008",
+        "title": "Aaa最帅的mua～",
+        "body": "恭喜你呀我的大明星😭",
+        "sender": "🧡💖",
+        "time": "2026-09-01 11:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-009",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈谢谢宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-010",
+        "title": "Aaa最帅的mua～",
+        "body": "我刚知道的时候也特别开心",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:31",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-011",
+        "title": "Aaa最帅的mua～",
+        "body": "我真的好为你骄傲",
+        "sender": "🧡💖",
+        "time": "2026-09-01 11:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-012",
+        "title": "Aaa最帅的mua～",
+        "body": "等见面给我个拥抱呗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-013",
+        "title": "Aaa最帅的mua～",
+        "body": "给你一百个！！",
+        "sender": "🧡💖",
+        "time": "2026-09-01 11:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-014",
+        "title": "Aaa最帅的mua～",
+        "body": "那我先记账了哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-015",
+        "title": "Aaa最帅的mua～",
+        "body": "晚上有空给你打电话",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-01 11:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-016",
+        "title": "Aaa最帅的mua～",
+        "body": "好！爱你宝宝",
+        "sender": "🧡💖",
+        "time": "2026-09-01 11:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-017",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-018",
+        "title": "Aaa最帅的mua～",
+        "body": "给你看个东西",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-019",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:13",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-16.jpg"
+      },
+      {
+        "id": "bf-020",
+        "title": "Aaa最帅的mua～",
+        "body": "看看我有没有什么不一样",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:13",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-021",
+        "title": "Aaa最帅的mua～",
+        "body": "等等",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-022",
+        "title": "Aaa最帅的mua～",
+        "body": "你是不是剪头发了",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-023",
+        "title": "Aaa最帅的mua～",
+        "body": "不是哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-024",
+        "title": "Aaa最帅的mua～",
+        "body": "再仔细看看",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-025",
+        "title": "Aaa最帅的mua～",
+        "body": "啊啊啊啊啊",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-026",
+        "title": "Aaa最帅的mua～",
+        "body": "穆祉丞！！！",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-027",
+        "title": "Aaa最帅的mua～",
+        "body": "你打耳洞了？？？",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-028",
+        "title": "Aaa最帅的mua～",
+        "body": "被发现了嘿嘿",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-029",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:20",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-17.jpg"
+      },
+      {
+        "id": "bf-030",
+        "title": "Aaa最帅的mua～",
+        "body": "再给你看清楚一点",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-031",
+        "title": "Aaa最帅的mua～",
+        "body": "啊啊啊好帅",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-032",
+        "title": "Aaa最帅的mua～",
+        "body": "但是疼不疼呀宝宝",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-033",
+        "title": "Aaa最帅的mua～",
+        "body": "还好 就一下",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-034",
+        "title": "Aaa最帅的mua～",
+        "body": "你喜欢吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-035",
+        "title": "Aaa最帅的mua～",
+        "body": "喜欢！！",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-036",
+        "title": "Aaa最帅的mua～",
+        "body": "那就行",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-037",
+        "title": "Aaa最帅的mua～",
+        "body": "本来还想等见面给你个惊喜",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-038",
+        "title": "Aaa最帅的mua～",
+        "body": "那你怎么忍不住发照片了哈哈哈",
+        "sender": "🧡💖",
+        "time": "2026-09-05 16:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-039",
+        "title": "Aaa最帅的mua～",
+        "body": "想让你早点看到嘛",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-05 16:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-040",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝今天拍摄的地方好漂亮",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:36",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-041",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:37",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-18.jpg"
+      },
+      {
+        "id": "bf-042",
+        "title": "Aaa最帅的mua～",
+        "body": "你看",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:37",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-043",
+        "title": "Aaa最帅的mua～",
+        "body": "哇 好漂亮的草坪",
+        "sender": "🧡💖",
+        "time": "2026-09-10 14:40",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-044",
+        "title": "Aaa最帅的mua～",
+        "body": "感觉好适合野餐",
+        "sender": "🧡💖",
+        "time": "2026-09-10 14:40",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-045",
+        "title": "Aaa最帅的mua～",
+        "body": "我也是这么想的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:41",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-046",
+        "title": "Aaa最帅的mua～",
+        "body": "以后有机会带你来",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:41",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-047",
+        "title": "Aaa最帅的mua～",
+        "body": "好呀好呀",
+        "sender": "🧡💖",
+        "time": "2026-09-10 14:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-048",
+        "title": "Aaa最帅的mua～",
+        "body": "带点吃的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-049",
+        "title": "Aaa最帅的mua～",
+        "body": "再带个小毯子",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:43",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-050",
+        "title": "Aaa最帅的mua～",
+        "body": "你怎么都安排好了哈哈哈",
+        "sender": "🧡💖",
+        "time": "2026-09-10 14:43",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-051",
+        "title": "Aaa最帅的mua～",
+        "body": "因为刚才在这坐着就想到你了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:44",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-052",
+        "title": "Aaa最帅的mua～",
+        "body": "那我也想你啦",
+        "sender": "🧡💖",
+        "time": "2026-09-10 14:45",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-053",
+        "title": "Aaa最帅的mua～",
+        "body": "等我回去带你出去玩",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-10 14:45",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-054",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-055",
+        "title": "Aaa最帅的mua～",
+        "body": "我头发是不是长太快了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-056",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:24",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-19.jpg"
+      },
+      {
+        "id": "bf-057",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:24",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-20.jpg"
+      },
+      {
+        "id": "bf-058",
+        "title": "Aaa最帅的mua～",
+        "body": "你看这刘海",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-059",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈哈哈",
+        "sender": "🧡💖",
+        "time": "2026-09-15 18:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-060",
+        "title": "Aaa最帅的mua～",
+        "body": "好像真的长了好多",
+        "sender": "🧡💖",
+        "time": "2026-09-15 18:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-061",
+        "title": "Aaa最帅的mua～",
+        "body": "都快挡眼睛了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-062",
+        "title": "Aaa最帅的mua～",
+        "body": "想剪了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-063",
+        "title": "Aaa最帅的mua～",
+        "body": "不要不要",
+        "sender": "🧡💖",
+        "time": "2026-09-15 18:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-064",
+        "title": "Aaa最帅的mua～",
+        "body": "我喜欢你现在这个发型",
+        "sender": "🧡💖",
+        "time": "2026-09-15 18:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-065",
+        "title": "Aaa最帅的mua～",
+        "body": "真的啊",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-066",
+        "title": "Aaa最帅的mua～",
+        "body": "真的 特别乖",
+        "sender": "🧡💖",
+        "time": "2026-09-15 18:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-067",
+        "title": "Aaa最帅的mua～",
+        "body": "那先不剪",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:31",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-068",
+        "title": "Aaa最帅的mua～",
+        "body": "听女朋友的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:31",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-069",
+        "title": "Aaa最帅的mua～",
+        "body": "嘿嘿好乖",
+        "sender": "🧡💖",
+        "time": "2026-09-15 18:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-070",
+        "title": "Aaa最帅的mua～",
+        "body": "那有没有奖励",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-071",
+        "title": "Aaa最帅的mua～",
+        "body": "奖励一个亲亲",
+        "sender": "🧡💖",
+        "time": "2026-09-15 18:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-072",
+        "title": "Aaa最帅的mua～",
+        "body": "成交",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-15 18:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-073",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝快看",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:08",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-074",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:08",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-21.jpg"
+      },
+      {
+        "id": "bf-075",
+        "title": "Aaa最帅的mua～",
+        "body": "我做的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:09",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-076",
+        "title": "Aaa最帅的mua～",
+        "body": "哇！！！",
+        "sender": "🧡💖",
+        "time": "2026-09-20 19:11",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-077",
+        "title": "Aaa最帅的mua～",
+        "body": "穆大厨上线了",
+        "sender": "🧡💖",
+        "time": "2026-09-20 19:11",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-078",
+        "title": "Aaa最帅的mua～",
+        "body": "看着还可以吧",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-079",
+        "title": "Aaa最帅的mua～",
+        "body": "看着就很好吃",
+        "sender": "🧡💖",
+        "time": "2026-09-20 19:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-080",
+        "title": "Aaa最帅的mua～",
+        "body": "我尝了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:13",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-081",
+        "title": "Aaa最帅的mua～",
+        "body": "还真挺好吃的哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:13",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-082",
+        "title": "Aaa最帅的mua～",
+        "body": "什么时候做给我吃",
+        "sender": "🧡💖",
+        "time": "2026-09-20 19:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-083",
+        "title": "Aaa最帅的mua～",
+        "body": "等我回去",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-084",
+        "title": "Aaa最帅的mua～",
+        "body": "给你做一大份",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:15",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-085",
+        "title": "Aaa最帅的mua～",
+        "body": "好期待呀",
+        "sender": "🧡💖",
+        "time": "2026-09-20 19:15",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-086",
+        "title": "Aaa最帅的mua～",
+        "body": "那你得负责夸我",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-20 19:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-087",
+        "title": "Aaa最帅的mua～",
+        "body": "保证完成任务",
+        "sender": "🧡💖",
+        "time": "2026-09-20 19:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-088",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝我收拾行李呢",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-25 21:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-089",
+        "title": "Aaa最帅的mua～",
+        "body": "收拾完了吗",
+        "sender": "🧡💖",
+        "time": "2026-09-25 21:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-090",
+        "title": "Aaa最帅的mua～",
+        "body": "差不多了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-25 21:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-091",
+        "title": "Aaa最帅的mua～",
+        "body": "总感觉少带了点什么",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-25 21:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-092",
+        "title": "Aaa最帅的mua～",
+        "body": "护照充电器转换插头",
+        "sender": "🧡💖",
+        "time": "2026-09-25 21:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-093",
+        "title": "Aaa最帅的mua～",
+        "body": "都检查了吗",
+        "sender": "🧡💖",
+        "time": "2026-09-25 21:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-094",
+        "title": "Aaa最帅的mua～",
+        "body": "检查了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-25 21:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-095",
+        "title": "Aaa最帅的mua～",
+        "body": "少带了你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-25 21:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-096",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈穆祉丞！",
+        "sender": "🧡💖",
+        "time": "2026-09-25 21:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-097",
+        "title": "Aaa最帅的mua～",
+        "body": "说真的嘛",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-25 21:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-098",
+        "title": "Aaa最帅的mua～",
+        "body": "等下次有空我们一起出去玩",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-25 21:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-099",
+        "title": "Aaa最帅的mua～",
+        "body": "好呀 我等你",
+        "sender": "🧡💖",
+        "time": "2026-09-25 21:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-100",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-101",
+        "title": "Aaa最帅的mua～",
+        "body": "给你看看今天",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-102",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:43",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-22.jpg"
+      },
+      {
+        "id": "bf-103",
+        "title": "Aaa最帅的mua～",
+        "body": "巴黎这边天气还不错",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:43",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-104",
+        "title": "Aaa最帅的mua～",
+        "body": "啊啊啊啊好帅",
+        "sender": "🧡💖",
+        "time": "2026-09-28 16:46",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-105",
+        "title": "Aaa最帅的mua～",
+        "body": "我的巴黎小王子",
+        "sender": "🧡💖",
+        "time": "2026-09-28 16:46",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-106",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:47",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-107",
+        "title": "Aaa最帅的mua～",
+        "body": "这个称呼不错",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:47",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-108",
+        "title": "Aaa最帅的mua～",
+        "body": "你吃饭了吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:48",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-109",
+        "title": "Aaa最帅的mua～",
+        "body": "吃啦 你呢",
+        "sender": "🧡💖",
+        "time": "2026-09-28 16:49",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-110",
+        "title": "Aaa最帅的mua～",
+        "body": "我刚吃完早餐",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:49",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-111",
+        "title": "Aaa最帅的mua～",
+        "body": "今天还有活动",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-112",
+        "title": "Aaa最帅的mua～",
+        "body": "加油宝宝！",
+        "sender": "🧡💖",
+        "time": "2026-09-28 16:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-113",
+        "title": "Aaa最帅的mua～",
+        "body": "收到女朋友的加油了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-28 16:51",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-114",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝在干嘛",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-115",
+        "title": "Aaa最帅的mua～",
+        "body": "在家看电视",
+        "sender": "🧡💖",
+        "time": "2026-09-29 20:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-116",
+        "title": "Aaa最帅的mua～",
+        "body": "看什么呢",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-117",
+        "title": "Aaa最帅的mua～",
+        "body": "随便找了个综艺",
+        "sender": "🧡💖",
+        "time": "2026-09-29 20:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-118",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:21",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-23.jpg"
+      },
+      {
+        "id": "bf-119",
+        "title": "Aaa最帅的mua～",
+        "body": "我现在在车上",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-120",
+        "title": "Aaa最帅的mua～",
+        "body": "刚结束一个行程",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-121",
+        "title": "Aaa最帅的mua～",
+        "body": "今天累不累呀",
+        "sender": "🧡💖",
+        "time": "2026-09-29 20:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-122",
+        "title": "Aaa最帅的mua～",
+        "body": "还好",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-123",
+        "title": "Aaa最帅的mua～",
+        "body": "就是有点困",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-124",
+        "title": "Aaa最帅的mua～",
+        "body": "那你靠着睡一会",
+        "sender": "🧡💖",
+        "time": "2026-09-29 20:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-125",
+        "title": "Aaa最帅的mua～",
+        "body": "嗯",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:25",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-126",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝我有点想回家了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-127",
+        "title": "Aaa最帅的mua～",
+        "body": "想面团了是不是",
+        "sender": "🧡💖",
+        "time": "2026-09-29 20:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-128",
+        "title": "Aaa最帅的mua～",
+        "body": "想面团",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-129",
+        "title": "Aaa最帅的mua～",
+        "body": "更想你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-29 20:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-130",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝今天去了卢浮宫",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:36",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-131",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:37",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-24.jpg"
+      },
+      {
+        "id": "bf-132",
+        "title": "Aaa最帅的mua～",
+        "body": "里面真的好大",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:37",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-133",
+        "title": "Aaa最帅的mua～",
+        "body": "哇啊啊啊",
+        "sender": "🧡💖",
+        "time": "2026-09-30 18:39",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-134",
+        "title": "Aaa最帅的mua～",
+        "body": "好想去！！",
+        "sender": "🧡💖",
+        "time": "2026-09-30 18:39",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-135",
+        "title": "Aaa最帅的mua～",
+        "body": "以后我们一起来",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:40",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-136",
+        "title": "Aaa最帅的mua～",
+        "body": "慢慢逛",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:40",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-137",
+        "title": "Aaa最帅的mua～",
+        "body": "好！说好了",
+        "sender": "🧡💖",
+        "time": "2026-09-30 18:41",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-138",
+        "title": "Aaa最帅的mua～",
+        "body": "说好了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:41",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-139",
+        "title": "Aaa最帅的mua～",
+        "body": "到时候你负责做攻略",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-140",
+        "title": "Aaa最帅的mua～",
+        "body": "那你负责什么",
+        "sender": "🧡💖",
+        "time": "2026-09-30 18:42",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-141",
+        "title": "Aaa最帅的mua～",
+        "body": "负责陪你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:43",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-142",
+        "title": "Aaa最帅的mua～",
+        "body": "还有拍照",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-09-30 18:43",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-143",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈可以",
+        "sender": "🧡💖",
+        "time": "2026-09-30 18:44",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-144",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝宝宝！！",
+        "sender": "🧡💖",
+        "time": "2026-10-01 22:13",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-145",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "🧡💖",
+        "time": "2026-10-01 22:13",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-25.jpg"
+      },
+      {
+        "id": "bf-146",
+        "title": "Aaa最帅的mua～",
+        "body": "我看到你走秀的图啦",
+        "sender": "🧡💖",
+        "time": "2026-10-01 22:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-147",
+        "title": "Aaa最帅的mua～",
+        "body": "啊啊啊啊好帅啊啊啊",
+        "sender": "🧡💖",
+        "time": "2026-10-01 22:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-148",
+        "title": "Aaa最帅的mua～",
+        "body": "怎么会这么帅",
+        "sender": "🧡💖",
+        "time": "2026-10-01 22:15",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-149",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-01 22:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-150",
+        "title": "Aaa最帅的mua～",
+        "body": "你这夸得我都不好意思了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-01 22:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-151",
+        "title": "Aaa最帅的mua～",
+        "body": "真的特别特别帅",
+        "sender": "🧡💖",
+        "time": "2026-10-01 22:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-152",
+        "title": "Aaa最帅的mua～",
+        "body": "好骄傲呀",
+        "sender": "🧡💖",
+        "time": "2026-10-01 22:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-153",
+        "title": "Aaa最帅的mua～",
+        "body": "谢谢宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-01 22:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-154",
+        "title": "Aaa最帅的mua～",
+        "body": "你喜欢就好",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-01 22:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-155",
+        "title": "Aaa最帅的mua～",
+        "body": "等我回去给你看别的照片",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-01 22:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-156",
+        "title": "Aaa最帅的mua～",
+        "body": "好！等你回来",
+        "sender": "🧡💖",
+        "time": "2026-10-01 22:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-157",
+        "title": "Aaa最帅的mua～",
+        "body": "快啦",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-01 22:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-158",
+        "title": "Aaa最帅的mua～",
+        "body": "很快就见面了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-01 22:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-159",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-160",
+        "title": "Aaa最帅的mua～",
+        "body": "落地啦",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:12",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-161",
+        "title": "Aaa最帅的mua～",
+        "body": "终于回来啦！！",
+        "sender": "🧡💖",
+        "time": "2026-10-02 18:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-162",
+        "title": "Aaa最帅的mua～",
+        "body": "嗯嗯",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:14",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-163",
+        "title": "Aaa最帅的mua～",
+        "body": "现在去拿行李",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:15",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-164",
+        "title": "Aaa最帅的mua～",
+        "body": "累不累宝宝",
+        "sender": "🧡💖",
+        "time": "2026-10-02 18:15",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-165",
+        "title": "Aaa最帅的mua～",
+        "body": "有点",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-166",
+        "title": "Aaa最帅的mua～",
+        "body": "想赶紧回去躺着",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-167",
+        "title": "Aaa最帅的mua～",
+        "body": "那你早点回来",
+        "sender": "🧡💖",
+        "time": "2026-10-02 18:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-168",
+        "title": "Aaa最帅的mua～",
+        "body": "好",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:17",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-169",
+        "title": "Aaa最帅的mua～",
+        "body": "想抱你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-170",
+        "title": "Aaa最帅的mua～",
+        "body": "我也是🥺",
+        "sender": "🧡💖",
+        "time": "2026-10-02 18:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-171",
+        "title": "Aaa最帅的mua～",
+        "body": "等我回家",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-02 18:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-172",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝在忙吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-173",
+        "title": "Aaa最帅的mua～",
+        "body": "刚吃完午饭",
+        "sender": "🧡💖",
+        "time": "2026-10-06 13:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-174",
+        "title": "Aaa最帅的mua～",
+        "body": "怎么啦",
+        "sender": "🧡💖",
+        "time": "2026-10-06 13:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-175",
+        "title": "Aaa最帅的mua～",
+        "body": "给你看看前两天拍的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-176",
+        "title": "Aaa最帅的mua～",
+        "body": "",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:29",
+        "kind": "image",
+        "read": true,
+        "media": "/assets/story-photos/chat-photo-26.jpg"
+      },
+      {
+        "id": "bf-177",
+        "title": "Aaa最帅的mua～",
+        "body": "这个衣服是不是很可爱",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-178",
+        "title": "Aaa最帅的mua～",
+        "body": "啊啊啊啊",
+        "sender": "🧡💖",
+        "time": "2026-10-06 13:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-179",
+        "title": "Aaa最帅的mua～",
+        "body": "小熊宝宝！！",
+        "sender": "🧡💖",
+        "time": "2026-10-06 13:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-180",
+        "title": "Aaa最帅的mua～",
+        "body": "哈哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-181",
+        "title": "Aaa最帅的mua～",
+        "body": "我就知道你会这么说",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-182",
+        "title": "Aaa最帅的mua～",
+        "body": "好想捏捏你的脸",
+        "sender": "🧡💖",
+        "time": "2026-10-06 13:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-183",
+        "title": "Aaa最帅的mua～",
+        "body": "晚上回来给你捏",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:34",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-184",
+        "title": "Aaa最帅的mua～",
+        "body": "说话算话",
+        "sender": "🧡💖",
+        "time": "2026-10-06 13:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-185",
+        "title": "Aaa最帅的mua～",
+        "body": "算话",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:35",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-186",
+        "title": "Aaa最帅的mua～",
+        "body": "对了冰箱里还有牛奶吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:36",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-187",
+        "title": "Aaa最帅的mua～",
+        "body": "好像没了",
+        "sender": "🧡💖",
+        "time": "2026-10-06 13:37",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-188",
+        "title": "Aaa最帅的mua～",
+        "body": "行 我回去买",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:37",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-189",
+        "title": "Aaa最帅的mua～",
+        "body": "还想吃什么 发我",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-06 13:38",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-190",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:48",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-191",
+        "title": "Aaa最帅的mua～",
+        "body": "你今天几点回来",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:48",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-192",
+        "title": "Aaa最帅的mua～",
+        "body": "六点多吧",
+        "sender": "🧡💖",
+        "time": "2026-10-10 17:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-193",
+        "title": "Aaa最帅的mua～",
+        "body": "我今天比你早到家",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:50",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-194",
+        "title": "Aaa最帅的mua～",
+        "body": "哇这么难得",
+        "sender": "🧡💖",
+        "time": "2026-10-10 17:51",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-195",
+        "title": "Aaa最帅的mua～",
+        "body": "对啊哈哈哈",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:51",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-196",
+        "title": "Aaa最帅的mua～",
+        "body": "晚上我做饭",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:52",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-197",
+        "title": "Aaa最帅的mua～",
+        "body": "真的吗穆大厨",
+        "sender": "🧡💖",
+        "time": "2026-10-10 17:52",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-198",
+        "title": "Aaa最帅的mua～",
+        "body": "当然",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:53",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-199",
+        "title": "Aaa最帅的mua～",
+        "body": "你回来直接吃",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:53",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-200",
+        "title": "Aaa最帅的mua～",
+        "body": "好幸福呀",
+        "sender": "🧡💖",
+        "time": "2026-10-10 17:54",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-201",
+        "title": "Aaa最帅的mua～",
+        "body": "那你路上慢点",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:54",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-202",
+        "title": "Aaa最帅的mua～",
+        "body": "我在家等你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-10 17:55",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-203",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝我跟他们打两把CS",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 21:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-204",
+        "title": "Aaa最帅的mua～",
+        "body": "好呀",
+        "sender": "🧡💖",
+        "time": "2026-10-15 21:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-205",
+        "title": "Aaa最帅的mua～",
+        "body": "我去洗澡啦",
+        "sender": "🧡💖",
+        "time": "2026-10-15 21:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-206",
+        "title": "Aaa最帅的mua～",
+        "body": "好",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 21:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-207",
+        "title": "Aaa最帅的mua～",
+        "body": "洗完叫我",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 21:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-208",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 22:03",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-209",
+        "title": "Aaa最帅的mua～",
+        "body": "你洗完了吗",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 22:03",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-210",
+        "title": "Aaa最帅的mua～",
+        "body": "刚吹完头发",
+        "sender": "🧡💖",
+        "time": "2026-10-15 22:05",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-211",
+        "title": "Aaa最帅的mua～",
+        "body": "我也打完了",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 22:05",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-212",
+        "title": "Aaa最帅的mua～",
+        "body": "赢了吗",
+        "sender": "🧡💖",
+        "time": "2026-10-15 22:06",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-213",
+        "title": "Aaa最帅的mua～",
+        "body": "赢了嘿嘿",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 22:06",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-214",
+        "title": "Aaa最帅的mua～",
+        "body": "厉害厉害",
+        "sender": "🧡💖",
+        "time": "2026-10-15 22:07",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-215",
+        "title": "Aaa最帅的mua～",
+        "body": "我去找你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 22:07",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-216",
+        "title": "Aaa最帅的mua～",
+        "body": "我就在客厅啊哈哈哈",
+        "sender": "🧡💖",
+        "time": "2026-10-15 22:08",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-217",
+        "title": "Aaa最帅的mua～",
+        "body": "知道",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 22:08",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-218",
+        "title": "Aaa最帅的mua～",
+        "body": "马上到",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-15 22:09",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-219",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝在干嘛",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-20 15:16",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-220",
+        "title": "Aaa最帅的mua～",
+        "body": "在公司改表格",
+        "sender": "🧡💖",
+        "time": "2026-10-20 15:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-221",
+        "title": "Aaa最帅的mua～",
+        "body": "改得头都大了",
+        "sender": "🧡💖",
+        "time": "2026-10-20 15:18",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-222",
+        "title": "Aaa最帅的mua～",
+        "body": "辛苦了宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-20 15:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-223",
+        "title": "Aaa最帅的mua～",
+        "body": "今天忙完带你去吃好吃的",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-20 15:19",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-224",
+        "title": "Aaa最帅的mua～",
+        "body": "你不是也有工作吗",
+        "sender": "🧡💖",
+        "time": "2026-10-20 15:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-225",
+        "title": "Aaa最帅的mua～",
+        "body": "晚上应该能结束",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-20 15:20",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-226",
+        "title": "Aaa最帅的mua～",
+        "body": "要是太晚就改天",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-20 15:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-227",
+        "title": "Aaa最帅的mua～",
+        "body": "好呀 不着急",
+        "sender": "🧡💖",
+        "time": "2026-10-20 15:21",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-228",
+        "title": "Aaa最帅的mua～",
+        "body": "嗯",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-20 15:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-229",
+        "title": "Aaa最帅的mua～",
+        "body": "你先忙",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-20 15:22",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-230",
+        "title": "Aaa最帅的mua～",
+        "body": "晚上见宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-20 15:23",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-231",
+        "title": "Aaa最帅的mua～",
+        "body": "宝宝",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-232",
+        "title": "Aaa最帅的mua～",
+        "body": "起床没",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:24",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-233",
+        "title": "Aaa最帅的mua～",
+        "body": "起啦",
+        "sender": "🧡💖",
+        "time": "2026-10-25 10:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-234",
+        "title": "Aaa最帅的mua～",
+        "body": "你怎么这么早",
+        "sender": "🧡💖",
+        "time": "2026-10-25 10:26",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-235",
+        "title": "Aaa最帅的mua～",
+        "body": "今天有拍摄",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-236",
+        "title": "Aaa最帅的mua～",
+        "body": "我走的时候你还在睡",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:27",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-237",
+        "title": "Aaa最帅的mua～",
+        "body": "你怎么不叫我",
+        "sender": "🧡💖",
+        "time": "2026-10-25 10:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-238",
+        "title": "Aaa最帅的mua～",
+        "body": "看你睡得挺香",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:28",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-239",
+        "title": "Aaa最帅的mua～",
+        "body": "就没舍得叫",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:29",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-240",
+        "title": "Aaa最帅的mua～",
+        "body": "呜呜好想你",
+        "sender": "🧡💖",
+        "time": "2026-10-25 10:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-241",
+        "title": "Aaa最帅的mua～",
+        "body": "我也是",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:30",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-242",
+        "title": "Aaa最帅的mua～",
+        "body": "晚上回来抱抱",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:31",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-243",
+        "title": "Aaa最帅的mua～",
+        "body": "好！！",
+        "sender": "🧡💖",
+        "time": "2026-10-25 10:31",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-244",
+        "title": "Aaa最帅的mua～",
+        "body": "厨房给你留了早餐",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-245",
+        "title": "Aaa最帅的mua～",
+        "body": "记得吃",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:32",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-246",
+        "title": "Aaa最帅的mua～",
+        "body": "知道啦 爱你宝宝",
+        "sender": "🧡💖",
+        "time": "2026-10-25 10:33",
+        "kind": "text",
+        "read": true
+      },
+      {
+        "id": "bf-247",
+        "title": "Aaa最帅的mua～",
+        "body": "爱你",
+        "sender": "Aaa最帅的mua～",
+        "time": "2026-10-25 10:33",
+        "kind": "text",
+        "read": true
       }
     ]
   },
