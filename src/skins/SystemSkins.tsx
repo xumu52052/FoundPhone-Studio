@@ -724,81 +724,68 @@ export function FilesSkin(p: Props) {
   );
 }
 export function MusicSkin(p: Props) {
-  const { tab, setTab, items } = useContent(p, "资料库");
-  const [song, setSong] = useTrack(p, items);
+  const [tab, setTab] = useState("首页");
+  const [playlist, setPlaylist] = useState("");
+  const [query, setQuery] = useState("");
+  const [selected, setSelected] = useState<Item | null>(null);
+  const [liked, setLiked] = useState<string[]>([]);
+  const [recent, setRecent] = useState<string[]>([]);
+  const [showPlayer, setShowPlayer] = useState(false);
+  const playlists = ["我的喜欢 ♡", "🪵 分享给我的歌", "🪵 专场", "晚间耳机时间", "通勤循环"];
+  const tracks = p.items.filter(i => i.id !== "test-item-music");
+  const unique = tracks.filter((i, index, arr) => arr.findIndex(t => t.title === i.title && t.sender === i.sender) === index);
+  const active = playlist ? tracks.filter(i => i.folder === playlist) : tab === "收藏" ? unique.filter(i => liked.includes(i.title + "|" + i.sender) || i.folder === "我的喜欢 ♡") : tab === "最近播放" ? recent.map(id => unique.find(i => i.title + "|" + i.sender === id)).filter((i): i is Item => !!i) : unique;
+  const shown = active.filter(i => (i.title + " " + i.sender).toLowerCase().includes(query.toLowerCase()));
+  const choose = (i: Item) => { setSelected(i); setShowPlayer(true); setRecent(prev => [i.title + "|" + i.sender, ...prev.filter(k => k !== i.title + "|" + i.sender)].slice(0, 30)); };
+  const next = (offset: number) => { if (!selected || !shown.length) return; const index = shown.findIndex(i => i.title === selected.title && i.sender === selected.sender); choose(shown[(index + offset + shown.length) % shown.length]); };
+  const isLiked = (i: Item) => liked.includes(i.title + "|" + i.sender) || (i.folder === "我的喜欢 ♡" && !liked.includes("!" + i.title + "|" + i.sender));
+  const toggleLike = (i: Item) => { const key = i.title + "|" + i.sender; setLiked(prev => isLiked(i) ? [...prev.filter(k => k !== key), "!" + key] : [...prev.filter(k => k !== "!" + key), key]); };
+  const btn = { background: "transparent", border: "none", color: "inherit", cursor: "pointer" } as const;
   return (
-    <div className="catalog-skin native-music">
+    <div className="catalog-skin native-music" style={{background:"#fffafc", color:"#302d31"}}>
       <Header p={p} />
-      <div className="catalog-scroll">
-        <h1>{tab}</h1>
-        {tab === "歌单" ? (
-          <div className="music-albums">
-            {groupItems(items, "我的音乐").map((g) => (
-              <button
-                key={g}
-                onClick={() => {
-                  const i = items.find((i) => (i.folder || "我的音乐") === g);
-                  if (i) setSong(i);
-                }}
-              >
-                <Music size={51} />
-                <strong>{g}</strong>
-              </button>
-            ))}
+      <div className="catalog-scroll" style={{padding:"10px 16px 120px"}}>
+        <h1 style={{fontSize:29, margin:"12px 0 16px", color:"#242026"}}>{playlist || (tab === "首页" ? "音乐" : tab)}</h1>
+        <SearchBox value={query} set={setQuery} placeholder="搜索歌曲或歌手" />
+        {playlist && <button style={{...btn, padding:"14px 0", color:"#ad6581"}} onClick={() => {setPlaylist(""); setQuery("");}}>‹ 返回歌单</button>}
+        {!playlist && tab === "首页" && <>
+          <div style={{display:"flex", gap:9, margin:"17px 0"}}>
+            <button style={{...btn, background:"#f7e4eb", borderRadius:12, padding:"12px 14px", flex:1}} onClick={() => setTab("收藏")}>♡ 我的喜欢</button>
+            <button style={{...btn, background:"#f7e4eb", borderRadius:12, padding:"12px 14px", flex:1}} onClick={() => setTab("最近播放")}>◷ 最近播放</button>
           </div>
-        ) : (
-          items.map((i, n) => (
-            <button
-              className="music-track"
-              key={i.id}
-              onClick={() => {
-                setSong(i);
-              }}
-            >
-              <small>{n + 1}</small>
-              <span>
-                <strong>{i.title}</strong>
-                <small>
-                  {i.sender} · {meta(i, "album")}
-                </small>
-              </span>
-              <span>{meta(i, "duration")}</span>
-            </button>
-          ))
-        )}
-        <Empty items={items} />
+          <h2 style={{fontSize:17, margin:"18px 0 12px"}}>我的歌单</h2>
+          <div style={{display:"grid", gridTemplateColumns:"repeat(2,minmax(0,1fr))", gap:12, marginBottom:22}}>
+            {playlists.map((name, index) => <button key={name} style={{...btn, textAlign:"left", minWidth:0}} onClick={() => {setPlaylist(name); setQuery("");}}>
+              <div style={{height:112, borderRadius:12, background:["#f6dce4","#e8e4f4","#f2e8d7","#dce8e6","#e4e9f5"][index], display:"flex", alignItems:"center", justifyContent:"center", fontSize:37}}>{["♡","♫","☆","☾","♬"][index]}</div>
+              <strong style={{display:"block", fontSize:13, marginTop:8}}>{name}</strong>
+              <small style={{color:"#999"}}>{tracks.filter(i => i.folder === name).length} 首歌曲</small>
+            </button>)}
+          </div>
+          <h2 style={{fontSize:17, margin:"14px 0"}}>音乐库</h2>
+        </>}
+        {(playlist || tab !== "首页" || tab === "首页") && shown.map((i, n) => <div key={i.id} style={{display:"flex", alignItems:"center", gap:10, borderBottom:"1px solid #f1e8ed", padding:"11px 0"}}>
+          <button style={{...btn, flex:1, display:"flex", textAlign:"left", gap:11, minWidth:0, alignItems:"center"}} onClick={() => choose(i)}>
+            <span style={{width:40, height:40, flexShrink:0, borderRadius:8, background:"#f4e6ed", display:"grid", placeItems:"center", color:"#bc8196"}}>♫</span>
+            <span style={{minWidth:0, flex:1}}><strong style={{display:"block", fontSize:13, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap"}}>{i.title}</strong><small style={{color:"#9c949a", fontSize:11}}>{i.sender}</small></span>
+          </button>
+          <button aria-label={isLiked(i) ? "取消喜欢" : "喜欢"} style={{...btn, fontSize:21, color:isLiked(i)?"#e46b91":"#bbb"}} onClick={() => toggleLike(i)}>{isLiked(i)?"♥":"♡"}</button>
+        </div>)}
+        {!shown.length && <p style={{color:"#999", padding:18}}>这里还没有歌曲</p>}
       </div>
-      {song && (
-        <div className="native-now-playing">
-          <button onClick={() => p.onItem(song)}>
-            <Music size={20} />
-            {song.title}
-          </button>
-          {song.kind === "audio" && safeMedia(song.media) ? (
-            <AudioPlayer p={p} item={song} />
-          ) : (
-            <button onClick={() => p.onItem(song)}>查看歌曲内容</button>
-          )}
-          <button
-            aria-label="下一首"
-            onClick={() =>
-              setSong(
-                items[
-                  (items.findIndex((i) => i.id === song.id) + 1) % items.length
-                ],
-              )
-            }
-          >
-            <SkipForward size={18} />
-          </button>
-        </div>
-      )}
-      <Tabs
-        tabs={["资料库", "歌单"]}
-        value={tab}
-        set={setTab}
-        icons={[<Music />, <Folder />]}
-      />
+      {selected && <div className="native-now-playing" style={{display:"block", background:"#f8e8ef", padding:"10px 15px"}}>
+        <button style={{...btn, width:"100%", textAlign:"left", fontWeight:600}} onClick={() => setShowPlayer(!showPlayer)}>{selected.title} · {selected.sender}　{showPlayer?"⌄":"⌃"}</button>
+        {showPlayer && <div style={{textAlign:"center", padding:"14px 0 5px"}}>
+          <div style={{height:100, width:100, borderRadius:16, background:"#ecd5e0", margin:"0 auto 12px", display:"grid", placeItems:"center", fontSize:42}}>♫</div>
+          <strong style={{display:"block"}}>{selected.title}</strong><small>{selected.sender}</small>
+          <div style={{display:"flex", justifyContent:"center", gap:35, margin:"15px 0"}}>
+            <button aria-label="上一首" style={{...btn, fontSize:23}} onClick={() => next(-1)}>⏮</button>
+            <span style={{fontSize:12, color:"#a37b8c"}}>未提供音频</span>
+            <button aria-label="下一首" style={{...btn, fontSize:23}} onClick={() => next(1)}>⏭</button>
+          </div>
+          <small style={{color:"#997f89"}}>当前仅展示歌单资料，添加合法音源后才可播放。</small>
+        </div>}
+      </div>}
+      <Tabs tabs={["首页", "收藏", "最近播放"]} value={tab} set={t => {setTab(t); setPlaylist(""); setQuery("");}} icons={[<Music />, <Heart />, <Clock />]} />
     </div>
   );
 }
