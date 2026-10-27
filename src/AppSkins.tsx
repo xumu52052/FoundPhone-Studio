@@ -1,6 +1,6 @@
 import { NativeComposer } from "./DeviceSystem";
 import { useSkinState } from "./skinState";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ChevronLeft,
   Plus,
@@ -157,6 +157,12 @@ function Compose({
     </div>
   );
 }
+// The countdown begins when the phone app bundle loads, not when the chat is opened.
+const wxTimedNotificationStart = Date.now();
+const wxTimedNotificationKey = "foundphone-boyfriend-60s-v1";
+const wxTimedSender = "Aaa最帅的mua～";
+const wxTimedBody = "宝宝，你在干嘛呀？怎么不回我消息😿";
+
 export function WeChatSkin(p: SkinProps) {
   const [tab, setTab] = useState("微信"),
     [query, setQuery] = useState(""),
@@ -164,6 +170,151 @@ export function WeChatSkin(p: SkinProps) {
     [menu, setMenu] = useState(false),
     [searchOpen, setSearchOpen] = useState(false),
     [utility, setUtility] = useState("");
+  const [timedDelivered, setTimedDelivered] = useState(() => {
+    try { return sessionStorage.getItem(wxTimedNotificationKey) === "1"; }
+    catch { return false; }
+  });
+  // The phone shell owns the timer; refresh the conversation when it fires.
+  useEffect(() => {
+    const onDelivery = () => setTimedDelivered(true);
+    window.addEventListener("foundphone:boyfriend-message", onDelivery);
+    return () => window.removeEventListener("foundphone:boyfriend-message", onDelivery);
+  }, []);
+  const timedMessage: Item | null = timedDelivered && !p.creator ? {
+    ...(p.items[0] || {}),
+    id: "foundphone-boyfriend-timed-message-v1",
+    title: wxTimedSender,
+    body: wxTimedBody,
+    sender: wxTimedSender,
+    avatar: "/assets/wechat/aaa-dog.jpeg",
+    time: new Date().toISOString().slice(0, 16).replace("T", " "),
+    kind: "text",
+    media: "",
+    outgoing: false,
+    read: false,
+  } as Item : null;
+  // Interactive otome-style reply: stored only for this visitor's browser tab.
+  type ReplyChoice = "busy" | "miss";
+  const [replyChoice, setReplyChoice] = useState<ReplyChoice | "">(() => {
+    try { const value = sessionStorage.getItem("foundphone-boyfriend-reply-v1"); return value === "busy" || value === "miss" ? value : ""; }
+    catch { return ""; }
+  });
+  const [replyOpen, setReplyOpen] = useState(false);
+  const [boyfriendTyping, setBoyfriendTyping] = useState(false);
+  const [replyReady, setReplyReady] = useState(() => {
+    try { return sessionStorage.getItem("foundphone-boyfriend-answer-v1") === "1"; }
+    catch { return false; }
+  });
+  useEffect(() => {
+    if (!replyChoice || replyReady) return;
+    const typingTimer = window.setTimeout(() => setBoyfriendTyping(true), 700);
+    const answerTimer = window.setTimeout(() => {
+      setBoyfriendTyping(false);
+      setReplyReady(true);
+      try { sessionStorage.setItem("foundphone-boyfriend-answer-v1", "1"); } catch { /* private browsing */ }
+    }, 3000);
+    return () => { window.clearTimeout(typingTimer); window.clearTimeout(answerTimer); };
+  }, [replyChoice, replyReady]);
+  const selectReply = (choice: ReplyChoice) => {
+    if (replyChoice) return;
+    setReplyChoice(choice);
+    setReplyOpen(false);
+    try { sessionStorage.setItem("foundphone-boyfriend-reply-v1", choice); } catch { /* private browsing */ }
+  };
+  const createStoryMessage = (id: string, body: string, outgoing: boolean): Item => ({
+    ...(p.items[0] || {}), id, title: wxTimedSender, body,
+    sender: outgoing ? "我" : wxTimedSender,
+    avatar: outgoing ? "/assets/wechat/my-chat-avatar.jpeg" : "/assets/wechat/aaa-dog.jpeg",
+    time: new Date().toISOString().slice(0, 16).replace("T", " "),
+    kind: "text", media: "", outgoing, read: true,
+  } as Item);
+  const storyMessages: Item[] = timedMessage ? [timedMessage] : [];
+  if (timedMessage && replyChoice) {
+    storyMessages.push(createStoryMessage("foundphone-boyfriend-user-reply-v1",
+      replyChoice === "busy" ? "刚刚在忙啦，才看到消息" : "因为我在想你呀～", true));
+    if (replyReady) storyMessages.push(createStoryMessage("foundphone-boyfriend-answer-v1",
+      replyChoice === "busy"
+        ? "没事宝宝，忙完了吗？我刚刚还在想你怎么一直没动静呢哈哈哈"
+        : "这么巧啊，我刚刚也在想你。", false));
+  }
+  // The continuation is gated by real user actions and persisted across visits.
+  const progressKey = "foundphone-wx-call-progress-v1";
+  type CallProgress = "waiting" | "voice-ready" | "voice-heard" | "accept" | "decline" | "ringing" | "connected" | "ended" | "rejected";
+  const [callProgress, setCallProgress] = useState<CallProgress>(() => {
+    try { return (localStorage.getItem(progressKey) as CallProgress) || "waiting"; }
+    catch { return "waiting"; }
+  });
+  const [voicePlaying, setVoicePlaying] = useState(false);
+  const [callPlaying, setCallPlaying] = useState(false);
+  const [callSeconds, setCallSeconds] = useState(() => { try { return Number(localStorage.getItem("foundphone-wx-call-seconds-v1") || 0); } catch { return 0; } });
+  const [callAudioEnded, setCallAudioEnded] = useState(false);
+  const [ringNotice, setRingNotice] = useState("");
+  const voiceAudio = useRef<HTMLAudioElement>(null);
+  const callAudio = useRef<HTMLAudioElement>(null);
+  const ringAudio = useRef<HTMLAudioElement>(null);
+  const setProgress = (next: CallProgress) => {
+    setCallProgress(next);
+    try { localStorage.setItem(progressKey, next); } catch { /* private mode */ }
+  };
+  useEffect(() => {
+    if (replyReady && callProgress === "waiting") setProgress("voice-ready");
+  }, [replyReady, callProgress]);
+  useEffect(() => {
+    if (callProgress !== "connected") return;
+    const timer = window.setInterval(() => setCallSeconds((n) => n + 1), 1000);
+    return () => window.clearInterval(timer);
+  }, [callProgress]);
+  useEffect(() => {
+    if (p.thread === wxTimedSender) return;
+    voiceAudio.current?.pause();
+    callAudio.current?.pause();
+    ringAudio.current?.pause();
+    setVoicePlaying(false);
+    setCallPlaying(false);
+    // Do not leave an invisible incoming call ringing when navigating away.
+    if (callProgress === "ringing") setProgress("rejected");
+  }, [p.thread]);
+  const beginCall = () => {
+    if (callProgress !== "accept") return;
+    setProgress("ringing");
+    setRingNotice("");
+    window.setTimeout(() => {
+      const audio = ringAudio.current;
+      if (audio) audio.play().catch(() => setRingNotice("点击接听或拒绝来电"));
+    }, 0);
+  };
+  const answerCall = () => {
+    ringAudio.current?.pause();
+    if (ringAudio.current) ringAudio.current.currentTime = 0;
+    setCallSeconds(0);
+    setCallAudioEnded(false);
+    setProgress("connected");
+    window.setTimeout(() => {
+      callAudio.current?.play().then(() => setCallPlaying(true)).catch(() => setCallPlaying(false));
+    }, 0);
+  };
+  const finishCall = (status: "ended" | "rejected") => {
+    ringAudio.current?.pause();
+    callAudio.current?.pause();
+    setCallPlaying(false);
+    if (status === "ended") { try { localStorage.setItem("foundphone-wx-call-seconds-v1", String(callSeconds)); } catch {} }
+    setProgress(status);
+  };
+  const callDuration = `${String(Math.floor(callSeconds / 60)).padStart(2,"0")}:${String(callSeconds % 60).padStart(2,"0")}`;
+  if (timedMessage && replyReady && callProgress !== "waiting") {
+    storyMessages.push(createStoryMessage("foundphone-wx-voice-prompt", "🎙️ 语音消息 · 点击下方语音气泡收听", false));
+    if (["accept","ringing","connected","ended","rejected"].includes(callProgress)) {
+      storyMessages.push(createStoryMessage("foundphone-wx-user-call-choice", "接呀，正好我也想你了", true));
+      storyMessages.push(createStoryMessage("foundphone-wx-call-ready", "好，那我打过来啦。", false));
+    }
+    if (callProgress === "decline") {
+      storyMessages.push(createStoryMessage("foundphone-wx-user-call-decline", "现在不太方便，等会儿好不好？", true));
+      storyMessages.push(createStoryMessage("foundphone-wx-call-decline-reply", "好呀，那你先忙，等你有空了我们再打。", false));
+    }
+    if (callProgress === "ended") storyMessages.push(createStoryMessage("foundphone-wx-call-history", `语音通话 ${callDuration}`, false));
+    if (callProgress === "rejected") storyMessages.push(createStoryMessage("foundphone-wx-call-rejected", "已拒绝语音通话", false));
+  }
+  const boyfriendItems = [...p.items, ...storyMessages];
   const [readThreads, setReadThreads] = useSkinState<string[]>(
     p,
     "readThreads",
@@ -295,7 +446,7 @@ export function WeChatSkin(p: SkinProps) {
       ) : p.thread ? (
         <>
           <MessageList
-            items={p.items.filter((i) => i.title === p.thread)}
+            items={boyfriendItems.filter((i) => i.title === p.thread)}
             chatWallpaper={p.thread === "Aaa最帅的mua～" ? "/assets/wechat/chat-boyfriend-bg.jpeg" : "/assets/wechat/chat-others-bg.jpeg"}
             boyfriendChat={p.thread === "Aaa最帅的mua～"}
             participantAvatar={chatAvatars[p.thread]}
@@ -303,7 +454,71 @@ export function WeChatSkin(p: SkinProps) {
             onItem={p.onItem}
             onRead={p.onRead}
           />
-          <Compose creator={p.creator} onAdd={p.onAdd} />
+          {!p.creator && p.thread === wxTimedSender && timedDelivered && replyReady && callProgress !== "waiting" && (
+            <div style={{padding:"10px 14px",background:"#e8e8e8",display:"grid",gap:10}}>
+              <audio ref={voiceAudio} preload="metadata" src="/assets/wechat/voice-call-question.m4a"
+                onEnded={() => { setVoicePlaying(false); if (callProgress === "voice-ready") setProgress("voice-heard"); }}
+                onPause={() => setVoicePlaying(false)} />
+              <audio ref={callAudio} preload="metadata" src="/assets/wechat/voice-call-conversation.m4a"
+                onEnded={() => { setCallPlaying(false); setCallAudioEnded(true); }} onPause={() => setCallPlaying(false)} />
+              <audio ref={ringAudio} loop preload="auto" src="/assets/wechat/incoming-call-tone.wav" />
+              {(["voice-ready","voice-heard"].includes(callProgress)) && (
+                <button type="button" style={{justifySelf:"start",background:"#fff",border:"none",borderRadius:13,padding:"12px 18px",fontSize:14,color:"#222"}}
+                  onClick={() => {
+                    const audio = voiceAudio.current;
+                    if (!audio) return;
+                    if (audio.paused) audio.play().then(() => setVoicePlaying(true)).catch(() => setRingNotice("请再点一次播放语音"));
+                    else audio.pause();
+                  }}>
+                  {voicePlaying ? "Ⅱ" : "▶"}　)))　6″ {callProgress === "voice-heard" ? "✓" : ""}
+                </button>
+              )}
+              {callProgress === "voice-heard" && (
+                <div style={{display:"grid",gap:8}}>
+                  <div style={{fontSize:12,color:"#777",textAlign:"center"}}>选择一句回复</div>
+                  <button type="button" style={{padding:13,border:0,borderRadius:10,background:"white",textAlign:"left"}} onClick={() => setProgress("accept")}>接呀，正好我也想你了</button>
+                  <button type="button" style={{padding:13,border:0,borderRadius:10,background:"white",textAlign:"left"}} onClick={() => setProgress("decline")}>现在不太方便，等会儿好不好？</button>
+                </div>
+              )}
+              {callProgress === "accept" && <button type="button" onClick={beginCall} style={{padding:12,background:"#07c160",border:0,borderRadius:12,color:"white"}}>📞 查看 🪵 发来的语音通话</button>}
+              {(["ringing","connected"].includes(callProgress)) && (
+                <div role="dialog" aria-label="微信语音通话" style={{background:"#23272c",color:"white",borderRadius:20,padding:"28px 18px",display:"grid",gap:18,textAlign:"center",justifyItems:"center"}}>
+                  <img src="/assets/wechat/aaa-dog.jpeg" alt="" style={{width:70,height:70,borderRadius:15,objectFit:"cover"}} />
+                  <strong>Aaa最帅的mua～</strong>
+                  <span>{callProgress === "ringing" ? "微信语音通话邀请…" : `语音通话 ${callDuration}`}</span>
+                  {ringNotice && <small>{ringNotice}</small>}
+                  {callProgress === "connected" && <div style={{fontSize:12,color:"#ddd"}}>{callAudioEnded ? "对方说完啦，可以挂断通话" : callPlaying ? "正在通话…" : "音频已暂停"}</div>}
+                  {callProgress === "connected" && !callAudioEnded && !callPlaying && <button type="button" onClick={() => callAudio.current?.play().then(() => setCallPlaying(true)).catch(() => setRingNotice("请再点一次播放"))} style={{border:0,borderRadius:10,padding:10}}>▶ 继续播放</button>}
+                  <div style={{display:"flex",gap:30}}>
+                    <button type="button" onClick={() => finishCall(callProgress === "ringing" ? "rejected" : "ended")} style={{background:"#e54848",border:0,borderRadius:50,color:"white",padding:16}}>📞 {callProgress === "ringing" ? "拒绝" : "挂断"}</button>
+                    {callProgress === "ringing" && <button type="button" onClick={answerCall} style={{background:"#07c160",border:0,borderRadius:50,color:"white",padding:16}}>📞 接听</button>}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+          {!p.creator && p.thread === wxTimedSender && timedDelivered && (
+            <>
+              {boyfriendTyping && !replyReady && (
+                <div role="status" style={{padding:"7px 16px",fontSize:12,color:"#777",background:"#f4f4f4"}}>对方正在输入中…</div>
+              )}
+              {replyOpen && !replyChoice && (
+                <div style={{background:"#e9e9ed",padding:"12px 12px 8px",display:"grid",gap:9}}>
+                  <div style={{textAlign:"center",fontSize:12,color:"#777"}}>选择一句回复</div>
+                  <button type="button" onClick={() => selectReply("busy")} style={{padding:13,borderRadius:10,background:"white",border:"1px solid #ddd",color:"#222",textAlign:"left"}}>刚刚在忙啦，才看到消息</button>
+                  <button type="button" onClick={() => selectReply("miss")} style={{padding:13,borderRadius:10,background:"white",border:"1px solid #ddd",color:"#222",textAlign:"left"}}>因为我在想你呀～</button>
+                  <div style={{height:32,display:"flex",justifyContent:"space-around",color:"#a4a4a8",fontSize:16}}><span>ABC</span><span>空格</span><span>↵</span></div>
+                </div>
+              )}
+              {!replyChoice && (
+                <button type="button" onClick={() => setReplyOpen((v) => !v)}
+                  style={{width:"100%",background:"#f7f7f7",border:"none",borderTop:"1px solid #ddd",padding:"13px 15px",textAlign:"left",color:"#888",fontSize:14}}>
+                  <span aria-hidden="true">⌨　</span>{replyOpen ? "收起回复选项" : "点击输入框回复…"}
+                </button>
+              )}
+            </>
+          )}
+          {(p.creator || p.thread !== wxTimedSender || !timedDelivered) && <Compose creator={p.creator} onAdd={p.onAdd} />}
         </>
       ) : moments ? (
         <div className="wx-moments">
@@ -357,7 +572,7 @@ export function WeChatSkin(p: SkinProps) {
                     ),
                 )
                 .map((t) => {
-                  const list = p.items.filter((i) => i.title === t),
+                  const list = boyfriendItems.filter((i) => i.title === t),
                     last = list.at(-1);
                   return (
                     <button

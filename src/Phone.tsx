@@ -141,6 +141,25 @@ function PhoneRuntime({
   const [recent, setRecent] = useState<string[]>([]);
   const appSnapshots = useRef(new Map<string, HTMLElement>());
   const [banner, setBanner] = useState("");
+  const [boyfriendNotice, setBoyfriendNotice] = useState(false);
+  const [boyfriendThreadRequest, setBoyfriendThreadRequest] = useState(0);
+  useEffect(() => {
+    if (creator) return;
+    const key = "foundphone-boyfriend-60s-v1";
+    try { if (sessionStorage.getItem(key) === "1") return; } catch { /* private browsing */ }
+    const timer = window.setTimeout(() => {
+      try { sessionStorage.setItem(key, "1"); } catch { /* private browsing */ }
+      setBoyfriendNotice(true);
+      window.dispatchEvent(new Event("foundphone:boyfriend-message"));
+    }, 60000);
+    return () => window.clearTimeout(timer);
+  }, [creator]);
+  useEffect(() => {
+    if (!boyfriendNotice) return;
+    const timer = window.setTimeout(() => setBoyfriendNotice(false), 9000);
+    return () => window.clearTimeout(timer);
+  }, [boyfriendNotice]);
+
   const noticesSeen = useRef(0);
   const [contextApp, setContextApp] = useState("");
   const [deviceScale, setDeviceScale] = useState(0.84);
@@ -442,6 +461,7 @@ function PhoneRuntime({
                 origin={launchOrigin}
               >
                 <AppContent
+                  boyfriendThreadRequest={boyfriendThreadRequest}
                   app={plugin}
                   name={
                     work.apps.find((a) => a.id === app)?.name ?? plugin.name
@@ -678,6 +698,26 @@ function PhoneRuntime({
               </div>
             </div>
           )}
+          {boyfriendNotice && (
+            <button type="button" aria-label="查看男朋友的微信消息"
+              onClick={() => {
+                setBoyfriendNotice(false);
+                if (locked) { setLocked(false); setPinOpen(false); }
+                open("wechat");
+                setBoyfriendThreadRequest((n) => n + 1);
+              }}
+              style={{position:"absolute",top:54,left:15,right:15,zIndex:99999,
+                display:"flex",alignItems:"center",gap:10,padding:"12px",
+                borderRadius:16,border:"1px solid #ddd",background:"rgba(249,249,249,.98)",
+                color:"#202020",boxShadow:"0 6px 25px rgba(0,0,0,.2)",textAlign:"left",cursor:"pointer"}}>
+              <img src="/assets/wechat/aaa-dog.jpeg" alt="" style={{width:42,height:42,borderRadius:9,objectFit:"cover"}} />
+              <span style={{display:"flex",flexDirection:"column",gap:3,minWidth:0}}>
+                <span style={{fontSize:12,color:"#666"}}>微信 · 现在</span>
+                <strong style={{fontSize:14}}>Aaa最帅的mua～</strong>
+                <span style={{fontSize:13}}>宝宝，你在干嘛呀？怎么不回我消息😿</span>
+              </span>
+            </button>
+          )}
           {banner && !locked && (
             <button
               className="device-banner"
@@ -855,6 +895,7 @@ function Media({ item }: { item: Item }) {
   );
 }
 function AppContent({
+  boyfriendThreadRequest,
   app,
   name,
   items,
@@ -868,6 +909,7 @@ function AppContent({
   onUi,
   work,
 }: {
+  boyfriendThreadRequest?: number;
   app: AppPlugin;
   name: string;
   items: Item[];
@@ -883,6 +925,10 @@ function AppContent({
 }) {
   const [detail, setDetail] = useState<Item | null>(null);
   const [thread, setThread] = useState("");
+  useEffect(() => {
+    if (app.id === "wechat" && boyfriendThreadRequest) setThread("Aaa最帅的mua～");
+  }, [app.id, boyfriendThreadRequest]);
+
   const [tab, setTab] = useState(app.tabs[0]);
   const [q, setQ] = useState("");
   const [pw, setPw] = useState("");
