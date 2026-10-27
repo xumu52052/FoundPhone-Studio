@@ -409,13 +409,16 @@ export function NotesSkin(p: Props) {
   );
 }
 export function CalendarSkin(p: Props) {
-  const [month, setMonth] = useState(8),
+  const [month, setMonth] = useState(9),
     [year, setYear] = useState(2026),
-    [day, setDay] = useState(1);
+    [day, setDay] = useState(27);
   const prefix = `${year}-${String(month + 1).padStart(2, "0")}`;
-  const list = p.items.filter((i) =>
-    i.time.startsWith(`${prefix}-${String(day).padStart(2, "0")}`),
-  );
+  const isOnDate = (i: (typeof p.items)[number], d: number) => {
+    const md = `${String(month + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+    return i.time.startsWith(`${year}-${md}`) ||
+      (i.meta?.recurring === "yearly" && i.time.slice(5, 10) === md);
+  };
+  const list = p.items.filter((i) => isOnDate(i, day));
   const move = (d: number) => {
     const date = new Date(Date.UTC(year, month + d, 1));
     setYear(date.getUTCFullYear());
@@ -453,11 +456,7 @@ export function CalendarSkin(p: Props) {
               onClick={() => setDay(i + 1)}
             >
               {i + 1}
-              {p.items.some((x) =>
-                x.time.startsWith(
-                  `${prefix}-${String(i + 1).padStart(2, "0")}`,
-                ),
-              ) && <i />}
+              {p.items.some((x) => isOnDate(x, i + 1)) && <i />}
             </button>
           ))}
         </div>
