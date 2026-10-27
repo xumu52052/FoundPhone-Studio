@@ -3831,12 +3831,615 @@
     ],
     "music": [
       {
-        "id": "test-item-music",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
+        "id": "enn-music-01-01",
+        "title": "U",
+        "body": "OSUN",
+        "sender": "OSUN",
+        "folder": "我的喜欢 ♡",
         "kind": "text",
-        "meta": {}
+        "meta": {
+          "album": "",
+          "playlistOrder": 1,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-02",
+        "title": "i need you more (feat. Suyo)",
+        "body": "Sweet The Kid",
+        "sender": "Sweet The Kid",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 2,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-03",
+        "title": "Breakup Serenade",
+        "body": "SLAY",
+        "sender": "SLAY",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 3,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-04",
+        "title": "all day",
+        "body": "george",
+        "sender": "george",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 4,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-05",
+        "title": "homesick",
+        "body": "wave to earth",
+        "sender": "wave to earth",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 5,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-06",
+        "title": "let’s go picnic",
+        "body": "george",
+        "sender": "george",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 6,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-07",
+        "title": "S",
+        "body": "OSUN",
+        "sender": "OSUN",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 7,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-08",
+        "title": "Skrr (feat. GISELLE)",
+        "body": "HAON",
+        "sender": "HAON",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 8,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-09",
+        "title": "What if we met at another plac...",
+        "body": "OSUN",
+        "sender": "OSUN",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 9,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-10",
+        "title": "1:05",
+        "body": "The Black Skirts",
+        "sender": "The Black Skirts",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 10,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-11",
+        "title": "LEAVING THE VALLEY",
+        "body": "Shinjihang",
+        "sender": "Shinjihang",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 11,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-12",
+        "title": "恋人未满",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 12,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-13",
+        "title": "等待一切重来",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 13,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-01-14",
+        "title": "偷偷做个梦",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 14,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-01",
+        "title": "different",
+        "body": "leejean",
+        "sender": "leejean",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 1,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-02",
+        "title": "My Only One (No Hay Nadie Más)",
+        "body": "Sebastián Yatra、Isabela Merced",
+        "sender": "Sebastián Yatra、Isabela Merced",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 2,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-03",
+        "title": "305",
+        "body": "Shawn Mendes",
+        "sender": "Shawn Mendes",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 3,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-04",
+        "title": "Man in the Mirror",
+        "body": "Michael Jackson",
+        "sender": "Michael Jackson",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 4,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-05",
+        "title": "LOVE.",
+        "body": "Kendrick Lamar、Zacari",
+        "sender": "Kendrick Lamar、Zacari",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 5,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-06",
+        "title": "Paris in the Rain",
+        "body": "Lauv",
+        "sender": "Lauv",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 6,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-07",
+        "title": "always",
+        "body": "keshi",
+        "sender": "keshi",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 7,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-08",
+        "title": "ETA",
+        "body": "Justin Bieber",
+        "sender": "Justin Bieber",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 8,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-01",
+        "title": "等待一切重来",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 1,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-02",
+        "title": "偷偷做个梦",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 2,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-03",
+        "title": "恋人未满",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 3,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-04",
+        "title": "Dreamin",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 4,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-05",
+        "title": "Holiday",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 5,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-06",
+        "title": "淡季动物园",
+        "body": "许光汉",
+        "sender": "许光汉",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 6,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-07",
+        "title": "恋人",
+        "body": "李荣浩",
+        "sender": "李荣浩",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 7,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-08",
+        "title": "路过人间",
+        "body": "郁可唯",
+        "sender": "郁可唯",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 8,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-09",
+        "title": "我只在乎你",
+        "body": "邓丽君",
+        "sender": "邓丽君",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 9,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-10",
+        "title": "凑热闹",
+        "body": "BY2",
+        "sender": "BY2",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 10,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-11",
+        "title": "想见你想见你想见你",
+        "body": "八三夭",
+        "sender": "八三夭",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 11,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-12",
+        "title": "ETA",
+        "body": "Justin Bieber",
+        "sender": "Justin Bieber",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 12,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-13",
+        "title": "always",
+        "body": "keshi",
+        "sender": "keshi",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 13,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-14",
+        "title": "Paris in the Rain",
+        "body": "Lauv",
+        "sender": "Lauv",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 14,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-15",
+        "title": "LOVE.",
+        "body": "Kendrick Lamar、Zacari",
+        "sender": "Kendrick Lamar、Zacari",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 15,
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-04-01",
+        "title": "seasons",
+        "body": "wave to earth",
+        "sender": "wave to earth",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 1,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-04-02",
+        "title": "instagram",
+        "body": "DEAN",
+        "sender": "DEAN",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 2,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-04-03",
+        "title": "beside you",
+        "body": "keshi",
+        "sender": "keshi",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 3,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-04-04",
+        "title": "Best Part",
+        "body": "Daniel Caesar、H.E.R.",
+        "sender": "Daniel Caesar、H.E.R.",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 4,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-04-05",
+        "title": "Snooze",
+        "body": "SZA",
+        "sender": "SZA",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 5,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-05-01",
+        "title": "Candy",
+        "body": "NCT DREAM",
+        "sender": "NCT DREAM",
+        "folder": "通勤循环",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 1,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-05-02",
+        "title": "Hello Future",
+        "body": "NCT DREAM",
+        "sender": "NCT DREAM",
+        "folder": "通勤循环",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 2,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-05-03",
+        "title": "D (Half Moon)",
+        "body": "DEAN、Gaeko",
+        "sender": "DEAN、Gaeko",
+        "folder": "通勤循环",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 3,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-05-04",
+        "title": "Love Me Again",
+        "body": "V",
+        "sender": "V",
+        "folder": "通勤循环",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 4,
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-05-05",
+        "title": "Sunflower",
+        "body": "Post Malone、Swae Lee",
+        "sender": "Post Malone、Swae Lee",
+        "folder": "通勤循环",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": 5,
+          "source": "推荐搭配"
+        }
       }
     ],
     "maps": [
