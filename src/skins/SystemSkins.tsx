@@ -25,7 +25,7 @@ import {
   Users,
   Wallet,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { download } from "../io";
 import { safeMedia, type Item } from "../schema";
 import {
@@ -731,6 +731,27 @@ export function MusicSkin(p: Props) {
   const [liked, setLiked] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
   const [showPlayer, setShowPlayer] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const [position, setPosition] = useState(0);
+  const playable = (i: Item | null) => !!i && i.title === "偷偷做个梦" && i.sender.includes("穆祉丞");
+  const audioPath = "/assets/story-music/tou-tou-zuo-ge-meng-37s.m4a";
+  const coverPath = "/assets/story-music/tou-tou-zuo-ge-meng-cover.jpeg";
+  const clock = (s: number) => `0:${String(Math.floor(Math.max(0, s))).padStart(2, "0")}`;
+  useEffect(() => {
+    const a = audioRef.current;
+    if (!a) return;
+    if (!playable(selected)) { a.pause(); setPlaying(false); setPosition(0); return; }
+    a.pause(); a.currentTime = 0; setPosition(0); setPlaying(false);
+    // Opening the song selects the clip; audio starts from the explicit song tap.
+    a.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+  }, [selected?.title, selected?.sender]);
+  const togglePlayback = () => {
+    const a = audioRef.current;
+    if (!a || !playable(selected)) return;
+    if (a.paused) a.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    else { a.pause(); setPlaying(false); }
+  };
   const playlists = ["我的喜欢 ♡", "🪵 分享给我的歌", "🪵 专场", "晚间耳机时间", "通勤循环"];
   const tracks = p.items.filter(i => i.id !== "test-item-music");
   const unique = tracks.filter((i, index, arr) => arr.findIndex(t => t.title === i.title && t.sender === i.sender) === index);
@@ -772,17 +793,21 @@ export function MusicSkin(p: Props) {
         </div>)}
         {!shown.length && <p style={{color:"#999", padding:18}}>这里还没有歌曲</p>}
       </div>
+      <audio ref={audioRef} src={audioPath} preload="metadata" onTimeUpdate={e => setPosition(Math.min(e.currentTarget.currentTime,37))} onEnded={() => {setPlaying(false);setPosition(37);}} onPause={() => setPlaying(false)} onPlay={() => setPlaying(true)} />
       {selected && <div className="native-now-playing" style={{display:"block", background:"#f8e8ef", padding:"10px 15px"}}>
         <button style={{...btn, width:"100%", textAlign:"left", fontWeight:600}} onClick={() => setShowPlayer(!showPlayer)}>{selected.title} · {selected.sender}　{showPlayer?"⌄":"⌃"}</button>
         {showPlayer && <div style={{textAlign:"center", padding:"14px 0 5px"}}>
-          <div style={{height:100, width:100, borderRadius:16, background:"#ecd5e0", margin:"0 auto 12px", display:"grid", placeItems:"center", fontSize:42}}>♫</div>
+          {playable(selected) ? <img src={coverPath} alt="偷偷做个梦 原版封面" style={{height:160,width:160,objectFit:"cover",borderRadius:16,display:"block",margin:"0 auto 12px"}} /> : <div style={{height:100, width:100, borderRadius:16, background:"#ecd5e0", margin:"0 auto 12px", display:"grid", placeItems:"center", fontSize:42}}>♫</div>}
           <strong style={{display:"block"}}>{selected.title}</strong><small>{selected.sender}</small>
           <div style={{display:"flex", justifyContent:"center", gap:35, margin:"15px 0"}}>
             <button aria-label="上一首" style={{...btn, fontSize:23}} onClick={() => next(-1)}>⏮</button>
-            <span style={{fontSize:12, color:"#a37b8c"}}>未提供音频</span>
+            {playable(selected) ? <button aria-label={playing ? "暂停" : "播放"} style={{...btn,fontSize:24,color:"#ad6581"}} onClick={togglePlayback}>{playing ? "⏸" : "▶"}</button> : <span style={{fontSize:12, color:"#a37b8c"}}>未提供音频</span>}
             <button aria-label="下一首" style={{...btn, fontSize:23}} onClick={() => next(1)}>⏭</button>
           </div>
-          <small style={{color:"#997f89"}}>当前仅展示歌单资料，添加合法音源后才可播放。</small>
+          {playable(selected) ? <div style={{padding:"4px 12px 8px"}}>
+            <input aria-label="播放进度" type="range" min={0} max={37} step={0.1} value={Math.min(position,37)} onChange={e => { const a=audioRef.current; if(a){a.currentTime=Number(e.target.value);setPosition(a.currentTime);} }} style={{width:"100%",accentColor:"#ad6581"}} />
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:11,color:"#997f89"}}><span>{clock(position)}</span><span>0:37</span></div>
+          </div> : <small style={{color:"#997f89"}}>当前歌曲未提供音频。</small>}
         </div>}
       </div>}
       <Tabs tabs={["首页", "收藏", "最近播放"]} value={tab} set={t => {setTab(t); setPlaylist(""); setQuery("");}} icons={[<Music />, <Heart />, <Clock />]} />
