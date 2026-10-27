@@ -226,7 +226,7 @@ function PhoneRuntime({
           setOwn(saved.state);
         else {
           setOwn(dispatch(work, initialRuntime(work), "start"));
-          if (saved) setLoadError("作品已更新，已开始新的进度。");
+          // Keep the revision-based save behavior, but do not show an update toast.
         }
         setReady(true);
       })
