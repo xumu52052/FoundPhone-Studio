@@ -3645,12 +3645,148 @@
     ],
     "calendar": [
       {
-        "id": "test-item-calendar",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
+        "id": "personal-calendar-01",
+        "title": "上午有课",
+        "body": "记得带笔记本，早点出门。",
+        "time": "2026-08-25 08:00",
         "kind": "text",
-        "meta": {}
+        "folder": "日常",
+        "meta": {
+          "location": "记得带笔记本，早点出门。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-02",
+        "title": "整理课程作业",
+        "body": "晚上把作业进度整理一下。",
+        "time": "2026-09-03 19:00",
+        "kind": "text",
+        "folder": "学习",
+        "meta": {
+          "location": "晚上把作业进度整理一下。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-03",
+        "title": "和朋友吃饭",
+        "body": "中午约了朋友，别迟到。",
+        "time": "2026-09-12 12:30",
+        "kind": "text",
+        "folder": "日常",
+        "meta": {
+          "location": "中午约了朋友，别迟到。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-04",
+        "title": "探班 🎬",
+        "body": "出门前先联系陈助理；小面包和咖啡记得带。",
+        "time": "2026-09-18 11:00",
+        "kind": "text",
+        "folder": "见面",
+        "meta": {
+          "location": "出门前先联系陈助理；小面包和咖啡记得带。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-05",
+        "title": "面团 🐾",
+        "body": "整理一下给面团拍的照片。",
+        "time": "2026-09-29 18:00",
+        "kind": "text",
+        "folder": "生活",
+        "meta": {
+          "location": "整理一下给面团拍的照片。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-06",
+        "title": "🪵 出道纪念日 ✨",
+        "body": "今天是他的出道纪念日。",
+        "time": "2026-10-01 09:00",
+        "kind": "text",
+        "folder": "纪念",
+        "meta": {
+          "location": "今天是他的出道纪念日。",
+          "recurring": "yearly"
+        }
+      },
+      {
+        "id": "personal-calendar-07",
+        "title": "晚饭 🍚",
+        "body": "晚上问问他几点回来，别做太多。",
+        "time": "2026-10-06 18:30",
+        "kind": "text",
+        "folder": "生活",
+        "meta": {
+          "location": "晚上问问他几点回来，别做太多。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-08",
+        "title": "超市补货 🛒",
+        "body": "家里洗衣液、牛奶和鸡蛋都快没了，等他有空一起去。",
+        "time": "2026-10-10 16:00",
+        "kind": "text",
+        "folder": "生活",
+        "meta": {
+          "location": "家里洗衣液、牛奶和鸡蛋都快没了，等他有空一起去。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-09",
+        "title": "课程作业",
+        "body": "检查一下本周的学习任务。",
+        "time": "2026-10-17 09:00",
+        "kind": "text",
+        "folder": "学习",
+        "meta": {
+          "location": "检查一下本周的学习任务。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-10",
+        "title": "这周的待办",
+        "body": "买洗衣液、取快递、给面团洗澡。",
+        "time": "2026-10-25 14:00",
+        "kind": "text",
+        "folder": "日常",
+        "meta": {
+          "location": "买洗衣液、取快递、给面团洗澡。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-11",
+        "title": "和朋友约饭",
+        "body": "中午见面，记得提前出门。",
+        "time": "2026-11-05 12:00",
+        "kind": "text",
+        "folder": "日常",
+        "meta": {
+          "location": "中午见面，记得提前出门。",
+          "recurring": ""
+        }
+      },
+      {
+        "id": "personal-calendar-12",
+        "title": "🪵 生日快乐 🎂",
+        "body": "记得提前准备生日的小惊喜。",
+        "time": "2026-11-16 09:00",
+        "kind": "text",
+        "folder": "纪念",
+        "meta": {
+          "location": "记得提前准备生日的小惊喜。",
+          "recurring": "yearly"
+        }
       }
     ],
     "mail": [
