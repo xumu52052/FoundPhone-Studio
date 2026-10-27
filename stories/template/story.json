@@ -3,7 +3,7 @@
   "id": "ui-test-phone-v2",
   "title": "捡手机",
   "description": "仅用于界面测试，不含剧情",
-  "revision": 11,
+  "revision": 12,
   "phone": {
     "owner": "机主",
     "date": "2026-10-25",
@@ -102,10 +102,6 @@
     {
       "id": "assistant",
       "name": "🪵助理"
-    },
-    {
-      "id": "lijie",
-      "name": "李姐"
     },
     {
       "id": "bestie",
@@ -2903,77 +2899,6 @@
       ]
     },
     {
-      "id": "wechat-lijie",
-      "app": "wechat",
-      "title": "李姐",
-      "participants": [
-        "owner",
-        "lijie"
-      ],
-      "messages": [
-        {
-          "id": "wechat-lijie-001",
-          "body": "小徐，早上好呀",
-          "senderId": "lijie",
-          "time": "09:12"
-        },
-        {
-          "id": "wechat-lijie-002",
-          "body": "早上好李姐！",
-          "senderId": "owner",
-          "time": "09:13"
-        },
-        {
-          "id": "wechat-lijie-003",
-          "body": "昨天那个数据你整理完了吗",
-          "senderId": "lijie",
-          "time": "09:13"
-        },
-        {
-          "id": "wechat-lijie-004",
-          "body": "整理好了！我一会发您",
-          "senderId": "owner",
-          "time": "09:14"
-        },
-        {
-          "id": "wechat-lijie-005",
-          "body": "好嘞 不着急",
-          "senderId": "lijie",
-          "time": "09:15"
-        },
-        {
-          "id": "wechat-lijie-006",
-          "body": "对了中午要不要一起吃饭",
-          "senderId": "lijie",
-          "time": "09:18"
-        },
-        {
-          "id": "wechat-lijie-007",
-          "body": "好呀 今天吃什么",
-          "senderId": "owner",
-          "time": "09:19"
-        },
-        {
-          "id": "wechat-lijie-008",
-          "body": "楼下那家米线？",
-          "senderId": "lijie",
-          "time": "09:20"
-        },
-        {
-          "id": "wechat-lijie-009",
-          "body": "可以可以！",
-          "senderId": "owner",
-          "time": "09:21"
-        },
-        {
-          "id": "wechat-lijie-010",
-          "body": "小徐，那个表我给你发过去了哈",
-          "senderId": "lijie",
-          "time": "09:36"
-        }
-      ]
-    },
-    {
       "id": "wechat-bestie",
       "app": "wechat",
       "title": "好闺闺",
@@ -3464,10 +3389,56 @@
     ],
     "notes": [
       {
-        "id": "test-item-notes",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
+        "id": "personal-note-1",
+        "title": "这周要做的事",
+        "body": "买洗衣液、取快递、给面团洗澡。",
+        "time": "2026-10-25 18:30",
+        "folder": "备忘录",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "personal-note-2",
+        "title": "超市补货 🛒",
+        "body": "洗衣液、牛奶、鸡蛋都快没了。\n\n等他有空一起去超市补货。",
+        "time": "2026-10-10 20:10",
+        "folder": "备忘录",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "personal-note-3",
+        "title": "晚饭",
+        "body": "冰箱没牛奶了。\n晚上问问他几点回来，别做太多。",
+        "time": "2026-10-06 17:45",
+        "folder": "备忘录",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "personal-note-4",
+        "title": "探班",
+        "body": "出发前问陈助理几点方便过去。\n\n烤点小面包带给大家，再买五杯咖啡。",
+        "time": "2026-09-18 10:20",
+        "folder": "备忘录",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "personal-note-5",
+        "title": "记得带",
+        "body": "充电宝、耳机、纸巾。\n他的那件黑短袖还在我这。",
+        "time": "2026-08-19 09:15",
+        "folder": "备忘录",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "personal-note-6",
+        "title": "面团 🐾",
+        "body": "洗澡、剪指甲、补猫粮。\n最近怎么越来越黏人了。",
+        "time": "2026-08-15 14:00",
+        "folder": "备忘录",
         "kind": "text",
         "meta": {}
       }
