@@ -145,13 +145,13 @@ function PhoneRuntime({
   const [boyfriendThreadRequest, setBoyfriendThreadRequest] = useState(0);
   useEffect(() => {
     if (creator) return;
-    const key = "foundphone-boyfriend-60s-v1";
+    const key = "foundphone-boyfriend-20s-v1";
     try { if (sessionStorage.getItem(key) === "1") return; } catch { /* private browsing */ }
     const timer = window.setTimeout(() => {
       try { sessionStorage.setItem(key, "1"); } catch { /* private browsing */ }
       setBoyfriendNotice(true);
       window.dispatchEvent(new Event("foundphone:boyfriend-message"));
-    }, 60000);
+    }, 20000);
     return () => window.clearTimeout(timer);
   }, [creator]);
   useEffect(() => {
