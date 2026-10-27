@@ -16,7 +16,7 @@ import {
   Users,
   Video,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { safeMedia, type Item } from "../schema";
 import {
   Avatar,
@@ -399,35 +399,94 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
     </article>
   );
 }
-export function DouyinSkin(p: Props) {
-  const { tab, setTab, items } = useContent(p, "推荐");
-  const list = tab === "推荐" ? items : items.filter((i) => i.folder === tab);
+// Two user-supplied videos. The screen recordings have baked-in Douyin controls;
+// cover that right-hand area and render the only two active actions ourselves.
+const douyinClips = [
+  { src: "/assets/douyin/clip-01.mp4", likes: 1336000, saves: 117000 },
+  { src: "/assets/douyin/clip-02.mp4", likes: 1341000, saves: 96000 },
+];
+const douyinStoreKey = "foundphone-douyin-reactions-v1";
+function readDouyinReactions(): { likes: boolean[]; saves: boolean[] } {
+  try {
+    const raw = JSON.parse(localStorage.getItem(douyinStoreKey) || "null");
+    if (raw && Array.isArray(raw.likes) && Array.isArray(raw.saves)) {
+      return { likes: [!!raw.likes[0], !!raw.likes[1]], saves: [!!raw.saves[0], !!raw.saves[1]] };
+    }
+  } catch { /* Storage may be unavailable in private browsing. */ }
+  return { likes: [false, false], saves: [false, false] };
+}
+function formatDouyinCount(value: number): string {
+  return value >= 10000 ? `${(value / 10000).toFixed(1)}万` : String(value);
+}
+export function DouyinSkin(_p: Props) {
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [reactions, setReactions] = useState(readDouyinReactions);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const startY = useRef<number | null>(null);
+  const wheelTime = useRef(0);
+  const clip = douyinClips[index];
+  useEffect(() => {
+    try { localStorage.setItem(douyinStoreKey, JSON.stringify(reactions)); } catch { /* optional persistence */ }
+  }, [reactions]);
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.currentTime = 0;
+    video.play().then(() => setPaused(false)).catch(() => setPaused(true));
+  }, [index]);
+  function move(delta: number) {
+    if (Math.abs(delta) < 45) return;
+    setIndex((i) => Math.max(0, Math.min(1, i + (delta > 0 ? 1 : -1))));
+  }
+  function toggle(kind: "likes" | "saves") {
+    setReactions((old) => {
+      const updated = [...old[kind]];
+      updated[index] = !updated[index];
+      return { ...old, [kind]: updated };
+    });
+  }
   return (
-    <div className="catalog-skin douyin-ui">
-      <Header p={p} />
-      <div className="douyin-top">
-        {["同城", "关注", "推荐"].map((t) => (
-          <button
-            className={tab === t ? "selected" : ""}
-            key={t}
-            onClick={() => setTab(t)}
-          >
-            {t}
-          </button>
-        ))}
-      </div>
-      <div className="vertical-feed">
-        {list.map((i) => (
-          <VerticalVideo key={i.id} p={p} item={i} />
-        ))}
-        <Empty items={list} />
-      </div>
-      <Tabs
-        tabs={["推荐", "关注", "我"]}
-        value={tab}
-        set={setTab}
-        icons={[<Home />, <Users />, <User />]}
+    <div className="catalog-skin douyin-ui douyin-two-clips"
+      onTouchStart={(e) => { startY.current = e.touches[0]?.clientY ?? null; }}
+      onTouchEnd={(e) => {
+        if (startY.current === null) return;
+        move(startY.current - (e.changedTouches[0]?.clientY ?? startY.current));
+        startY.current = null;
+      }}
+      onWheel={(e) => {
+        const now = Date.now();
+        if (Math.abs(e.deltaY) > 45 && now - wheelTime.current > 500) {
+          wheelTime.current = now;
+          move(e.deltaY);
+        }
+      }}
+    >
+      <video key={index} ref={videoRef} src={clip.src}
+        autoPlay loop playsInline preload="metadata"
+        onClick={() => {
+          const video = videoRef.current;
+          if (!video) return;
+          if (video.paused) video.play().then(() => setPaused(false)).catch(() => {});
+          else { video.pause(); setPaused(true); }
+        }}
       />
+      <div className="douyin-reaction-mask" aria-hidden="true" />
+      <div className="douyin-reaction-actions">
+        <button type="button" aria-label={reactions.likes[index] ? "取消点赞" : "点赞"}
+          aria-pressed={reactions.likes[index]} onClick={() => toggle("likes")}
+          className={reactions.likes[index] ? "active-like" : ""}>
+          <Heart size={38} strokeWidth={2.1} fill={reactions.likes[index] ? "currentColor" : "none"} />
+          <span>{formatDouyinCount(clip.likes + Number(reactions.likes[index]))}</span>
+        </button>
+        <button type="button" aria-label={reactions.saves[index] ? "取消收藏" : "收藏"}
+          aria-pressed={reactions.saves[index]} onClick={() => toggle("saves")}
+          className={reactions.saves[index] ? "active-save" : ""}>
+          <span className="douyin-star">★</span>
+          <span>{formatDouyinCount(clip.saves + Number(reactions.saves[index]))}</span>
+        </button>
+      </div>
+      {paused && <div className="douyin-paused-indicator" aria-hidden="true">▶</div>}
     </div>
   );
 }

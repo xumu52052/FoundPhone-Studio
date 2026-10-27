@@ -4130,3 +4130,32 @@
 .catalog-slot[hidden] {
   display: none;
 }
+
+/* Two original screen recordings; no extra feed, navigation or fake data. */
+.douyin-two-clips { position:relative; height:100%; min-height:0; overflow:hidden; background:#000; touch-action:pan-y; }
+.douyin-two-clips > video { display:block; width:100%; height:100%; object-fit:contain; background:#000; }
+.douyin-video-hint { position:absolute; top:10px; right:12px; background:#0008; color:#fff; padding:3px 7px; border-radius:12px; font-size:11px; pointer-events:none; }
+.douyin-paused-indicator { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); color:white; font-size:42px; text-shadow:0 1px 8px #000; pointer-events:none; }
+
+/* Only two real, user-supplied videos. Cover baked-in screenshot buttons. */
+.douyin-two-clips .douyin-reaction-mask {
+  position:absolute; right:0; top:43%; bottom:6%; width:19%;
+  background:rgba(12,12,12,.67); backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px); pointer-events:none;
+  mask-image:linear-gradient(to right,transparent,#000 25%);
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 25%);
+}
+.douyin-two-clips .douyin-reaction-actions {
+  position:absolute; right:1.5%; top:55%; display:flex; flex-direction:column;
+  align-items:center; gap:32px; width:16%; z-index:3;
+}
+.douyin-two-clips .douyin-reaction-actions button {
+  display:flex; flex-direction:column; align-items:center; gap:5px;
+  padding:6px 0; width:100%; border:0; background:transparent;
+  color:#fff; font:600 12px/1.25 system-ui,sans-serif; cursor:pointer;
+  text-shadow:0 1px 4px #000b;
+}
+.douyin-two-clips .douyin-reaction-actions button.active-like { color:#ff3159; }
+.douyin-two-clips .douyin-reaction-actions button.active-save { color:#ffcc19; }
+.douyin-two-clips .douyin-reaction-actions .douyin-star {font-size:43px;line-height:1;}
+.douyin-two-clips .douyin-reaction-actions button span:last-child {color:#fff;}
