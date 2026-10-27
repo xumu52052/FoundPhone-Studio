@@ -755,8 +755,10 @@ export function MusicSkin(p: Props) {
   const playlists = ["我的喜欢 ♡", "🪵 分享给我的歌", "🪵 专场", "晚间耳机时间", "通勤循环"];
   const tracks = p.items.filter(i => i.id !== "test-item-music");
   const unique = tracks.filter((i, index, arr) => arr.findIndex(t => t.title === i.title && t.sender === i.sender) === index);
+  const featured = unique.find(i => playable(i));
+  const prioritize = (items: Item[]) => [...items].sort((a,b) => Number(playable(b)) - Number(playable(a)));
   const active = playlist ? tracks.filter(i => i.folder === playlist) : tab === "收藏" ? unique.filter(i => liked.includes(i.title + "|" + i.sender) || i.folder === "我的喜欢 ♡") : tab === "最近播放" ? recent.map(id => unique.find(i => i.title + "|" + i.sender === id)).filter((i): i is Item => !!i) : unique;
-  const shown = active.filter(i => (i.title + " " + i.sender).toLowerCase().includes(query.toLowerCase()));
+  const shown = prioritize(active.filter(i => (i.title + " " + i.sender).toLowerCase().includes(query.toLowerCase())));
   const choose = (i: Item) => { setSelected(i); setShowPlayer(true); setRecent(prev => [i.title + "|" + i.sender, ...prev.filter(k => k !== i.title + "|" + i.sender)].slice(0, 30)); };
   const next = (offset: number) => { if (!selected || !shown.length) return; const index = shown.findIndex(i => i.title === selected.title && i.sender === selected.sender); choose(shown[(index + offset + shown.length) % shown.length]); };
   const isLiked = (i: Item) => liked.includes(i.title + "|" + i.sender) || (i.folder === "我的喜欢 ♡" && !liked.includes("!" + i.title + "|" + i.sender));
@@ -770,6 +772,15 @@ export function MusicSkin(p: Props) {
         <SearchBox value={query} set={setQuery} placeholder="搜索歌曲或歌手" />
         {playlist && <button style={{...btn, padding:"14px 0", color:"#ad6581"}} onClick={() => {setPlaylist(""); setQuery("");}}>‹ 返回歌单</button>}
         {!playlist && tab === "首页" && <>
+          {featured && <button aria-label="播放偷偷做个梦37秒片段" onClick={() => choose(featured)} style={{...btn, width:"100%", display:"flex", alignItems:"center", gap:13, padding:13, margin:"8px 0 14px", background:"#f9e7ee", borderRadius:16, textAlign:"left", border:"1px solid #f2d5e0"}}>
+            <img src={coverPath} alt="偷偷做个梦原版封面" style={{width:82,height:82,objectFit:"cover",borderRadius:12,flexShrink:0}} />
+            <span style={{display:"flex",flexDirection:"column",gap:5,minWidth:0,flex:1}}>
+              <span style={{fontSize:11,color:"#a45b7b",fontWeight:700}}>▶ 可播放 · 37 秒</span>
+              <strong style={{fontSize:16,color:"#302d31"}}>偷偷做个梦</strong>
+              <small style={{color:"#857680"}}>穆祉丞 · 点击收听</small>
+            </span>
+            <span aria-hidden="true" style={{fontSize:26,color:"#b85e82"}}>▶</span>
+          </button>}
           <div style={{display:"flex", gap:9, margin:"17px 0"}}>
             <button style={{...btn, background:"#f7e4eb", borderRadius:12, padding:"12px 14px", flex:1}} onClick={() => setTab("收藏")}>♡ 我的喜欢</button>
             <button style={{...btn, background:"#f7e4eb", borderRadius:12, padding:"12px 14px", flex:1}} onClick={() => setTab("最近播放")}>◷ 最近播放</button>
@@ -786,8 +797,8 @@ export function MusicSkin(p: Props) {
         </>}
         {(playlist || tab !== "首页" || tab === "首页") && shown.map((i, n) => <div key={i.id} style={{display:"flex", alignItems:"center", gap:10, borderBottom:"1px solid #f1e8ed", padding:"11px 0"}}>
           <button style={{...btn, flex:1, display:"flex", textAlign:"left", gap:11, minWidth:0, alignItems:"center"}} onClick={() => choose(i)}>
-            <span style={{width:40, height:40, flexShrink:0, borderRadius:8, background:"#f4e6ed", display:"grid", placeItems:"center", color:"#bc8196"}}>♫</span>
-            <span style={{minWidth:0, flex:1}}><strong style={{display:"block", fontSize:13, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap"}}>{i.title}</strong><small style={{color:"#9c949a", fontSize:11}}>{i.sender}</small></span>
+            {playable(i) ? <img src={coverPath} alt="歌曲封面" style={{width:40,height:40,flexShrink:0,borderRadius:8,objectFit:"cover"}}/> : <span style={{width:40, height:40, flexShrink:0, borderRadius:8, background:"#f4e6ed", display:"grid", placeItems:"center", color:"#bc8196"}}>♫</span>}
+            <span style={{minWidth:0, flex:1}}><strong style={{display:"block", fontSize:13, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap"}}>{i.title}</strong><small style={{color:"#9c949a", fontSize:11}}>{i.sender}{playable(i) ? " · ▶ 可播放" : ""}</small></span>
           </button>
           <button aria-label={isLiked(i) ? "取消喜欢" : "喜欢"} style={{...btn, fontSize:21, color:isLiked(i)?"#e46b91":"#bbb"}} onClick={() => toggleLike(i)}>{isLiked(i)?"♥":"♡"}</button>
         </div>)}
