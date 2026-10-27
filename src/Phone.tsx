@@ -146,9 +146,18 @@ function PhoneRuntime({
   useEffect(() => {
     if (creator) return;
     const key = "foundphone-boyfriend-20s-v1";
-    try { if (sessionStorage.getItem(key) === "1") return; } catch { /* private browsing */ }
+    // Delivery is durable independently of whether the visitor taps the banner.
+    // Legacy session delivery is also recognized for existing visitors.
+    try {
+      if (localStorage.getItem(key) === "1") return;
+      if (sessionStorage.getItem(key) === "1") {
+        localStorage.setItem(key, "1");
+        return;
+      }
+    } catch { /* storage can be disabled in private mode */ }
     const timer = window.setTimeout(() => {
       try { sessionStorage.setItem(key, "1"); } catch { /* private browsing */ }
+      try { localStorage.setItem(key, "1"); } catch { /* private browsing */ }
       setBoyfriendNotice(true);
       window.dispatchEvent(new Event("foundphone:boyfriend-message"));
     }, 20000);

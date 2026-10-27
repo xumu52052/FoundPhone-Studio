@@ -159,7 +159,8 @@ function Compose({
 }
 // The countdown begins when the phone app bundle loads, not when the chat is opened.
 const wxTimedNotificationStart = Date.now();
-const wxTimedNotificationKey = "foundphone-boyfriend-60s-v1";
+// Must match the 20-second delivery marker written by Phone.tsx.
+const wxTimedNotificationKey = "foundphone-boyfriend-20s-v1";
 const wxTimedSender = "Aaa最帅的mua～";
 const wxTimedBody = "宝宝，你在干嘛呀？怎么不回我消息😿";
 
@@ -170,16 +171,37 @@ export function WeChatSkin(p: SkinProps) {
     [menu, setMenu] = useState(false),
     [searchOpen, setSearchOpen] = useState(false),
     [utility, setUtility] = useState("");
-  const [timedDelivered, setTimedDelivered] = useState(() => {
-    try { return sessionStorage.getItem(wxTimedNotificationKey) === "1"; }
-    catch { return false; }
-  });
-  // The phone shell owns the timer; refresh the conversation when it fires.
+  const hasDeliveredBoyfriendMessage = () => {
+    try {
+      return localStorage.getItem(wxTimedNotificationKey) === "1" ||
+        sessionStorage.getItem(wxTimedNotificationKey) === "1" ||
+        sessionStorage.getItem("foundphone-boyfriend-60s-v1") === "1";
+    } catch { return false; }
+  };
+  const [timedDelivered, setTimedDelivered] = useState(hasDeliveredBoyfriendMessage);
+  // The phone shell owns the timer. Also recheck persistent delivery on mount,
+  // when returning to WeChat, and when the app regains focus: a missed toast
+  // must never mean a missing chat message.
   useEffect(() => {
     const onDelivery = () => setTimedDelivered(true);
+    const syncDelivery = () => {
+      if (hasDeliveredBoyfriendMessage()) setTimedDelivered(true);
+    };
+    syncDelivery();
     window.addEventListener("foundphone:boyfriend-message", onDelivery);
-    return () => window.removeEventListener("foundphone:boyfriend-message", onDelivery);
+    window.addEventListener("focus", syncDelivery);
+    document.addEventListener("visibilitychange", syncDelivery);
+    return () => {
+      window.removeEventListener("foundphone:boyfriend-message", onDelivery);
+      window.removeEventListener("focus", syncDelivery);
+      document.removeEventListener("visibilitychange", syncDelivery);
+    };
   }, []);
+  useEffect(() => {
+    if (p.thread === wxTimedSender) {
+      if (hasDeliveredBoyfriendMessage()) setTimedDelivered(true);
+    }
+  }, [p.thread]);
   const timedMessage: Item | null = timedDelivered && !p.creator ? {
     ...(p.items[0] || {}),
     id: "foundphone-boyfriend-timed-message-v1",
