@@ -3831,6 +3831,19 @@
     ],
     "music": [
       {
+        "id": "enn-music-01-14",
+        "title": "偷偷做个梦",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "我的喜欢 ♡",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "1",
+          "source": "用户指定"
+        }
+      },
+      {
         "id": "enn-music-01-01",
         "title": "U",
         "body": "OSUN",
@@ -3839,7 +3852,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 1,
+          "playlistOrder": "2",
           "source": "用户指定"
         }
       },
@@ -3852,7 +3865,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 2,
+          "playlistOrder": "3",
           "source": "用户指定"
         }
       },
@@ -3865,7 +3878,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 3,
+          "playlistOrder": "4",
           "source": "用户指定"
         }
       },
@@ -3878,7 +3891,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 4,
+          "playlistOrder": "5",
           "source": "用户指定"
         }
       },
@@ -3891,7 +3904,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 5,
+          "playlistOrder": "6",
           "source": "用户指定"
         }
       },
@@ -3904,7 +3917,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 6,
+          "playlistOrder": "7",
           "source": "用户指定"
         }
       },
@@ -3917,7 +3930,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 7,
+          "playlistOrder": "8",
           "source": "用户指定"
         }
       },
@@ -3930,7 +3943,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 8,
+          "playlistOrder": "9",
           "source": "用户指定"
         }
       },
@@ -3943,7 +3956,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 9,
+          "playlistOrder": "10",
           "source": "用户指定"
         }
       },
@@ -3956,7 +3969,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 10,
+          "playlistOrder": "11",
           "source": "用户指定"
         }
       },
@@ -3969,7 +3982,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 11,
+          "playlistOrder": "12",
           "source": "用户指定"
         }
       },
@@ -3982,7 +3995,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 12,
+          "playlistOrder": "13",
           "source": "用户指定"
         }
       },
@@ -3995,20 +4008,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 13,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-01-14",
-        "title": "偷偷做个梦",
-        "body": "TF_ING 穆祉丞",
-        "sender": "TF_ING 穆祉丞",
-        "folder": "我的喜欢 ♡",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 14,
+          "playlistOrder": "14",
           "source": "用户指定"
         }
       },
@@ -4021,98 +4021,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 1,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-02-02",
-        "title": "My Only One (No Hay Nadie Más)",
-        "body": "Sebastián Yatra、Isabela Merced",
-        "sender": "Sebastián Yatra、Isabela Merced",
-        "folder": "🪵 分享给我的歌",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 2,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-02-03",
-        "title": "305",
-        "body": "Shawn Mendes",
-        "sender": "Shawn Mendes",
-        "folder": "🪵 分享给我的歌",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 3,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-02-04",
-        "title": "Man in the Mirror",
-        "body": "Michael Jackson",
-        "sender": "Michael Jackson",
-        "folder": "🪵 分享给我的歌",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 4,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-02-05",
-        "title": "LOVE.",
-        "body": "Kendrick Lamar、Zacari",
-        "sender": "Kendrick Lamar、Zacari",
-        "folder": "🪵 分享给我的歌",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 5,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-02-06",
-        "title": "Paris in the Rain",
-        "body": "Lauv",
-        "sender": "Lauv",
-        "folder": "🪵 分享给我的歌",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 6,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-02-07",
-        "title": "always",
-        "body": "keshi",
-        "sender": "keshi",
-        "folder": "🪵 分享给我的歌",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 7,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-02-08",
-        "title": "ETA",
-        "body": "Justin Bieber",
-        "sender": "Justin Bieber",
-        "folder": "🪵 分享给我的歌",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 8,
+          "playlistOrder": "1",
           "source": "用户指定"
         }
       },
@@ -4125,189 +4034,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 1,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-02",
-        "title": "偷偷做个梦",
-        "body": "TF_ING 穆祉丞",
-        "sender": "TF_ING 穆祉丞",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 2,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-03",
-        "title": "恋人未满",
-        "body": "TF_ING 穆祉丞",
-        "sender": "TF_ING 穆祉丞",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 3,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-04",
-        "title": "Dreamin",
-        "body": "TF_ING 穆祉丞",
-        "sender": "TF_ING 穆祉丞",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 4,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-05",
-        "title": "Holiday",
-        "body": "TF_ING 穆祉丞",
-        "sender": "TF_ING 穆祉丞",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 5,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-06",
-        "title": "淡季动物园",
-        "body": "许光汉",
-        "sender": "许光汉",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 6,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-07",
-        "title": "恋人",
-        "body": "李荣浩",
-        "sender": "李荣浩",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 7,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-08",
-        "title": "路过人间",
-        "body": "郁可唯",
-        "sender": "郁可唯",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 8,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-09",
-        "title": "我只在乎你",
-        "body": "邓丽君",
-        "sender": "邓丽君",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 9,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-10",
-        "title": "凑热闹",
-        "body": "BY2",
-        "sender": "BY2",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 10,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-11",
-        "title": "想见你想见你想见你",
-        "body": "八三夭",
-        "sender": "八三夭",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 11,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-12",
-        "title": "ETA",
-        "body": "Justin Bieber",
-        "sender": "Justin Bieber",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 12,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-13",
-        "title": "always",
-        "body": "keshi",
-        "sender": "keshi",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 13,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-14",
-        "title": "Paris in the Rain",
-        "body": "Lauv",
-        "sender": "Lauv",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 14,
-          "source": "用户指定"
-        }
-      },
-      {
-        "id": "enn-music-03-15",
-        "title": "LOVE.",
-        "body": "Kendrick Lamar、Zacari",
-        "sender": "Kendrick Lamar、Zacari",
-        "folder": "🪵 专场",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 15,
+          "playlistOrder": "1",
           "source": "用户指定"
         }
       },
@@ -4320,59 +4047,7 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 1,
-          "source": "推荐搭配"
-        }
-      },
-      {
-        "id": "enn-music-04-02",
-        "title": "instagram",
-        "body": "DEAN",
-        "sender": "DEAN",
-        "folder": "晚间耳机时间",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 2,
-          "source": "推荐搭配"
-        }
-      },
-      {
-        "id": "enn-music-04-03",
-        "title": "beside you",
-        "body": "keshi",
-        "sender": "keshi",
-        "folder": "晚间耳机时间",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 3,
-          "source": "推荐搭配"
-        }
-      },
-      {
-        "id": "enn-music-04-04",
-        "title": "Best Part",
-        "body": "Daniel Caesar、H.E.R.",
-        "sender": "Daniel Caesar、H.E.R.",
-        "folder": "晚间耳机时间",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 4,
-          "source": "推荐搭配"
-        }
-      },
-      {
-        "id": "enn-music-04-05",
-        "title": "Snooze",
-        "body": "SZA",
-        "sender": "SZA",
-        "folder": "晚间耳机时间",
-        "kind": "text",
-        "meta": {
-          "album": "",
-          "playlistOrder": 5,
+          "playlistOrder": "1",
           "source": "推荐搭配"
         }
       },
@@ -4385,7 +4060,46 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 1,
+          "playlistOrder": "1",
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-02-02",
+        "title": "My Only One (No Hay Nadie Más)",
+        "body": "Sebastián Yatra、Isabela Merced",
+        "sender": "Sebastián Yatra、Isabela Merced",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "2",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-02",
+        "title": "偷偷做个梦",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "2",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-04-02",
+        "title": "instagram",
+        "body": "DEAN",
+        "sender": "DEAN",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "2",
           "source": "推荐搭配"
         }
       },
@@ -4398,7 +4112,46 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 2,
+          "playlistOrder": "2",
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-02-03",
+        "title": "305",
+        "body": "Shawn Mendes",
+        "sender": "Shawn Mendes",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "3",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-03",
+        "title": "恋人未满",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "3",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-04-03",
+        "title": "beside you",
+        "body": "keshi",
+        "sender": "keshi",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "3",
           "source": "推荐搭配"
         }
       },
@@ -4411,7 +4164,46 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 3,
+          "playlistOrder": "3",
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-02-04",
+        "title": "Man in the Mirror",
+        "body": "Michael Jackson",
+        "sender": "Michael Jackson",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "4",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-04",
+        "title": "Dreamin",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "4",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-04-04",
+        "title": "Best Part",
+        "body": "Daniel Caesar、H.E.R.",
+        "sender": "Daniel Caesar、H.E.R.",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "4",
           "source": "推荐搭配"
         }
       },
@@ -4424,7 +4216,46 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 4,
+          "playlistOrder": "4",
+          "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-02-05",
+        "title": "LOVE.",
+        "body": "Kendrick Lamar、Zacari",
+        "sender": "Kendrick Lamar、Zacari",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "5",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-05",
+        "title": "Holiday",
+        "body": "TF_ING 穆祉丞",
+        "sender": "TF_ING 穆祉丞",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "5",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-04-05",
+        "title": "Snooze",
+        "body": "SZA",
+        "sender": "SZA",
+        "folder": "晚间耳机时间",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "5",
           "source": "推荐搭配"
         }
       },
@@ -4437,8 +4268,177 @@
         "kind": "text",
         "meta": {
           "album": "",
-          "playlistOrder": 5,
+          "playlistOrder": "5",
           "source": "推荐搭配"
+        }
+      },
+      {
+        "id": "enn-music-02-06",
+        "title": "Paris in the Rain",
+        "body": "Lauv",
+        "sender": "Lauv",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "6",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-06",
+        "title": "淡季动物园",
+        "body": "许光汉",
+        "sender": "许光汉",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "6",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-07",
+        "title": "always",
+        "body": "keshi",
+        "sender": "keshi",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "7",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-07",
+        "title": "恋人",
+        "body": "李荣浩",
+        "sender": "李荣浩",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "7",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-02-08",
+        "title": "ETA",
+        "body": "Justin Bieber",
+        "sender": "Justin Bieber",
+        "folder": "🪵 分享给我的歌",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "8",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-08",
+        "title": "路过人间",
+        "body": "郁可唯",
+        "sender": "郁可唯",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "8",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-09",
+        "title": "我只在乎你",
+        "body": "邓丽君",
+        "sender": "邓丽君",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "9",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-10",
+        "title": "凑热闹",
+        "body": "BY2",
+        "sender": "BY2",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "10",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-11",
+        "title": "想见你想见你想见你",
+        "body": "八三夭",
+        "sender": "八三夭",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "11",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-12",
+        "title": "ETA",
+        "body": "Justin Bieber",
+        "sender": "Justin Bieber",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "12",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-13",
+        "title": "always",
+        "body": "keshi",
+        "sender": "keshi",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "13",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-14",
+        "title": "Paris in the Rain",
+        "body": "Lauv",
+        "sender": "Lauv",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "14",
+          "source": "用户指定"
+        }
+      },
+      {
+        "id": "enn-music-03-15",
+        "title": "LOVE.",
+        "body": "Kendrick Lamar、Zacari",
+        "sender": "Kendrick Lamar、Zacari",
+        "folder": "🪵 专场",
+        "kind": "text",
+        "meta": {
+          "album": "",
+          "playlistOrder": "15",
+          "source": "用户指定"
         }
       }
     ],
