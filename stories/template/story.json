@@ -71,7 +71,135 @@
     "forum",
     "instagram",
     "youtube",
-    "kakao"
+    "kakao",
+    {
+      "id": "find",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "netease",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "whatsapp",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "tiktok",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "twitter",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "telegram",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "discord",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "line",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "snapchat",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "facebook",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "messenger",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "reddit",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "spotify",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "netflix",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "pinterest",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "threads",
+      "installed": true,
+      "visible": false,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    }
   ],
   "contacts": [
     {
