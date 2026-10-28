@@ -3580,12 +3580,204 @@
     ],
     "safari": [
       {
-        "id": "test-item-safari",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
+        "id": "safari-history-00-00",
+        "title": "肉末茄子的做法",
+        "body": "",
+        "folder": "历史记录",
         "kind": "text",
-        "meta": {}
+        "meta": {
+          "dateGroup": "今天"
+        }
+      },
+      {
+        "id": "safari-history-00-01",
+        "title": "茄子怎么做不吸油",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "今天"
+        }
+      },
+      {
+        "id": "safari-history-00-02",
+        "title": "北京天气适合穿什么",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "今天"
+        }
+      },
+      {
+        "id": "safari-history-00-03",
+        "title": "附近好吃的韩餐",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "今天"
+        }
+      },
+      {
+        "id": "safari-history-01-00",
+        "title": "男朋友生日礼物推荐",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "昨天"
+        }
+      },
+      {
+        "id": "safari-history-01-01",
+        "title": "男生喜欢csgo送什么比较好",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "昨天"
+        }
+      },
+      {
+        "id": "safari-history-01-02",
+        "title": "csgo玩家喜欢什么礼物",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "昨天"
+        }
+      },
+      {
+        "id": "safari-history-01-03",
+        "title": "男生生日惊喜怎么准备",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "昨天"
+        }
+      },
+      {
+        "id": "safari-history-02-00",
+        "title": "北京约会圣地 私密性好",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月24日"
+        }
+      },
+      {
+        "id": "safari-history-02-01",
+        "title": "北京适合情侣独处的地方",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月24日"
+        }
+      },
+      {
+        "id": "safari-history-02-02",
+        "title": "北京小众约会餐厅 包间",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月24日"
+        }
+      },
+      {
+        "id": "safari-history-02-03",
+        "title": "拍立得照片怎么保存不褪色",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月24日"
+        }
+      },
+      {
+        "id": "safari-history-03-00",
+        "title": "男朋友熬夜打游戏怎么劝",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月21日"
+        }
+      },
+      {
+        "id": "safari-history-03-01",
+        "title": "炒年糕怎么做才好吃",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月21日"
+        }
+      },
+      {
+        "id": "safari-history-03-02",
+        "title": "猫咪为什么喜欢踩奶",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月21日"
+        }
+      },
+      {
+        "id": "safari-history-03-03",
+        "title": "香水怎么喷留香时间长",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月21日"
+        }
+      },
+      {
+        "id": "safari-history-04-00",
+        "title": "第一次谈恋爱送什么比较有纪念意义",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月17日"
+        }
+      },
+      {
+        "id": "safari-history-04-01",
+        "title": "情侣一起做什么比较有仪式感",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月17日"
+        }
+      },
+      {
+        "id": "safari-history-04-02",
+        "title": "生日蛋糕写什么字比较特别",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月17日"
+        }
+      },
+      {
+        "id": "safari-history-04-03",
+        "title": "睡不着一直想一个人怎么办",
+        "body": "",
+        "folder": "历史记录",
+        "kind": "text",
+        "meta": {
+          "dateGroup": "10月17日"
+        }
       }
     ],
     "notes": [
