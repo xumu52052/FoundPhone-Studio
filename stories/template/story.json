@@ -48,6 +48,7 @@
     },
     "safari",
     "notes",
+    "voice_memos",
     "calendar",
     "mail",
     "clock",
@@ -3588,6 +3589,15 @@
       }
     ],
     "notes": [
+      {
+        "id": "secret-clue-note-1017",
+        "title": "今天的小事",
+        "body": "今天某个人趁我不注意拿了我的手机好久。\n\n问他干嘛，他还不告诉我。\n\n神神秘秘的……\n\n总感觉他在我手机里藏了什么东西😾",
+        "sender": "我",
+        "kind": "text",
+        "time": "2026-10-17 23:56",
+        "meta": {}
+      },
       {
         "id": "personal-note-1",
         "title": "这周要做的事",
