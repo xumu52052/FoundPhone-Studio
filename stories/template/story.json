@@ -59,7 +59,11 @@
     "weather",
     "wallet",
     "health",
-    "find",
+    {
+      "id": "find",
+      "installed": true,
+      "visible": false
+    },
     "calculator",
     "settings",
     "qq",
@@ -68,25 +72,85 @@
     "bilibili",
     "alipay",
     "taobao",
-    "netease",
+    {
+      "id": "netease",
+      "installed": true,
+      "visible": false
+    },
     "delivery",
     "forum",
-    "whatsapp",
+    {
+      "id": "whatsapp",
+      "installed": true,
+      "visible": false
+    },
     "instagram",
-    "tiktok",
-    "twitter",
-    "telegram",
-    "discord",
+    {
+      "id": "tiktok",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "twitter",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "telegram",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "discord",
+      "installed": true,
+      "visible": false
+    },
     "youtube",
-    "line",
-    "snapchat",
-    "facebook",
-    "messenger",
-    "reddit",
-    "spotify",
-    "netflix",
-    "pinterest",
-    "threads",
+    {
+      "id": "line",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "snapchat",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "facebook",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "messenger",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "reddit",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "spotify",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "netflix",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "pinterest",
+      "installed": true,
+      "visible": false
+    },
+    {
+      "id": "threads",
+      "installed": true,
+      "visible": false
+    },
     "kakao"
   ],
   "contacts": [
