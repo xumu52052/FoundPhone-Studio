@@ -303,49 +303,65 @@ export function CameraSkin(p: Props) {
   );
 }
 export function SafariSkin(p: Props) {
-  const [q, setQ] = useState(""),
-    [tab, setTab] = useState("书签");
-  const items = p.items
-    .filter((i) =>
-      (i.title + i.body + meta(i, "url"))
-        .toLowerCase()
-        .includes(q.toLowerCase()),
-    )
-    .filter((i) =>
-      tab === "书签"
-        ? i.favorite || i.folder !== "历史记录"
-        : i.folder === "历史记录",
-    );
+  const [q, setQ] = useState("");
+  const [tab, setTab] = useState("历史记录");
+  const items = p.items.filter((i) =>
+    (i.title + i.body + meta(i, "url"))
+      .toLowerCase()
+      .includes(q.trim().toLowerCase()),
+  );
+  const history = items.filter((i) => i.folder === "历史记录");
+  const bookmarks = items.filter((i) => i.favorite || i.folder !== "历史记录");
+  const groups = history.reduce<Record<string, Item[]>>((acc, item) => {
+    const day = meta(item, "dateGroup", "更早");
+    (acc[day] ||= []).push(item);
+    return acc;
+  }, {});
   return (
     <div className="catalog-skin native-safari">
       <Header p={p} />
       <div className="catalog-scroll">
         <h1>{tab}</h1>
-        <div className="safari-favorites">
-          {items.map((i) => (
-            <button key={i.id} onClick={() => p.onItem(i)}>
-              <span>
-                <Globe size={28} />
-              </span>
-              <strong>{i.title}</strong>
-              <small>{meta(i, "url")}</small>
-            </button>
-          ))}
-        </div>
-        <Empty items={items} label="没有匹配的虚构网页" />
+        {tab === "历史记录" ? (
+          <div className="safari-history">
+            {Object.entries(groups).map(([day, entries]) => (
+              <section key={day} className="safari-history-group">
+                <h2>{day}</h2>
+                <div className="safari-history-entries">
+                  {entries.map((item) => (
+                    <div key={item.id} className="safari-history-entry">
+                      <Clock size={17} aria-hidden="true" />
+                      <span>{item.title}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ))}
+            {history.length === 0 && <p className="safari-history-empty">没有匹配的历史记录</p>}
+          </div>
+        ) : (
+          <>
+            <div className="safari-favorites">
+              {bookmarks.map((i) => (
+                <button key={i.id} onClick={() => p.onItem(i)}>
+                  <span><Globe size={28} /></span>
+                  <strong>{i.title}</strong>
+                  <small>{meta(i, "url")}</small>
+                </button>
+              ))}
+            </div>
+            <Empty items={bookmarks} label="暂无书签" />
+          </>
+        )}
       </div>
       <label className="safari-address">
-        <LockKeyhole size={13} />
+        <Search size={15} />
         <input
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="搜索或输入虚构网址"
-          aria-label="地址栏"
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && items[0]) p.onItem(items[0]);
-          }}
+          placeholder="搜索历史记录"
+          aria-label="搜索历史记录"
         />
-        <Search size={16} />
       </label>
       <Tabs
         tabs={["书签", "历史记录"]}

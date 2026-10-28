@@ -4159,3 +4159,14 @@
 .douyin-two-clips .douyin-reaction-actions button.active-save { color:#ffcc19; }
 .douyin-two-clips .douyin-reaction-actions .douyin-star {font-size:43px;line-height:1;}
 .douyin-two-clips .douyin-reaction-actions button span:last-child {color:#fff;}
+
+/* Safari history: private, fictional browsing history. */
+.native-safari .safari-history { padding: 2px 14px 18px; }
+.native-safari .safari-history-group { margin: 0 0 18px; }
+.native-safari .safari-history-group h2 { font-size: 12px; font-weight: 600; color: #83878e; margin: 6px 4px 8px; }
+.native-safari .safari-history-entries { border-radius: 12px; background: #fff; overflow: hidden; }
+.native-safari .safari-history-entry { display: flex; align-items: center; gap: 11px; padding: 12px; color: #22242a; font-size: 12px; line-height: 1.5; min-height: 43px; }
+.native-safari .safari-history-entry + .safari-history-entry { border-top: 1px solid #eceef1; }
+.native-safari .safari-history-entry svg { flex: 0 0 auto; color: #8e939b; }
+.native-safari .safari-history-entry span { min-width: 0; overflow-wrap: anywhere; }
+.native-safari .safari-history-empty { text-align: center; padding: 26px 8px; color: #8e939b; font-size: 12px; }
