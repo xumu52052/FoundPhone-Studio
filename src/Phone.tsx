@@ -1,6 +1,7 @@
 import { VoiceMemos } from "./VoiceMemos";
 import { StatusGlyph } from "./ios/StatusGlyph";
 import { SocialDetail, socialDetailApps } from "./skins/SocialDetails";
+import { ForumDetail } from "./skins/ForumDetail";
 import { NativeCalculator } from "./ios/Calculator";
 import { HomeLauncher } from "./launcher/HomeLauncher";
 import { useDeviceLayout } from "./launcher/layout";
@@ -1104,7 +1105,9 @@ function AppContent({
           </Suspense>
         </div>
         {detail &&
-          (socialDetailApps.has(app.id) &&
+          (app.id === "forum" && (!detail.password || unlocks.includes(detail.id)) ? (
+            <ForumDetail item={detail} back={back} />
+          ) : socialDetailApps.has(app.id) &&
           (!detail.password || unlocks.includes(detail.id)) ? (
             <SocialDetail
               app={app.id}
