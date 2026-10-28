@@ -321,6 +321,7 @@ export function WeChatSkin(p: SkinProps) {
     setCallPlaying(false);
     if (status === "ended") { try { localStorage.setItem("foundphone-wx-call-seconds-v1", String(callSeconds)); } catch {} }
     setProgress(status);
+    if (status === "ended") window.dispatchEvent(new Event("foundphone:secret-call-ended"));
   };
   const callDuration = `${String(Math.floor(callSeconds / 60)).padStart(2,"0")}:${String(callSeconds % 60).padStart(2,"0")}`;
   if (timedMessage && replyReady && callProgress !== "waiting") {
@@ -336,6 +337,27 @@ export function WeChatSkin(p: SkinProps) {
     if (callProgress === "ended") storyMessages.push(createStoryMessage("foundphone-wx-call-history", `语音通话 ${callDuration}`, false));
     if (callProgress === "rejected") storyMessages.push(createStoryMessage("foundphone-wx-call-rejected", "已拒绝语音通话", false));
   }
+  // Secret voice memo continuation: append-only, never changes the existing call flow.
+  type SecretChoice = "playful" | "sweet";
+  const [secretReady, setSecretReady] = useState(() => {try{return localStorage.getItem("foundphone-secret-wx-ready-v1")==="1"}catch{return false}});
+  useEffect(()=>{const sync=()=>setSecretReady(true);window.addEventListener("foundphone:secret-wx-ready",sync);return()=>window.removeEventListener("foundphone:secret-wx-ready",sync)},[]);
+  const [secretFirst, setSecretFirst] = useState<SecretChoice | "">(() => {try{return (localStorage.getItem("foundphone-secret-wx-first-v1") as SecretChoice)||""}catch{return ""}});
+  const [secretSecond, setSecretSecond] = useState<SecretChoice | "">(() => {try{return (localStorage.getItem("foundphone-secret-wx-second-v1") as SecretChoice)||""}catch{return ""}});
+
+  const secretEnabled = !p.creator && callProgress==="ended" && secretReady;
+  if(secretEnabled){
+    storyMessages.push(createStoryMessage("secret-wx-intro","宝宝，你是不是发现什么了😼",false));
+    if(secretFirst){
+      storyMessages.push(createStoryMessage("secret-wx-first-user",secretFirst==="playful"?"穆祉丞！你什么时候偷偷录的！！":"呜呜呜宝宝……我听完了，好喜欢你",true));
+      const lines=secretFirst==="playful"?["哈哈哈哈哈真的被你发现了啊","就上次你去洗澡的时候，我偷偷拿你手机录的","怎么样，男朋友是不是还挺会准备惊喜的😼"]:["哎呀……怎么还哭了呀","本来是想偷偷给你个惊喜的","你喜欢就好。我录的时候还紧张了半天呢"];
+      lines.forEach((line,i)=>storyMessages.push(createStoryMessage(`secret-wx-first-answer-${i}`,line,false)));
+      if(secretSecond){
+        storyMessages.push(createStoryMessage("secret-wx-second-user",secretSecond==="playful"?"好吧，承认你这次真的有把我哄到😼":"那你以后也要一直这么喜欢我哦🥺",true));
+        ["不过说真的，宝宝。","录音里说的每一句话，都是真的。","当面说可能会有点不好意思，所以才偷偷录下来的。","喜欢你，特别特别喜欢。"].forEach((line,i)=>storyMessages.push(createStoryMessage(`secret-wx-final-${i}`,line,false)));
+      }
+    }
+  }
+  const chooseSecret = (stage:1|2,choice:SecretChoice)=>{if(stage===1){if(secretFirst)return;setSecretFirst(choice);try{localStorage.setItem("foundphone-secret-wx-first-v1",choice)}catch{}}else{if(!secretFirst||secretSecond)return;setSecretSecond(choice);try{localStorage.setItem("foundphone-secret-wx-second-v1",choice)}catch{}}};
   const boyfriendItems = [...p.items, ...storyMessages];
   const [readThreads, setReadThreads] = useSkinState<string[]>(
     p,
@@ -476,6 +498,12 @@ export function WeChatSkin(p: SkinProps) {
             onItem={p.onItem}
             onRead={p.onRead}
           />
+          {!p.creator && p.thread === wxTimedSender && secretEnabled && !secretSecond && (
+            <div style={{padding:"12px 14px",background:"#e8e8e8",display:"grid",gap:8}}>
+              <div style={{fontSize:12,color:"#666",textAlign:"center"}}>选择一句回复</div>
+              {(!secretFirst ? [["playful","穆祉丞！你什么时候偷偷录的！！"],["sweet","呜呜呜宝宝……我听完了，好喜欢你"]] : [["playful","好吧，承认你这次真的有把我哄到😼"],["sweet","那你以后也要一直这么喜欢我哦🥺"]]).map(([choice,label])=><button type="button" key={choice} style={{padding:13,border:0,borderRadius:10,background:"white",textAlign:"left",color:"#222"}} onClick={()=>chooseSecret(secretFirst?2:1,choice as SecretChoice)}>{label}</button>)}
+            </div>
+          )}
           {!p.creator && p.thread === wxTimedSender && timedDelivered && replyReady && callProgress !== "waiting" && (
             <div style={{padding:"10px 14px",background:"#e8e8e8",display:"grid",gap:10}}>
               <audio ref={voiceAudio} preload="metadata" src="/assets/wechat/voice-call-question.m4a"

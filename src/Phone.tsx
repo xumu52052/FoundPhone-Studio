@@ -1,3 +1,4 @@
+import { VoiceMemos } from "./VoiceMemos";
 import { StatusGlyph } from "./ios/StatusGlyph";
 import { SocialDetail, socialDetailApps } from "./skins/SocialDetails";
 import { NativeCalculator } from "./ios/Calculator";
@@ -143,6 +144,29 @@ function PhoneRuntime({
   const [banner, setBanner] = useState("");
   const [boyfriendNotice, setBoyfriendNotice] = useState(false);
   const [boyfriendThreadRequest, setBoyfriendThreadRequest] = useState(0);
+  const [secretNotice, setSecretNotice] = useState(false);
+  useEffect(() => {
+    if (creator) return;
+    let timer: number | undefined;
+    const check = () => {
+      try {
+        if (localStorage.getItem("foundphone-secret-recording-heard-v1") !== "1" || localStorage.getItem("foundphone-wx-call-progress-v1") !== "ended" || localStorage.getItem("foundphone-secret-wx-ready-v1") === "1") return;
+      } catch { return; }
+      if (timer !== undefined) return;
+      timer = window.setTimeout(() => {
+        timer = undefined;
+        try { localStorage.setItem("foundphone-secret-wx-ready-v1", "1"); } catch {}
+        setSecretNotice(true);
+        window.dispatchEvent(new Event("foundphone:secret-wx-ready"));
+      }, 5000);
+    };
+    check();
+    window.addEventListener("foundphone:secret-recording-heard", check);
+    window.addEventListener("foundphone:secret-call-ended", check);
+    return () => { if (timer !== undefined) window.clearTimeout(timer); window.removeEventListener("foundphone:secret-recording-heard", check); window.removeEventListener("foundphone:secret-call-ended", check); };
+  }, [creator]);
+  useEffect(() => { if (!secretNotice) return; const t=window.setTimeout(()=>setSecretNotice(false),9000);return ()=>window.clearTimeout(t); }, [secretNotice]);
+
   useEffect(() => {
     if (creator) return;
     const key = "foundphone-boyfriend-20s-v1";
@@ -707,6 +731,26 @@ function PhoneRuntime({
               </div>
             </div>
           )}
+          {secretNotice && (
+            <button type="button" aria-label="查看秘密录音之后的微信消息"
+              onClick={() => {
+                setSecretNotice(false);
+                if (locked) { setLocked(false); setPinOpen(false); }
+                open("wechat");
+                setBoyfriendThreadRequest((n) => n + 1);
+              }}
+              style={{position:"absolute",top:54,left:15,right:15,zIndex:99999,
+                display:"flex",alignItems:"center",gap:10,padding:"12px",
+                borderRadius:16,border:"1px solid #ddd",background:"rgba(249,249,249,.98)",
+                color:"#202020",boxShadow:"0 6px 25px rgba(0,0,0,.2)",textAlign:"left",cursor:"pointer"}}>
+              <img src="/assets/wechat/aaa-dog.jpeg" alt="" style={{width:42,height:42,borderRadius:9,objectFit:"cover"}} />
+              <span style={{display:"flex",flexDirection:"column",gap:3,minWidth:0}}>
+                <span style={{fontSize:12,color:"#666"}}>微信 · 现在</span>
+                <strong style={{fontSize:14}}>Aaa最帅的mua～</strong>
+                <span style={{fontSize:13}}>宝宝，你是不是发现什么了😼</span>
+              </span>
+            </button>
+          )}
           {boyfriendNotice && (
             <button type="button" aria-label="查看男朋友的微信消息"
               onClick={() => {
@@ -1035,6 +1079,7 @@ function AppContent({
       )}
     </div>
   ) : null;
+  if (app.id === "voice_memos" && !creator) return <VoiceMemos onBack={onBack} />;
   if (Skin)
     return (
       <>
