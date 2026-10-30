@@ -102,8 +102,24 @@ function MessageList({
   onRead: (id: string) => void;
   whatsapp?: boolean;
 }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const previousCount = useRef(items.length);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
+    const frame = requestAnimationFrame(() => { el.scrollTop = el.scrollHeight; });
+    return () => cancelAnimationFrame(frame);
+  }, []);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const wasNearBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 110;
+    if (items.length !== previousCount.current && wasNearBottom) el.scrollTop = el.scrollHeight;
+    previousCount.current = items.length;
+  }, [items.length]);
   return (
-    <div className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""} ${chatWallpaper ? "wx-custom-chat-wallpaper" : ""}`} style={chatWallpaper ? { backgroundImage: `url("${chatWallpaper}")` } : undefined}>
+    <div ref={scrollRef} className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""} ${chatWallpaper ? "wx-custom-chat-wallpaper" : ""}`} style={chatWallpaper ? { backgroundImage: `url("${chatWallpaper}")` } : undefined}>
       <div className="skin-date">{items[0]?.time.slice(0, 10)}</div>
       {items.map((i) => (
         <div
@@ -358,6 +374,14 @@ export function WeChatSkin(p: SkinProps) {
     }
   }
   const chooseSecret = (stage:1|2,choice:SecretChoice)=>{if(stage===1){if(secretFirst)return;setSecretFirst(choice);try{localStorage.setItem("foundphone-secret-wx-first-v1",choice)}catch{}}else{if(!secretFirst||secretSecond)return;setSecretSecond(choice);try{localStorage.setItem("foundphone-secret-wx-second-v1",choice)}catch{}}};
+  const [catfoodReady,setCatfoodReady] = useState(() => {try{return localStorage.getItem("foundphone-catfood-ordered-v1")==="1"}catch{return false}});
+  const [catfoodTranscript,setCatfoodTranscript] = useState(false);
+  useEffect(()=>{const sync=()=>setCatfoodReady(true);window.addEventListener("foundphone:catfood-ordered",sync);return()=>window.removeEventListener("foundphone:catfood-ordered",sync)},[]);
+  if(catfoodReady && !p.creator){
+    ["宝宝，你是不是又给面团买东西了？","我刚看见猫粮订单了哈哈哈","你等一下，我跟你说个事"].forEach((line,i)=>storyMessages.push(createStoryMessage(`catfood-message-${i}`,line,false)));
+    storyMessages.push(createStoryMessage("catfood-voice-message","🎙️ 语音消息 · 31秒",false));
+    storyMessages.push(createStoryMessage("catfood-final-message","忙完跟我说一声啊，别又忘了看手机",false));
+  }
   const boyfriendItems = [...p.items, ...storyMessages];
   const [readThreads, setReadThreads] = useSkinState<string[]>(
     p,
@@ -498,6 +522,13 @@ export function WeChatSkin(p: SkinProps) {
             onItem={p.onItem}
             onRead={p.onRead}
           />
+          {!p.creator && p.thread === wxTimedSender && catfoodReady && (
+            <div style={{padding:"10px 16px",background:"#f4f4f4",display:"grid",gap:7}}>
+              <audio controls preload="metadata" src="/assets/wechat/catfood-dad-voice.mp3" style={{width:"100%"}} aria-label="面团爸爸的微信语音" />
+              <button type="button" style={{border:0,background:"transparent",textAlign:"left",color:"#576b95"}} onClick={()=>setCatfoodTranscript(v=>!v)}> {catfoodTranscript ? "收起文字" : "转文字"} </button>
+              {catfoodTranscript && <p style={{whiteSpace:"pre-wrap",fontSize:13,lineHeight:1.7,margin:0}}>{["哎，宝宝，我刚看见你给面团买猫粮了。","你怎么又自己买了呀？上次不是说好了吗，面团的东西咱俩一起买。","哈哈，它刚才还在我旁边转来转去呢。","下次记得叫上我啊，面团又不是你一个人的猫，我也是它爸爸呢，好不好？","面团——快来谢谢妈妈～","（喵～）","哈哈哈，听见没？它谢谢你了。","好啦，宝宝也记得早点回家！我和面团在家等你～"].join("\n")}</p>}
+            </div>
+          )}
           {!p.creator && p.thread === wxTimedSender && secretEnabled && !secretSecond && (
             <div style={{padding:"12px 14px",background:"#e8e8e8",display:"grid",gap:8}}>
               <div style={{fontSize:12,color:"#666",textAlign:"center"}}>选择一句回复</div>

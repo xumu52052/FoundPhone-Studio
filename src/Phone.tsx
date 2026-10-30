@@ -146,6 +146,13 @@ function PhoneRuntime({
   const [boyfriendNotice, setBoyfriendNotice] = useState(false);
   const [boyfriendThreadRequest, setBoyfriendThreadRequest] = useState(0);
   const [secretNotice, setSecretNotice] = useState(false);
+  const [catfoodNotice,setCatfoodNotice] = useState(false);
+  useEffect(() => {
+    if (creator) return;
+    const notify = () => setCatfoodNotice(true);
+    window.addEventListener("foundphone:catfood-ordered",notify);
+    return () => window.removeEventListener("foundphone:catfood-ordered",notify);
+  },[creator]);
   useEffect(() => {
     if (creator) return;
     let timer: number | undefined;
@@ -732,6 +739,14 @@ function PhoneRuntime({
               </div>
             </div>
           )}
+          {catfoodNotice && (
+            <button type="button" aria-label="查看猫粮回购后的微信消息"
+              onClick={()=>{setCatfoodNotice(false);if(locked){setLocked(false);setPinOpen(false);}open("wechat");setBoyfriendThreadRequest(n=>n+1);}}
+              style={{position:"absolute",top:54,left:15,right:15,zIndex:100000,display:"flex",alignItems:"center",gap:10,padding:12,borderRadius:16,border:"1px solid #ddd",background:"rgba(249,249,249,.98)",color:"#202020",boxShadow:"0 6px 25px rgba(0,0,0,.2)",textAlign:"left",cursor:"pointer"}}>
+              <img src="/assets/wechat/aaa-dog.jpeg" alt="" style={{width:42,height:42,borderRadius:9,objectFit:"cover"}} />
+              <span style={{display:"flex",flexDirection:"column",gap:3}}><small>微信 · 现在</small><strong>Aaa最帅的mua～</strong><span>宝宝，你是不是又给面团买东西了？</span></span>
+            </button>
+          )}
           {secretNotice && (
             <button type="button" aria-label="查看秘密录音之后的微信消息"
               onClick={() => {
@@ -1054,7 +1069,9 @@ function AppContent({
           {(detail.media || ["media", "social"].includes(app.engine)) && (
             <Media item={detail} />
           )}
-          <RichText value={detail.richText} fallback={detail.body} />
+          {app.id === "notes" && detail.id === "catfood-note-202610" ? (
+            <div style={{whiteSpace:"pre-wrap",lineHeight:1.85}}>{detail.body.split("淘宝").map((part,index) => <span key={index}>{index > 0 && <strong>淘宝</strong>}{part}</span>)}</div>
+          ) : <RichText value={detail.richText} fallback={detail.body} />}
           <dl className="item-metadata">
             {getFields(app.id)
               .filter((f) => detail.meta?.[f.key])
