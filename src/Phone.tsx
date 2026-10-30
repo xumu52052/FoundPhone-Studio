@@ -993,6 +993,20 @@ function AppContent({
   work: Work;
 }) {
   const [detail, setDetail] = useState<Item | null>(null);
+  // Independent mock checkout: never mutates the historical order or WeChat data.
+  const [catfoodCheckout, setCatfoodCheckout] = useState<"detail" | "confirm" | "success">("detail");
+  const [catfoodOrdered, setCatfoodOrdered] = useState(() => {
+    try { return localStorage.getItem("foundphone-catfood-ordered-v1") === "1"; }
+    catch { return false; }
+  });
+  const submitCatfoodOrder = () => {
+    if (catfoodOrdered) { setCatfoodCheckout("success"); return; }
+    try { localStorage.setItem("foundphone-catfood-ordered-v1", "1"); } catch { /* private browsing */ }
+    setCatfoodOrdered(true);
+    setCatfoodCheckout("success");
+    // Delay the *notification*, not the order success screen.
+    window.setTimeout(() => window.dispatchEvent(new Event("foundphone:catfood-ordered")), 2000);
+  };
   const [thread, setThread] = useState("");
   useEffect(() => {
     if (app.id === "wechat" && boyfriendThreadRequest) setThread("Aaa最帅的mua～");
@@ -1020,12 +1034,14 @@ function AppContent({
       onEdit(i);
       return;
     }
+    setCatfoodCheckout("detail");
     setDetail(i);
     if (!i.password || unlocks.includes(i.id)) onRead(i.id);
   };
   const chats = [...new Set(shown.map((i) => i.title))];
   const back = () => {
-    if (detail) setDetail(null);
+    if (detail && catfoodCheckout !== "detail") setCatfoodCheckout("detail");
+    else if (detail) setDetail(null);
     else if (thread) setThread("");
     else onBack();
   };
@@ -1082,6 +1098,38 @@ function AppContent({
                 </div>
               ))}
           </dl>
+          {app.id === "taobao" && !creator && detail.id === "taobao-order-catfood" && (
+            <section aria-label="猫粮再次购买" style={{marginTop:20,padding:16,borderRadius:16,background:"#fff7f3",border:"1px solid #f7ded0",display:"grid",gap:12,color:"#333"}}>
+              {catfoodCheckout === "detail" ? (
+                <>
+                  <div style={{fontSize:13,color:"#946954"}}>面团常吃的这一款 · 历史订单</div>
+                  <button type="button" onClick={() => setCatfoodCheckout(catfoodOrdered ? "success" : "confirm")}
+                    style={{border:"1.5px solid #f07849",borderRadius:24,background:"#fff",color:"#dc6034",fontWeight:700,padding:"12px 16px",cursor:"pointer"}}>
+                    {catfoodOrdered ? "查看本次回购订单 →" : "再次购买 →"}
+                  </button>
+                </>
+              ) : catfoodCheckout === "confirm" ? (
+                <>
+                  <strong style={{fontSize:17}}>确认订单</strong>
+                  <div>🐱 猫粮 · 鸡肉三文鱼配方 2kg</div>
+                  <div style={{fontSize:13,color:"#666"}}>毛孩子粮仓 · 标准装 · 数量 1</div>
+                  <div style={{fontSize:13,color:"#666"}}>配送方式：快递配送（模拟）</div>
+                  <div style={{fontSize:13,color:"#666"}}>收货信息：沿用上次订单（虚构）</div>
+                  <strong>合计 ¥128.00</strong>
+                  <button type="button" onClick={submitCatfoodOrder} style={{border:0,borderRadius:24,padding:13,background:"#f36c3e",color:"white",fontWeight:700,cursor:"pointer"}}>提交订单 · 模拟下单</button>
+                  <button type="button" onClick={() => setCatfoodCheckout("detail")} style={{border:0,background:"transparent",padding:8}}>返回历史订单</button>
+                </>
+              ) : (
+                <>
+                  <strong style={{color:"#198754",fontSize:18}}>✓ 模拟下单成功</strong>
+                  <div>猫粮 · 鸡肉三文鱼配方 2kg × 1</div>
+                  <div>实付模拟金额 ¥128.00</div>
+                  <div style={{fontSize:12,color:"#777"}}>仅为故事互动，不会付款或产生真实订单。回购记录已保存。</div>
+                  <button type="button" onClick={() => setCatfoodCheckout("detail")} style={{border:"1px solid #ddd",borderRadius:20,background:"white",padding:10}}>返回订单详情</button>
+                </>
+              )}
+            </section>
+          )}
           {detail.folder && (
             <span className="folder-label">
               <Folder size={12} />
