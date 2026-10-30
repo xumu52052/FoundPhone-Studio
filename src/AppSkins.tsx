@@ -377,13 +377,16 @@ export function WeChatSkin(p: SkinProps) {
   const [catfoodReady,setCatfoodReady] = useState(() => {try{return localStorage.getItem("foundphone-catfood-ordered-v1")==="1"}catch{return false}});
   const catfoodAudioRef = useRef<HTMLAudioElement>(null);
   const [catfoodVoicePlaying,setCatfoodVoicePlaying] = useState(false);
-  const [catfoodVoiceHeard,setCatfoodVoiceHeard] = useState(() => {try{return localStorage.getItem("foundphone-catfood-voice-heard-v1")==="1"}catch{return false}});
-  const [catfoodAcknowledged,setCatfoodAcknowledged] = useState(() => {try{return localStorage.getItem("foundphone-catfood-ack-v1")==="1"}catch{return false}});
+  // Versioned flags deliberately ignore earlier test states: only a real ended event
+  // from the corrected, loadable audio can unlock this interaction.
+  const [catfoodVoiceHeard,setCatfoodVoiceHeard] = useState(() => {try{return localStorage.getItem("foundphone-catfood-voice-heard-v2")==="1"}catch{return false}});
+  const [catfoodAcknowledged,setCatfoodAcknowledged] = useState(() => {try{return localStorage.getItem("foundphone-catfood-ack-v2")==="1"}catch{return false}});
+  const [catfoodVoiceError,setCatfoodVoiceError] = useState(false);
   useEffect(()=>{const sync=()=>setCatfoodReady(true);window.addEventListener("foundphone:catfood-ordered",sync);return()=>window.removeEventListener("foundphone:catfood-ordered",sync)},[]);
   const acknowledgeCatfoodVoice = () => {
     if (!catfoodVoiceHeard || catfoodAcknowledged) return;
     setCatfoodAcknowledged(true);
-    try { localStorage.setItem("foundphone-catfood-ack-v1", "1"); } catch {}
+    try { localStorage.setItem("foundphone-catfood-ack-v2", "1"); } catch {}
   };
   if(catfoodReady && !p.creator){
     ["宝宝，你是不是又给面团买东西了？","我刚看见猫粮订单了哈哈哈","你等一下，我跟你说个事"].forEach((line,i)=>storyMessages.push(createStoryMessage(`catfood-message-${i}`,line,false)));
@@ -536,12 +539,13 @@ export function WeChatSkin(p: SkinProps) {
                 src="/assets/wechat/catfood-dad-voice.mp3"
                 style={{display:"none"}}
                 aria-label="面团爸爸的微信语音"
-                onPlay={() => setCatfoodVoicePlaying(true)}
+                onPlay={() => { setCatfoodVoiceError(false); setCatfoodVoicePlaying(true); }}
                 onPause={() => setCatfoodVoicePlaying(false)}
+                onError={() => { setCatfoodVoicePlaying(false); setCatfoodVoiceError(true); }}
                 onEnded={() => {
                   setCatfoodVoicePlaying(false);
                   setCatfoodVoiceHeard(true);
-                  try { localStorage.setItem("foundphone-catfood-voice-heard-v1", "1"); } catch {}
+                  try { localStorage.setItem("foundphone-catfood-voice-heard-v2", "1"); } catch {}
                 }}
               />
               <button
@@ -549,14 +553,21 @@ export function WeChatSkin(p: SkinProps) {
                 aria-label={catfoodVoicePlaying ? "暂停语音" : "播放语音"}
                 onClick={() => {
                   const audio = catfoodAudioRef.current;
-                  if (!audio) return;
+                  if (!audio || catfoodVoiceHeard) return;
                   if (catfoodVoicePlaying) audio.pause();
-                  else audio.play().catch(() => setCatfoodVoicePlaying(false));
+                  else {
+                    setCatfoodVoiceError(false);
+                    if (audio.ended) audio.currentTime = 0;
+                    audio.play().catch(() => { setCatfoodVoicePlaying(false); setCatfoodVoiceError(true); });
+                  }
                 }}
                 style={{justifySelf:"start",background:"#fff",border:"none",borderRadius:13,padding:"12px 18px",fontSize:14,color:"#222",cursor:"pointer"}}
               >
                 {catfoodVoicePlaying ? "Ⅱ" : "▶"}　)))　31″
               </button>
+              {catfoodVoiceError && !catfoodVoiceHeard && (
+                <div role="status" style={{fontSize:12,color:"#b42318",padding:"2px 4px"}}>语音暂时无法播放，请检查网络后重试。</div>
+              )}
               {catfoodVoiceHeard && !catfoodAcknowledged && (
                 <button
                   type="button"
