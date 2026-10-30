@@ -3782,6 +3782,15 @@
     ],
     "notes": [
       {
+        "id": "catfood-note-202610",
+        "title": "面团的东西 🐱",
+        "body": "猫粮好像快吃完了！！\n\n记得去淘宝看看之前买的那款，面团吃着还挺习惯的，直接回购就好。\n\n别买错口味了🥹",
+        "time": "2026-10-30 10:30",
+        "folder": "备忘录",
+        "kind": "text",
+        "meta": {}
+      },
+      {
         "id": "secret-clue-note-1017",
         "title": "今天的小事",
         "body": "今天某个人趁我不注意拿了我的手机好久。\n\n问他干嘛，他还不告诉我。\n\n神神秘秘的……\n\n总感觉他在我手机里藏了什么东西😾",
@@ -4766,12 +4775,193 @@
     ],
     "taobao": [
       {
-        "id": "test-item-taobao",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
+        "id": "taobao-order-catfood",
+        "title": "猫粮 · 鸡肉三文鱼配方 2kg",
+        "body": "规格：标准装 · 数量：1",
+        "sender": "毛孩子粮仓",
+        "time": "2026-10-18 19:21",
+        "folder": "订单",
         "kind": "text",
-        "meta": {}
+        "meta": {
+          "price": "128.00",
+          "status": "已完成",
+          "number": "订单编号 · TB20261018101",
+          "productKey": "catfood"
+        }
+      },
+      {
+        "id": "taobao-order-laundry",
+        "title": "清新洗衣凝珠 40颗",
+        "body": "规格：标准装 · 数量：1",
+        "sender": "日用好物铺",
+        "time": "2026-10-12 11:42",
+        "folder": "订单",
+        "kind": "text",
+        "meta": {
+          "price": "39.90",
+          "status": "已完成",
+          "number": "订单编号 · TB20261012102",
+          "productKey": "laundry"
+        }
+      },
+      {
+        "id": "taobao-order-towel",
+        "title": "厨房抽取式纸巾 6包",
+        "body": "规格：标准装 · 数量：1",
+        "sender": "居家生活馆",
+        "time": "2026-10-08 16:13",
+        "folder": "订单",
+        "kind": "text",
+        "meta": {
+          "price": "24.80",
+          "status": "已完成",
+          "number": "订单编号 · TB20261008103",
+          "productKey": "towel"
+        }
+      },
+      {
+        "id": "taobao-order-hotpot",
+        "title": "重庆牛油火锅底料 3袋",
+        "body": "规格：标准装 · 数量：1",
+        "sender": "川味小店",
+        "time": "2026-10-05 18:20",
+        "folder": "订单",
+        "kind": "text",
+        "meta": {
+          "price": "29.90",
+          "status": "已完成",
+          "number": "订单编号 · TB20261005104",
+          "productKey": "hotpot"
+        }
+      },
+      {
+        "id": "taobao-order-litter",
+        "title": "豆腐猫砂 6L×4袋",
+        "body": "规格：标准装 · 数量：1",
+        "sender": "面团生活馆",
+        "time": "2026-09-27 09:12",
+        "folder": "订单",
+        "kind": "text",
+        "meta": {
+          "price": "76.00",
+          "status": "已完成",
+          "number": "订单编号 · TB20260927105",
+          "productKey": "litter"
+        }
+      },
+      {
+        "id": "taobao-order-snack",
+        "title": "猫咪冻干鸡肉零食",
+        "body": "规格：标准装 · 数量：1",
+        "sender": "毛孩子粮仓",
+        "time": "2026-09-18 20:05",
+        "folder": "订单",
+        "kind": "text",
+        "meta": {
+          "price": "35.00",
+          "status": "已完成",
+          "number": "订单编号 · TB20260918106",
+          "productKey": "snack"
+        }
+      },
+      {
+        "id": "taobao-order-toy",
+        "title": "逗猫羽毛玩具",
+        "body": "规格：标准装 · 数量：1",
+        "sender": "猫咪杂货铺",
+        "time": "2026-09-03 13:46",
+        "folder": "订单",
+        "kind": "text",
+        "meta": {
+          "price": "19.90",
+          "status": "已完成",
+          "number": "订单编号 · TB20260903107",
+          "productKey": "toy"
+        }
+      },
+      {
+        "id": "taobao-product-catfood",
+        "title": "猫粮 · 鸡肉三文鱼配方 2kg",
+        "body": "生活好物",
+        "sender": "毛孩子粮仓",
+        "time": "2026-10-18 19:21",
+        "folder": "商品",
+        "kind": "text",
+        "meta": {
+          "price": "128.00"
+        }
+      },
+      {
+        "id": "taobao-product-laundry",
+        "title": "清新洗衣凝珠 40颗",
+        "body": "生活好物",
+        "sender": "日用好物铺",
+        "time": "2026-10-12 11:42",
+        "folder": "商品",
+        "kind": "text",
+        "meta": {
+          "price": "39.90"
+        }
+      },
+      {
+        "id": "taobao-product-towel",
+        "title": "厨房抽取式纸巾 6包",
+        "body": "生活好物",
+        "sender": "居家生活馆",
+        "time": "2026-10-08 16:13",
+        "folder": "商品",
+        "kind": "text",
+        "meta": {
+          "price": "24.80"
+        }
+      },
+      {
+        "id": "taobao-product-hotpot",
+        "title": "重庆牛油火锅底料 3袋",
+        "body": "生活好物",
+        "sender": "川味小店",
+        "time": "2026-10-05 18:20",
+        "folder": "商品",
+        "kind": "text",
+        "meta": {
+          "price": "29.90"
+        }
+      },
+      {
+        "id": "taobao-product-litter",
+        "title": "豆腐猫砂 6L×4袋",
+        "body": "生活好物",
+        "sender": "面团生活馆",
+        "time": "2026-09-27 09:12",
+        "folder": "商品",
+        "kind": "text",
+        "meta": {
+          "price": "76.00"
+        }
+      },
+      {
+        "id": "taobao-product-snack",
+        "title": "猫咪冻干鸡肉零食",
+        "body": "生活好物",
+        "sender": "毛孩子粮仓",
+        "time": "2026-09-18 20:05",
+        "folder": "商品",
+        "kind": "text",
+        "meta": {
+          "price": "35.00"
+        }
+      },
+      {
+        "id": "taobao-product-toy",
+        "title": "逗猫羽毛玩具",
+        "body": "生活好物",
+        "sender": "猫咪杂货铺",
+        "time": "2026-09-03 13:46",
+        "folder": "商品",
+        "kind": "text",
+        "meta": {
+          "price": "19.90"
+        }
       }
     ],
     "netease": [

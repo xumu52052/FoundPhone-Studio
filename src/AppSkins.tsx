@@ -92,6 +92,10 @@ function MessageList({
   chatWallpaper,
   boyfriendChat = false,
   participantAvatar,
+  catfoodVoicePlaying = false,
+  onCatfoodVoicePlaying,
+  onCatfoodVoiceEnded,
+  onCatfoodAcknowledge,
 }: {
   items: Item[];
   boyfriendChat?: boolean;
@@ -101,9 +105,30 @@ function MessageList({
   onItem: (i: Item) => void;
   onRead: (id: string) => void;
   whatsapp?: boolean;
+  catfoodVoicePlaying?: boolean;
+  onCatfoodVoicePlaying?: (playing: boolean) => void;
+  onCatfoodVoiceEnded?: () => void;
+  onCatfoodAcknowledge?: () => void;
 }) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const catfoodAudioRef = useRef<HTMLAudioElement>(null);
+  const previousCount = useRef(items.length);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
+    const frame = requestAnimationFrame(() => { el.scrollTop = el.scrollHeight; });
+    return () => cancelAnimationFrame(frame);
+  }, []);
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const wasNearBottom = el.scrollHeight - el.scrollTop - el.clientHeight < 110;
+    if (items.length !== previousCount.current && wasNearBottom) el.scrollTop = el.scrollHeight;
+    previousCount.current = items.length;
+  }, [items.length]);
   return (
-    <div className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""} ${chatWallpaper ? "wx-custom-chat-wallpaper" : ""}`} style={chatWallpaper ? { backgroundImage: `url("${chatWallpaper}")` } : undefined}>
+    <div ref={scrollRef} className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""} ${chatWallpaper ? "wx-custom-chat-wallpaper" : ""}`} style={chatWallpaper ? { backgroundImage: `url("${chatWallpaper}")` } : undefined}>
       <div className="skin-date">{items[0]?.time.slice(0, 10)}</div>
       {items.map((i) => (
         <div
@@ -113,25 +138,64 @@ function MessageList({
           {!whatsapp && !i.outgoing && (
             <Avatar name={i.sender} src={participantAvatar || i.avatar} />
           )}
-          <button
-            className="skin-bubble"
-            onClick={() => (creator ? onItem(i) : onRead(i.id))}
-          >
-            {["image", "audio", "video"].includes(i.kind) ? (
-              <ItemMedia item={i} />
-            ) : i.kind === "transfer" ? (
-              <div className="skin-transfer">
-                ¥ {i.body}
-                <small>转账记录 · 虚构</small>
-              </div>
-            ) : (
-              i.body
-            )}
-            <small className={whatsapp ? undefined : "wx-message-time"}>
-              {i.time.slice(-5)}{" "}
-              {whatsapp && i.outgoing && <CheckCheck size={11} />}
-            </small>
-          </button>
+          {i.id === "catfood-voice-message-v2" && !creator ? (
+            <div className="skin-bubble" style={{ minWidth: 112, display: "grid", gap: 5 }}>
+              <audio
+                ref={catfoodAudioRef}
+                preload="metadata"
+                src={i.media}
+                style={{ display: "none" }}
+                onPlay={() => onCatfoodVoicePlaying?.(true)}
+                onPause={() => onCatfoodVoicePlaying?.(false)}
+                onEnded={() => { onCatfoodVoicePlaying?.(false); onCatfoodVoiceEnded?.(); }}
+                onError={() => onCatfoodVoicePlaying?.(false)}
+              />
+              <button
+                type="button"
+                aria-label={catfoodVoicePlaying ? "暂停语音" : "播放语音"}
+                onClick={() => {
+                  const audio = catfoodAudioRef.current;
+                  if (!audio) return;
+                  if (catfoodVoicePlaying) audio.pause();
+                  else audio.play().catch(() => onCatfoodVoicePlaying?.(false));
+                }}
+                style={{ border: 0, background: "transparent", padding: "2px 0", display: "flex", alignItems: "center", gap: 9, color: "inherit", cursor: "pointer", font: "inherit" }}
+              >
+                <span>{catfoodVoicePlaying ? "Ⅱ" : "▶"}</span><span>)))</span><span>31″</span>
+              </button>
+              <small className={whatsapp ? undefined : "wx-message-time"}>{i.time.slice(-5)}</small>
+            </div>
+          ) : i.id === "catfood-voice-choice-v2" && !creator ? (
+            <button
+              type="button"
+              className="skin-bubble"
+              onClick={() => onCatfoodAcknowledge?.()}
+              style={{ cursor: "pointer", border: "1px solid #d9e6d8" }}
+            >
+              {i.body}
+              <small className={whatsapp ? undefined : "wx-message-time"}>{i.time.slice(-5)}</small>
+            </button>
+          ) : (
+            <button
+              className="skin-bubble"
+              onClick={() => (creator ? onItem(i) : onRead(i.id))}
+            >
+              {["image", "audio", "video"].includes(i.kind) ? (
+                <ItemMedia item={i} />
+              ) : i.kind === "transfer" ? (
+                <div className="skin-transfer">
+                  ¥ {i.body}
+                  <small>转账记录 · 虚构</small>
+                </div>
+              ) : (
+                i.body
+              )}
+              <small className={whatsapp ? undefined : "wx-message-time"}>
+                {i.time.slice(-5)}{" "}
+                {whatsapp && i.outgoing && <CheckCheck size={11} />}
+              </small>
+            </button>
+          )}
           {!whatsapp && i.outgoing && <Avatar name={i.sender} src="/assets/wechat/my-chat-avatar.jpeg" />}
         </div>
       ))}
@@ -358,6 +422,33 @@ export function WeChatSkin(p: SkinProps) {
     }
   }
   const chooseSecret = (stage:1|2,choice:SecretChoice)=>{if(stage===1){if(secretFirst)return;setSecretFirst(choice);try{localStorage.setItem("foundphone-secret-wx-first-v1",choice)}catch{}}else{if(!secretFirst||secretSecond)return;setSecretSecond(choice);try{localStorage.setItem("foundphone-secret-wx-second-v1",choice)}catch{}}};
+  const [catfoodReady,setCatfoodReady] = useState(() => {try{return localStorage.getItem("foundphone-catfood-ordered-v1")==="1"}catch{return false}});
+  const [catfoodVoicePlaying,setCatfoodVoicePlaying] = useState(false);
+  // v2 keys intentionally reset the broken v1 standalone-widget state.
+  const [catfoodVoiceHeard,setCatfoodVoiceHeard] = useState(() => {try{return localStorage.getItem("foundphone-catfood-voice-heard-v2")==="1"}catch{return false}});
+  const [catfoodAcknowledged,setCatfoodAcknowledged] = useState(() => {try{return localStorage.getItem("foundphone-catfood-ack-v2")==="1"}catch{return false}});
+  useEffect(()=>{const sync=()=>setCatfoodReady(true);window.addEventListener("foundphone:catfood-ordered",sync);return()=>window.removeEventListener("foundphone:catfood-ordered",sync)},[]);
+  const acknowledgeCatfoodVoice = () => {
+    if (!catfoodVoiceHeard || catfoodAcknowledged) return;
+    setCatfoodAcknowledged(true);
+    try { localStorage.setItem("foundphone-catfood-ack-v2", "1"); } catch {}
+  };
+  if(catfoodReady && !p.creator){
+    ["宝宝，你是不是又给面团买东西了？","我刚看见猫粮订单了哈哈哈","你等一下，我跟你说个事"].forEach((line,i)=>storyMessages.push(createStoryMessage(`catfood-message-${i}`,line,false)));
+    storyMessages.push({
+      ...(p.items[0] || {}), id: "catfood-voice-message-v2", title: wxTimedSender,
+      body: "语音消息 · 31秒", sender: wxTimedSender, avatar: "/assets/wechat/aaa-dog.jpeg",
+      time: new Date().toISOString().slice(0, 16).replace("T", " "), kind: "audio",
+      media: "/assets/wechat/catfood-dad-voice.mp3", outgoing: false, read: true,
+    } as Item);
+    if (catfoodVoiceHeard && !catfoodAcknowledged) {
+      storyMessages.push(createStoryMessage("catfood-voice-choice-v2", "知道了～", true));
+    }
+    if (catfoodAcknowledged) {
+      storyMessages.push(createStoryMessage("catfood-voice-user-reply-v2", "知道了～", true));
+      storyMessages.push(createStoryMessage("catfood-voice-boyfriend-reply-v2", "忙完跟我说一声。", false));
+    }
+  }
   const boyfriendItems = [...p.items, ...storyMessages];
   const [readThreads, setReadThreads] = useSkinState<string[]>(
     p,
@@ -497,6 +588,13 @@ export function WeChatSkin(p: SkinProps) {
             creator={p.creator}
             onItem={p.onItem}
             onRead={p.onRead}
+            catfoodVoicePlaying={catfoodVoicePlaying}
+            onCatfoodVoicePlaying={setCatfoodVoicePlaying}
+            onCatfoodVoiceEnded={() => {
+              setCatfoodVoiceHeard(true);
+              try { localStorage.setItem("foundphone-catfood-voice-heard-v2", "1"); } catch {}
+            }}
+            onCatfoodAcknowledge={acknowledgeCatfoodVoice}
           />
           {!p.creator && p.thread === wxTimedSender && secretEnabled && !secretSecond && (
             <div style={{padding:"12px 14px",background:"#e8e8e8",display:"grid",gap:8}}>
