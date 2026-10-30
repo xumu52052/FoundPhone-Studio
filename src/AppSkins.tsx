@@ -92,6 +92,10 @@ function MessageList({
   chatWallpaper,
   boyfriendChat = false,
   participantAvatar,
+  catfoodVoicePlaying = false,
+  onCatfoodVoicePlaying,
+  onCatfoodVoiceEnded,
+  onCatfoodAcknowledge,
 }: {
   items: Item[];
   boyfriendChat?: boolean;
@@ -101,8 +105,13 @@ function MessageList({
   onItem: (i: Item) => void;
   onRead: (id: string) => void;
   whatsapp?: boolean;
+  catfoodVoicePlaying?: boolean;
+  onCatfoodVoicePlaying?: (playing: boolean) => void;
+  onCatfoodVoiceEnded?: () => void;
+  onCatfoodAcknowledge?: () => void;
 }) {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const catfoodAudioRef = useRef<HTMLAudioElement>(null);
   const previousCount = useRef(items.length);
   useEffect(() => {
     const el = scrollRef.current;
@@ -129,25 +138,64 @@ function MessageList({
           {!whatsapp && !i.outgoing && (
             <Avatar name={i.sender} src={participantAvatar || i.avatar} />
           )}
-          <button
-            className="skin-bubble"
-            onClick={() => (creator ? onItem(i) : onRead(i.id))}
-          >
-            {["image", "audio", "video"].includes(i.kind) ? (
-              <ItemMedia item={i} />
-            ) : i.kind === "transfer" ? (
-              <div className="skin-transfer">
-                ¥ {i.body}
-                <small>转账记录 · 虚构</small>
-              </div>
-            ) : (
-              i.body
-            )}
-            <small className={whatsapp ? undefined : "wx-message-time"}>
-              {i.time.slice(-5)}{" "}
-              {whatsapp && i.outgoing && <CheckCheck size={11} />}
-            </small>
-          </button>
+          {i.id === "catfood-voice-message-v2" && !creator ? (
+            <div className="skin-bubble" style={{ minWidth: 112, display: "grid", gap: 5 }}>
+              <audio
+                ref={catfoodAudioRef}
+                preload="metadata"
+                src={i.media}
+                style={{ display: "none" }}
+                onPlay={() => onCatfoodVoicePlaying?.(true)}
+                onPause={() => onCatfoodVoicePlaying?.(false)}
+                onEnded={() => { onCatfoodVoicePlaying?.(false); onCatfoodVoiceEnded?.(); }}
+                onError={() => onCatfoodVoicePlaying?.(false)}
+              />
+              <button
+                type="button"
+                aria-label={catfoodVoicePlaying ? "暂停语音" : "播放语音"}
+                onClick={() => {
+                  const audio = catfoodAudioRef.current;
+                  if (!audio) return;
+                  if (catfoodVoicePlaying) audio.pause();
+                  else audio.play().catch(() => onCatfoodVoicePlaying?.(false));
+                }}
+                style={{ border: 0, background: "transparent", padding: "2px 0", display: "flex", alignItems: "center", gap: 9, color: "inherit", cursor: "pointer", font: "inherit" }}
+              >
+                <span>{catfoodVoicePlaying ? "Ⅱ" : "▶"}</span><span>)))</span><span>31″</span>
+              </button>
+              <small className={whatsapp ? undefined : "wx-message-time"}>{i.time.slice(-5)}</small>
+            </div>
+          ) : i.id === "catfood-voice-choice-v2" && !creator ? (
+            <button
+              type="button"
+              className="skin-bubble"
+              onClick={() => onCatfoodAcknowledge?.()}
+              style={{ cursor: "pointer", border: "1px solid #d9e6d8" }}
+            >
+              {i.body}
+              <small className={whatsapp ? undefined : "wx-message-time"}>{i.time.slice(-5)}</small>
+            </button>
+          ) : (
+            <button
+              className="skin-bubble"
+              onClick={() => (creator ? onItem(i) : onRead(i.id))}
+            >
+              {["image", "audio", "video"].includes(i.kind) ? (
+                <ItemMedia item={i} />
+              ) : i.kind === "transfer" ? (
+                <div className="skin-transfer">
+                  ¥ {i.body}
+                  <small>转账记录 · 虚构</small>
+                </div>
+              ) : (
+                i.body
+              )}
+              <small className={whatsapp ? undefined : "wx-message-time"}>
+                {i.time.slice(-5)}{" "}
+                {whatsapp && i.outgoing && <CheckCheck size={11} />}
+              </small>
+            </button>
+          )}
           {!whatsapp && i.outgoing && <Avatar name={i.sender} src="/assets/wechat/my-chat-avatar.jpeg" />}
         </div>
       ))}
@@ -375,13 +423,10 @@ export function WeChatSkin(p: SkinProps) {
   }
   const chooseSecret = (stage:1|2,choice:SecretChoice)=>{if(stage===1){if(secretFirst)return;setSecretFirst(choice);try{localStorage.setItem("foundphone-secret-wx-first-v1",choice)}catch{}}else{if(!secretFirst||secretSecond)return;setSecretSecond(choice);try{localStorage.setItem("foundphone-secret-wx-second-v1",choice)}catch{}}};
   const [catfoodReady,setCatfoodReady] = useState(() => {try{return localStorage.getItem("foundphone-catfood-ordered-v1")==="1"}catch{return false}});
-  const catfoodAudioRef = useRef<HTMLAudioElement>(null);
   const [catfoodVoicePlaying,setCatfoodVoicePlaying] = useState(false);
-  // Versioned flags deliberately ignore earlier test states: only a real ended event
-  // from the corrected, loadable audio can unlock this interaction.
+  // v2 keys intentionally reset the broken v1 standalone-widget state.
   const [catfoodVoiceHeard,setCatfoodVoiceHeard] = useState(() => {try{return localStorage.getItem("foundphone-catfood-voice-heard-v2")==="1"}catch{return false}});
   const [catfoodAcknowledged,setCatfoodAcknowledged] = useState(() => {try{return localStorage.getItem("foundphone-catfood-ack-v2")==="1"}catch{return false}});
-  const [catfoodVoiceError,setCatfoodVoiceError] = useState(false);
   useEffect(()=>{const sync=()=>setCatfoodReady(true);window.addEventListener("foundphone:catfood-ordered",sync);return()=>window.removeEventListener("foundphone:catfood-ordered",sync)},[]);
   const acknowledgeCatfoodVoice = () => {
     if (!catfoodVoiceHeard || catfoodAcknowledged) return;
@@ -390,6 +435,19 @@ export function WeChatSkin(p: SkinProps) {
   };
   if(catfoodReady && !p.creator){
     ["宝宝，你是不是又给面团买东西了？","我刚看见猫粮订单了哈哈哈","你等一下，我跟你说个事"].forEach((line,i)=>storyMessages.push(createStoryMessage(`catfood-message-${i}`,line,false)));
+    storyMessages.push({
+      ...(p.items[0] || {}), id: "catfood-voice-message-v2", title: wxTimedSender,
+      body: "语音消息 · 31秒", sender: wxTimedSender, avatar: "/assets/wechat/aaa-dog.jpeg",
+      time: new Date().toISOString().slice(0, 16).replace("T", " "), kind: "audio",
+      media: "/assets/wechat/catfood-dad-voice.mp3", outgoing: false, read: true,
+    } as Item);
+    if (catfoodVoiceHeard && !catfoodAcknowledged) {
+      storyMessages.push(createStoryMessage("catfood-voice-choice-v2", "知道了～", true));
+    }
+    if (catfoodAcknowledged) {
+      storyMessages.push(createStoryMessage("catfood-voice-user-reply-v2", "知道了～", true));
+      storyMessages.push(createStoryMessage("catfood-voice-boyfriend-reply-v2", "忙完跟我说一声。", false));
+    }
   }
   const boyfriendItems = [...p.items, ...storyMessages];
   const [readThreads, setReadThreads] = useSkinState<string[]>(
@@ -530,59 +588,14 @@ export function WeChatSkin(p: SkinProps) {
             creator={p.creator}
             onItem={p.onItem}
             onRead={p.onRead}
+            catfoodVoicePlaying={catfoodVoicePlaying}
+            onCatfoodVoicePlaying={setCatfoodVoicePlaying}
+            onCatfoodVoiceEnded={() => {
+              setCatfoodVoiceHeard(true);
+              try { localStorage.setItem("foundphone-catfood-voice-heard-v2", "1"); } catch {}
+            }}
+            onCatfoodAcknowledge={acknowledgeCatfoodVoice}
           />
-          {!p.creator && p.thread === wxTimedSender && catfoodReady && (
-            <div style={{padding:"8px 14px 12px",background:"transparent",display:"grid",justifyItems:"start",gap:10}}>
-              <audio
-                ref={catfoodAudioRef}
-                preload="metadata"
-                src="/assets/wechat/catfood-dad-voice.mp3"
-                style={{display:"none"}}
-                aria-label="面团爸爸的微信语音"
-                onPlay={() => { setCatfoodVoiceError(false); setCatfoodVoicePlaying(true); }}
-                onPause={() => setCatfoodVoicePlaying(false)}
-                onError={() => { setCatfoodVoicePlaying(false); setCatfoodVoiceError(true); }}
-                onEnded={() => {
-                  setCatfoodVoicePlaying(false);
-                  setCatfoodVoiceHeard(true);
-                  try { localStorage.setItem("foundphone-catfood-voice-heard-v2", "1"); } catch {}
-                }}
-              />
-              <button
-                type="button"
-                aria-label={catfoodVoicePlaying ? "暂停语音" : "播放语音"}
-                onClick={() => {
-                  const audio = catfoodAudioRef.current;
-                  if (!audio || catfoodVoiceHeard) return;
-                  if (catfoodVoicePlaying) audio.pause();
-                  else {
-                    setCatfoodVoiceError(false);
-                    if (audio.ended) audio.currentTime = 0;
-                    audio.play().catch(() => { setCatfoodVoicePlaying(false); setCatfoodVoiceError(true); });
-                  }
-                }}
-                style={{justifySelf:"start",background:"#fff",border:"none",borderRadius:13,padding:"12px 18px",fontSize:14,color:"#222",cursor:"pointer"}}
-              >
-                {catfoodVoicePlaying ? "Ⅱ" : "▶"}　)))　31″
-              </button>
-              {catfoodVoiceError && !catfoodVoiceHeard && (
-                <div role="status" style={{fontSize:12,color:"#b42318",padding:"2px 4px"}}>语音暂时无法播放，请检查网络后重试。</div>
-              )}
-              {catfoodVoiceHeard && !catfoodAcknowledged && (
-                <button
-                  type="button"
-                  onClick={acknowledgeCatfoodVoice}
-                  style={{justifySelf:"start",padding:"10px 18px",border:"1px solid #d9e6d8",borderRadius:18,background:"#f3f8f1",color:"#365b38",fontSize:14,cursor:"pointer"}}
-                >知道了～</button>
-              )}
-              {catfoodAcknowledged && (
-                <div style={{width:"100%",display:"grid",gap:9,paddingTop:2}}>
-                  <div style={{justifySelf:"end",maxWidth:"78%",padding:"9px 12px",borderRadius:"14px 4px 14px 14px",background:"#95ec69",color:"#24301f",fontSize:14}}>知道了～</div>
-                  <div style={{justifySelf:"start",maxWidth:"82%",padding:"9px 12px",borderRadius:"4px 14px 14px 14px",background:"#fff",border:"1px solid #eee",color:"#222",fontSize:14}}>忙完跟我说一声。</div>
-                </div>
-              )}
-            </div>
-          )}
           {!p.creator && p.thread === wxTimedSender && secretEnabled && !secretSecond && (
             <div style={{padding:"12px 14px",background:"#e8e8e8",display:"grid",gap:8}}>
               <div style={{fontSize:12,color:"#666",textAlign:"center"}}>选择一句回复</div>
